@@ -1,0 +1,46 @@
+
+@import '../../scss/mixins.scss';
+
+.intro {
+  background-color: black;
+  color: white;
+  margin: 0;
+  font-size: 18px;
+  font-family: 'EB Garamond', serif;
+  text-align: center;
+  padding: 8vh 0;
+  @include tablet {
+    font-size: 22px;
+  }
+  p {
+    @include responsive;
+    line-height: 1.5;
+  }
+  h2 {
+    font-family: 'La Belle Aurore', cursive;
+    color: #f66088;
+    font-size: 34px;
+    @include tablet {
+      font-size: 40px;
+    }
+  }
+  i {
+    font-size: 36px;
+    padding-right: 10px;
+    @include tablet {
+      font-size: 45px;
+    }
+    @include desktop {
+      font-size: 55px;
+    }
+  }
+  img {
+    width: 32px;
+    @include tablet {
+      width: 45px;
+    }
+    @include desktop {
+      width: 50px;
+    }
+  }
+}

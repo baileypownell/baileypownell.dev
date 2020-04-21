@@ -1,0 +1,47 @@
+
+nav {
+  height: 100vh;
+  position:fixed;
+  width: 100vw;
+  z-index: 100;
+  background-color: black;
+  ul {
+    margin:0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+  }
+  li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'EB Garamond', serif;
+    font-size: 28px;
+    padding: 5px 0;
+    display: inline-block;
+  }
+  i {
+    color: white;
+    font-size: 30px;
+    right: 15px;
+    top: 15px;
+    position: absolute;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.nav {
+  position: fixed;
+  backdrop-filter: blur(4px) brightness(150%);
+  width: 100%;
+  padding: 10px;
+  i {
+    color: white;
+    font-size: 40px;
+  }
+}
