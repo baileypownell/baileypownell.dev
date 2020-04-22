@@ -1,3 +1,4 @@
+@import '../../scss/mixins.scss';
 
 nav {
   height: 100vh;
@@ -21,13 +22,22 @@ nav {
     font-size: 28px;
     padding: 5px 0;
     display: inline-block;
+    letter-spacing: 8px;
+    &:hover {
+      color: $primary-color;
+    }
   }
   i {
     color: white;
-    font-size: 30px;
+    font-size: 40px!important;
     right: 15px;
     top: 15px;
     position: absolute;
+    cursor: pointer;
+    margin-right: 30px;
+    &:hover {
+      color: $primary-color;
+    }
   }
 }
 
@@ -40,8 +50,11 @@ nav {
   backdrop-filter: blur(4px) brightness(150%);
   width: 100%;
   padding: 10px;
+  text-align: right;
   i {
-    color: white;
+    color: $primary-color;
     font-size: 40px;
+    cursor: pointer;
+    margin-right: 30px;
   }
 }

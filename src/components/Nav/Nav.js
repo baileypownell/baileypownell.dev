@@ -18,11 +18,11 @@ class Nav extends React.Component {
       return (
         <>
           <nav className={this.state.show ? null : 'hidden'}>
-              <i id="x" className="fas fa-times-circle" onClick={this.toggleMenu}></i>
+              <i className="fas fa-times-circle" onClick={this.toggleMenu}></i>
               <ul>
-                <li><a href="#home">HOME</a></li>
+                <li ><a href="#home">HOME</a></li>
                 <li><a href="#portfolio">PORTFOLIO</a></li>
-                <li><a href="#about">ABOUT</a></li>
+                <li onClick={this.toggleMenu}><a href="#about">ABOUT</a></li>
                 <li><a href="#contact">CONTACT</a></li>
               </ul>
           </nav>

@@ -20,8 +20,10 @@
     font-family: 'La Belle Aurore', cursive;
     color: #f66088;
     font-size: 34px;
+    padding: 20px 0;
     @include tablet {
       font-size: 40px;
+      padding: 40px 0;
     }
   }
   i {

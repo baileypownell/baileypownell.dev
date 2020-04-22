@@ -31,15 +31,6 @@ footer {
     padding: 6vh 0;
     background-color: rgba(0, 0, 0, 0);
   }
-  .copyright {
-    font-family: 'La Belle Aurore', cursive;
-    font-size: 22px;
-  }
-  .source {
-    font-family: 'La Belle Aurore', cursive;
-    font-size: 26px;
-    cursor: pointer;
-  }
   @include IE10up {
     background-image: url("../../images/keyboardIE.jpg");
     background-attachment: scroll;
@@ -71,6 +62,18 @@ footer {
   }
   p {
     font-size: 18px;
+  }
+  .copyright {
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 22px;
+  }
+  .source {
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 26px;
+    cursor: pointer;
+    @include tablet {
+      font-size: 30px;
+    }
   }
 }
 

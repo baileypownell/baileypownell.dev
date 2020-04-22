@@ -3,6 +3,7 @@
 .portfolio-container {
   width: 90%;
   margin: 0 auto;
+  padding: 8vh 0;
   @include tablet {
     width: 75%;
   }
@@ -13,6 +14,10 @@
     font-family: 'La Belle Aurore', cursive;
     text-align: center;
     font-size: 34px;
+    color: $primary-color;
+    @include tablet {
+      font-size: 50px;
+    }
   }
 }
 

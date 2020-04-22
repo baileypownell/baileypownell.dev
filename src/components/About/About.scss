@@ -2,14 +2,8 @@
 
 .about-container {
   text-align: center;
-  padding: 20vw 5vw;
   background-image: linear-gradient(145deg, black 65%, #323232);
-  @include tablet {
-    padding: 10vw 15vw;
-  }
-  @include desktop {
-    padding: 5vw 15vw
-  }
+  padding: 8vh 0;
 }
 
 .alignment {
@@ -22,6 +16,7 @@
     width: 35vw;
     margin-bottom: 5vw;
     border-radius: 50%;
+    max-width: 250px;
     @include desktop {
       width: 18vw;
       height: auto;
@@ -34,6 +29,9 @@
     font-family: 'La Belle Aurore', cursive;
     color: $primary-color;
     font-size: 34px;
+    @include tablet {
+      font-size: 50px;
+    }
   }
   p {
     padding: 0;

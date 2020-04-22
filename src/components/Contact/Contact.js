@@ -3,41 +3,91 @@ import React from 'react';
 import './Contact.scss';
 
 class Contact extends React.Component {
+
+  state = {
+    name: '',
+    email: '',
+    message: '',
+    error: ''
+  }
+
+  updateInput = (e) => {
+    this.setState({
+      [e.target.id]: e.target.value
+    })
+  }
+
+  sendEmail = (e) => {
+    const { name, email, message } = this.state;
+    e.preventDefault();
+    if (name, email, message) {
+      let payload = {
+        name: name,
+        email: email,
+        message: message
+      };
+      fetch('/contact', {
+        method: 'POST',
+        body: JSON.stringify(payload)
+      })
+      .then(res => {
+        console.log('the result is: ', res);
+        if (res.ok === true) {
+
+        } else {
+          this.setState({
+            error: 'There has been an error.'
+          })
+        }
+      })
+      .catch(err => {
+        console.log('there was an error', err)
+      })
+    } else {
+      this.setState({
+        error: 'Fill out each form input.'
+      })
+    }
+  }
+
   render() {
     return (
-      <div class="contact-container">
+      <div className="contact">
       <h2>Contact</h2>
-      <div id="call">
-        <h3 class="moved-left">Hiring?</h3>
-        <h3>Let's get in touch.</h3>
-      </div>
-        <div class="contact-links">
+      <div class="contact-container">
 
-          <a href="https://github.com/baileypownell" target="_blank"><img class="logo" src="images/githublogo.png" alt="Github logo"/></a>
-          <a href="https://teamtreehouse.com/baileypownell" target="_blank"><img class="logo" src="images/Treehouse-Logo.png" alt="Treehouse logo"/></a>
-          <a href="https://www.linkedin.com/in/bailey-pownell-224606167/" target="_blank"><img class="logo" src="images/linkedin.png" alt="LinkedIn logo"/></a>
-          <a href="https://codepen.io/baileypownell/" target="_blank"><img class="logo" src="images/codepen.png" alt="Codepen logo"/></a>
-          <a href="bpownell_resume.pdf" target="_blank"><img class="logo" src="images/resume.png" alt="resume"/></a>
+      <div>
+        <div id="call">
+          <h3 class="moved-left">Hiring?</h3>
+          <h3>Let's get in touch.</h3>
         </div>
-        <div id="information">
-          <form method="POST">
+          <div class="contact-links">
+            <a href="https://github.com/baileypownell" target="_blank"><img class="logo" src="images/githublogo.png" alt="Github logo"/></a>
+            <a href="https://teamtreehouse.com/baileypownell" target="_blank"><img class="logo" src="images/Treehouse-Logo.png" alt="Treehouse logo"/></a>
+            <a href="https://www.linkedin.com/in/bailey-pownell-224606167/" target="_blank"><img class="logo" src="images/linkedin.png" alt="LinkedIn logo"/></a>
+            <a href="https://codepen.io/baileypownell/" target="_blank"><img class="logo" src="images/codepen.png" alt="Codepen logo"/></a>
+            <a href="bpownell_resume.pdf" target="_blank"><img class="logo" src="images/resume.png" alt="resume"/></a>
+          </div>
+        </div>
+        <form onSubmit={this.sendEmail}>
             <div>
               <label>NAME</label>
-              <input type="text" id="name" name="name" required></input>
+              <input type="text" id="name" name="name" required onChange={this.updateInput}></input>
             </div>
             <div>
               <label>EMAIL</label>
-              <input type="email" name="email" required></input>
+              <input type="email" name="email" id="email" required onChange={this.updateInput}></input>
             </div>
             <div>
               <label>MESSAGE</label>
-              <textarea id="message" name="message" required maxlength="500"></textarea>
+              <textarea id="message" name="message" required maxlength="700" onChange={this.updateInput}></textarea>
             </div>
             <button type="submit">SUBMIT</button>
+            {this.state.error.length > 1 ?
+              <p>{this.state.error}</p>
+            : null}
           </form>
-          <div class="confirmation"><h4>Thanks! Your email has been sent.</h4></div>
-          <div class="error"><h4>Sorry, we've run into a problem sending your email. :/ </h4></div>
-        </div>
+      </div>
       </div>
     )
   }

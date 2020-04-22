@@ -1,26 +1,53 @@
 @import '../../scss/mixins.scss';
 
-
-.contact-container {
-  width: 90%;
-  margin: 0 auto;
-    padding: 10vw 0;
-    text-align: center;
+.contact {
+  padding: 8vh 0;
+  text-align: center;
   h2 {
     font-family: 'La Belle Aurore', cursive;
     color: $primary-color;
     font-size: 34px;
     margin: 0;
-    padding: 10px 0;
+    text-align: center;
+    @include tablet {
+      font-size: 50px;
+    }
+  }
+}
+
+.contact-container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  @include tablet {
+    display: flex;
+    width: 80%;
+    > form {
+      width: 60%;
+    }
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
   h3 {
     color: black;
     font-family: 'EB Garamond', serif;
     margin: 0;
     padding: 5px 0;
+    @include tablet {
+      font-size: 24px;
+    }
+    @include desktop {
+      font-size: 34px;
+    }
   }
   #call {
-    paddinb-bottom: 10vw;
+    padding-bottom: 8vw;
+    @include tablet {
+      padding-bottom: 50px;
+    }
   }
 }
 
@@ -34,14 +61,14 @@
     display: inline-block;
     padding: 1vw;
     flex-grow: 1;
-    max-width: 15vw;
+    max-width: 11vw;
     transition-property: transform, -webkit-transform, -ms-transform;
     transition-duration: .5s;
     &:hover {
       @include prefix(transform, scale(1.1) translateY(-15px), webkit ms);
     }
     @include tablet {
-      max-width: 14vw;
+      max-width: 8vw;
     }
     @include desktop {
       max-width: 7vw;
@@ -61,9 +88,11 @@ form {
     width: 50%;
     padding-top: 10px;
     margin: 0 auto;
+    @include button;
+    letter-spacing: 5px;
     &:hover {
       background: linear-gradient(130deg, rgba(246, 96, 164, 0.89), $secondary-color);
-      color: white;
+      color: white!important;
       border-color: white;
     }
   }
@@ -73,18 +102,36 @@ form {
     padding: 10px 0;
     label {
       color: #1c1a1b;
-        font-family: 'EB Garamond', serif;
+      font-family: 'EB Garamond', serif;
       letter-spacing: 5px;
       padding: 5px;
+      @include tablet {
+        font-size: 18px;
+      }
+      @include desktop {
+        font-size: 22px;
+      }
     }
     input, textarea {
+      outline: none;
       border: 2px solid #1c1a1b;
       padding: 5px;
       transition: border-color .3s;
       font-size: 1rem;
-        font-family: 'EB Garamond', serif;
-      &:hover, select {
-        border-color: $secondary-color;
+      font-family: 'EB Garamond', serif;
+      // &:hover,
+      // &:focus {
+      //   border-color: $primary-color;
+      // }
+      &:focus {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.86);
+      }
+      @include tablet {
+        font-size: 18px;
+      }
+      @include desktop {
+        font-size: 22px;
       }
     }
     textarea {
@@ -95,33 +142,4 @@ form {
       }
     }
   }
-  button {
-    @include button;
-    letter-spacing: 5px;
-  }
-}
-
-.confirmation,
-.error {
-  padding: 15px;
-  width: 80%;
-  border-radius: 30px;
-  background-color: $tertiary-color;
-  display: none;
-  color: white;
-  margin: 25px auto 0 auto;
-  transition:transform .4s;
-  transform:scale(0);
-  -webkit-transform:scale(0);
-  -ms-transform:scale(0);
-  h3 {
-    color: white;
-  }
-}
-
-#showSubmitResult {
-  display: block;
-  -webkit-transform:scale(1);
-  -ms-transform:scale(1);
-  transform:scale(1)
 }
