@@ -1,3 +1,9 @@
+
+$primary-color: rgba(246,96,164,1);
+$secondary-color: #fcab3a;
+$tertiary-color: pink;
+
+
 @mixin tablet {
   @media only screen and (min-width: 800px) {
     @content;
@@ -18,5 +24,55 @@
   }
   @include desktop {
     width: 40%;
+  }
+}
+
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+}
+
+@mixin button {
+  cursor: pointer;
+  border-radius: 30px;
+  font-family: 'EB Garamond', serif;
+  font-size: 22px;
+  padding: 10px 25px;
+  font-weight: 800;
+  color: white;
+  background-color: $tertiary-color;
+  border: 2px solid $tertiary-color;
+  outline: none;
+  transition: color, background-color, transform, -webkit-transform, -ms-transform, border, .3s;
+  &:hover {
+    //@include prefix(transform, scale(1.1), webkit ms);
+    background-color: white;
+    color: $tertiary-color;
+  }
+  &:hover a {
+    color: $secondary-color;
+  }
+  a {
+    transition: color .3s;
+    color: $primary-color;
+  }
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin IE10up {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+@mixin desktopIE10up {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) and (min-width: 900px) {
+    @content;
   }
 }

@@ -1,0 +1,98 @@
+@import '../../../scss/mixins.scss';
+
+.modal {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  padding-top: 60px;
+  @include flex-column;
+  text-align: center;
+  color: black;
+  font-family: 'EB Garamond', serif;
+  @include IE10up {
+    display: block;
+  }
+  i {
+    font-size: 40px;
+    color: $tertiary-color;
+    margin: 10px;
+    @include desktop {
+      font-size: 60px;
+    }
+  }
+  .fa-times-circle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  h2 {
+    font-size: 1.5rem;
+    font-family: 'La Belle Aurore', cursive;
+  }
+  img {
+    max-width: 100%;
+    @include desktop {
+      max-width: 85%;
+    }
+    // @include desktop {
+    //   max-width: 70%;
+    // }
+  }
+  @include tablet {
+    img#mobile {
+      max-width: 20%!important;
+    }
+  }
+}
+
+.modal-layout {
+  @include flex-column;
+  > div {
+    padding-bottom: 5vw;
+  }
+  button {
+    @include button;
+    @include desktop {
+      font-size: 26px;
+    }
+  }
+  @include tablet {
+    flex-direction: row;
+    padding: 2vw 5vw;
+    > div {
+      margin: 0 auto;
+    }
+  }
+  @include IE10up {
+    img {
+      width: 60vw;
+    }
+    p {
+      max-width: 100vw;
+    }
+  }
+  p {
+    width: 80%;
+    margin: 0 auto;
+    padding: 5vw 0;
+    @include tablet {
+      font-size: 18px;
+      padding: 2vw 0;
+    }
+    @include desktop {
+      width: 50%;
+    }
+  }
+  img {
+    @include desktop {
+      max-width: 1000px;
+    }
+  }
+  video {
+    width: 100%;
+  }
+}

@@ -1,0 +1,50 @@
+@import '../../scss/mixins.scss';
+
+.about-container {
+  text-align: center;
+  padding: 20vw 5vw;
+  background-image: linear-gradient(145deg, black 65%, #323232);
+  @include tablet {
+    padding: 10vw 15vw;
+  }
+  @include desktop {
+    padding: 5vw 15vw
+  }
+}
+
+.alignment {
+  @include flex-column;
+  @include desktop {
+    flex-direction: row;
+    justify-content: center;
+  }
+  img {
+    width: 35vw;
+    margin-bottom: 5vw;
+    border-radius: 50%;
+    @include desktop {
+      width: 18vw;
+      height: auto;
+      margin-right: 3vw;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+  h2 {
+    font-family: 'La Belle Aurore', cursive;
+    color: $primary-color;
+    font-size: 34px;
+  }
+  p {
+    padding: 0;
+    color: #dddddd;
+    width: 90%;
+    margin: 0 auto;
+    font-family: 'EB Garamond', serif;
+    line-height: 1.5;
+    font-size: 18px;
+  }
+  > div {
+    max-width: 600px;
+  }
+}

@@ -1,0 +1,42 @@
+@import '../../scss/mixins.scss';
+
+.portfolio-container {
+  width: 90%;
+  margin: 0 auto;
+  @include tablet {
+    width: 75%;
+  }
+  @include desktop {
+    width: 60%;
+  }
+    h2 {
+    font-family: 'La Belle Aurore', cursive;
+    text-align: center;
+    font-size: 34px;
+  }
+}
+
+#gallery {
+  padding-top: 25px;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  grid-gap: 5vw;
+  @include tablet {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+  @include desktop {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: auto;
+    grid-gap: 2vw;
+  }
+  @include IE10up {
+    position:relative;
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+}

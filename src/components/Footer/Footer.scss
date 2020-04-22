@@ -1,0 +1,94 @@
+
+@import '../../scss/mixins.scss';
+
+footer {
+  color: white;
+  background-image: url("../../images/keyboard.jpg"), linear-gradient(45deg, rgba(246, 96, 164, 0.89), $secondary-color);
+  background-blend-mode: soft-light;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  font-family: 'EB Garamond', serif;
+  a {
+    text-decoration: none;
+  }
+  @include desktop {
+    background-size: contain;
+  }
+  p {
+    display: inline;
+    padding: 0;
+  }
+  a {
+    color: white;
+    cursor: pointer;
+  }
+  > div {
+    width: 100%;
+    height: 100%;
+    padding: 6vh 0;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .copyright {
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 22px;
+  }
+  .source {
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 26px;
+    cursor: pointer;
+  }
+  @include IE10up {
+    background-image: url("../../images/keyboardIE.jpg");
+    background-attachment: scroll;
+    background-size: cover;
+  }
+}
+
+#second-line {
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  margin-left: 8vw;
+  margin-right: 8vw;
+}
+
+.footer-container {
+  @include flex-column;
+  justify-content: center;
+  height: 100%;
+  margin: 0 1vw;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  transtion: color .5s;
+  div a:hover .fab {
+    @include prefix(transform, scale(1.2) rotateY(360deg), webkit ms);
+    color: $secondary-color;
+  }
+  > div {
+    padding-top: 5px;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
+
+#computer {
+  font-size: 50px;
+  padding: 2vw;
+}
+
+.fab,
+#computer,
+.fas {
+  transition-property: all;
+  transition-duration: .5s;
+}
+
+.fab,
+.fas {
+  font-size: 1.5rem;
+  padding-right: 5px;
+}
