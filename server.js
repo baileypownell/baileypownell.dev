@@ -36,7 +36,7 @@ app.post('/contact', (request, response) => {
     from: `${email}`,
     to: `bailey.pownell@gmail.com`,
     subject: `Portolio Email from ${name}`,
-    html: `${message}`
+    html: `<h2>${name}, email: ${email} has sent you a message.</h2><p>${message}<p>`
   };
   transporter.sendMail(mailOptions, (err, res) => {
     if (err) {
