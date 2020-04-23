@@ -30,7 +30,7 @@ class Modal extends React.Component {
   }
 
   increment = () => {
-    if (this.state.place === this.state.textblurbs.length-1) {
+    if (this.state.place === this.state.images.length-1) {
       this.setState({
         place: 0
       })
@@ -49,9 +49,20 @@ class Modal extends React.Component {
         <div className="modal-layout">
           <i className="fas fa-chevron-circle-left" onClick={this.decrement}></i>
           <div>
-            <img src={this.state.images[this.state.place]}/>
-            <p>{this.state.textblurbs[this.state.place]}</p>
-            {this.props.prod_link ? <a href={this.props.prod_link}><button>Visit Web App</button></a> : null}
+            {this.props.video && this.state.place === this.state.images.length-1 ?
+              <>
+                <video muted controls >
+                  <source src={this.props.video} type="video/mp4" ></source>
+                </video>
+                <p>Video demonstration</p>
+              </>
+              :
+              <>
+              <img src={this.state.images[this.state.place]}/>
+              <p>{this.state.textblurbs[this.state.place]}</p>
+                {this.props.prod_link && this.state.place === 0 ? <a href={this.props.prod_link}><button>Visit Web App</button></a> : null}
+              </>
+           }
           </div>
           <i className="fas fa-chevron-circle-right" onClick={this.increment}></i>
         </div>

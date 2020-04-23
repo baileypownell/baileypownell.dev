@@ -1,14 +1,36 @@
 import React from 'react';
 
+import github from '../../images/githublogo.png';
+import treehouse from '../../images/Treehouse-Logo.png';
+import linkedin from '../../images/linkedin.png';
+import codepen from '../../images/codepen.png';
+import resume from '../../images/resume.png';
+
 import './Contact.scss';
 
 class Contact extends React.Component {
+
+  fadeInElements = () => {
+    let fadedElements = document.querySelectorAll('.faded');
+    for (let i = 0; i < fadedElements.length; i++) {
+      let introPos = fadedElements[i].getBoundingClientRect().top;
+      let screenPos = window.innerHeight/1.2;
+      if (introPos < screenPos ) {
+        fadedElements[i].classList.add('fade-in');
+      }
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.fadeInElements)
+  }
 
   state = {
     name: '',
     email: '',
     message: '',
-    error: ''
+    error: '',
+    submissionMessage: ''
   }
 
   updateInput = (e) => {
@@ -28,12 +50,15 @@ class Contact extends React.Component {
       };
       fetch('/contact', {
         method: 'POST',
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
       })
       .then(res => {
         console.log('the result is: ', res);
         if (res.ok === true) {
-
+          this.setState({
+            submissionMessage: 'Your email has been sent successfully.'
+          })
         } else {
           this.setState({
             error: 'There has been an error.'
@@ -56,20 +81,20 @@ class Contact extends React.Component {
       <h2>Contact</h2>
       <div class="contact-container">
 
-      <div>
+      <div className="faded">
         <div id="call">
           <h3 class="moved-left">Hiring?</h3>
           <h3>Let's get in touch.</h3>
         </div>
           <div class="contact-links">
-            <a href="https://github.com/baileypownell" target="_blank"><img class="logo" src="images/githublogo.png" alt="Github logo"/></a>
-            <a href="https://teamtreehouse.com/baileypownell" target="_blank"><img class="logo" src="images/Treehouse-Logo.png" alt="Treehouse logo"/></a>
-            <a href="https://www.linkedin.com/in/bailey-pownell-224606167/" target="_blank"><img class="logo" src="images/linkedin.png" alt="LinkedIn logo"/></a>
-            <a href="https://codepen.io/baileypownell/" target="_blank"><img class="logo" src="images/codepen.png" alt="Codepen logo"/></a>
-            <a href="bpownell_resume.pdf" target="_blank"><img class="logo" src="images/resume.png" alt="resume"/></a>
+            <a href="https://github.com/baileypownell" target="_blank"><img class="logo" src={github} alt="Github logo"/></a>
+            <a href="https://teamtreehouse.com/baileypownell" target="_blank"><img class="logo" src={treehouse} alt="Treehouse logo"/></a>
+            <a href="https://www.linkedin.com/in/bailey-pownell-224606167/" target="_blank"><img class="logo" src={linkedin} alt="LinkedIn logo"/></a>
+            <a href="https://codepen.io/baileypownell/" target="_blank"><img class="logo" src={codepen} alt="Codepen logo"/></a>
+            <a href="bpownell_resume.pdf" target="_blank"><img class="logo" src={resume} alt="resume"/></a>
           </div>
         </div>
-        <form onSubmit={this.sendEmail}>
+        <form className="faded" onSubmit={this.sendEmail}>
             <div>
               <label>NAME</label>
               <input type="text" id="name" name="name" required onChange={this.updateInput}></input>
@@ -85,6 +110,9 @@ class Contact extends React.Component {
             <button type="submit">SUBMIT</button>
             {this.state.error.length > 1 ?
               <p>{this.state.error}</p>
+            : null}
+            {this.state.submissionMessage.length > 1 ?
+            <p>{this.state.submissionMessage}</p>
             : null}
           </form>
       </div>

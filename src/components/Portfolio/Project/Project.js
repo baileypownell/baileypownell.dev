@@ -2,6 +2,11 @@ import React from 'react';
 import Modal from '../Modal/Modal';
 import RWT from '../../../images/userinterface.jpg';
 import VC from '../../../images/VChomescreen.png';
+import MF from '../../../images/millsFarmsHome.jpg';
+import WA from '../../../images/weather.png';
+import ISBA from '../../../images/ISBA.jpg';
+import BW from '../../../images/3bdhome.jpg';
+import MP from '../../../images/mealPicker.jpg';
 import './Project.scss';
 
 class Project extends React.Component {
@@ -24,11 +29,41 @@ class Project extends React.Component {
         this.setState({
           background_image: RWT
         })
-        return;
+        break;
       case 'Virtual Cookbook SPA':
         this.setState({
           background_image: VC
         })
+        break;
+      case 'Sample Beef Farm site':
+        this.setState({
+          background_image: MF
+        });
+        break;
+      case 'Local Weather App':
+        this.setState({
+          background_image: WA
+        });
+      break;
+      case 'Redesign of the Indiana State Bar website':
+        this.setState({
+          background_image: ISBA
+        });
+      break;
+      case 'Band Website':
+        this.setState({
+          background_image: BW
+        });
+      break;
+      case 'Meal Picker App':
+        this.setState({
+          background_image: MP
+        });
+      break;
+      default:
+        this.setState({
+          background_image: VC
+        });
         return;
     }
   }
@@ -61,11 +96,11 @@ class Project extends React.Component {
 
 
   render() {
-    const { github_link, background_image, open, name, images, textblurbs, prod_link } = this.state;
+    const { github_link, background_image, open, name, images, textblurbs, prod_link, video } = this.state;
 
     return (
       <>
-      <div className="parent">
+      <div className="parent fade">
         <div className="website" style={{ backgroundImage: `url(${background_image})`}}></div>
           <div className="darken">
             <div className="information-banner">
@@ -76,6 +111,7 @@ class Project extends React.Component {
       </div>
       {open ?
         <Modal
+          video={video}
           title={name}
           images={images}
           textblurbs={textblurbs}

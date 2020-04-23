@@ -1,7 +1,7 @@
 
-$primary-color: #f66088;
-$secondary-color: #fcab3a;
-$tertiary-color: pink;
+$primary-color: #F6738C;
+$secondary-color: #FFA048;
+$tertiary-color: #F6738C;
 
 
 @mixin tablet {
@@ -75,4 +75,28 @@ $tertiary-color: pink;
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) and (min-width: 900px) {
     @content;
   }
+}
+
+
+// fade effects
+.faded {
+  opacity: 0;
+  transform: translateY(30px);
+  transition-property: translate opacity;
+  transition-duration: 1s;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.opaque {
+  opacity: 0;
+  transition-property: translate opacity;
+  transition-duration: 1s;
+}
+
+.full {
+  opacity: 1;
 }

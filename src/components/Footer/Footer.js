@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import './Footer.scss';
 
 const Footer = () => {
+
+  useEffect(() => {
+    const fadeFooter = () => {
+      const footer = document.querySelector('footer>div');
+      let scrolled = window.pageYOffset;
+      footer.style.backgroundColor = 'rgba(0, 0, 0, ' + (document.body.offsetHeight-(window.innerHeight+window.pageYOffset))/500 + ')';
+    }
+    window.addEventListener('scroll', fadeFooter);
+  })
+
+
     return (
       <footer id="footer">
-        <div>
+        <div style={{ backgroundColor: 'rgba(0, 0, 0, 0)'}}>
           <div id="second-line">
             <div class="footer-container">
 
@@ -36,6 +47,9 @@ const Footer = () => {
         </div>
       </footer>
     )
+
+
+
 }
 
 export default Footer;

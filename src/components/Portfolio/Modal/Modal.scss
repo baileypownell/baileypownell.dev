@@ -18,10 +18,12 @@
   }
   i {
     font-size: 40px;
-    color: $tertiary-color;
+    color: pink;
     margin: 10px;
-    @include desktop {
-      font-size: 60px;
+    cursor: pointer;
+    transition: transform .3s;
+    &:hover {
+      transform: scale(1.08);
     }
   }
   .fa-times-circle {
@@ -79,6 +81,7 @@
     width: 80%;
     margin: 0 auto;
     padding: 5vw 0;
+    line-height: 1.5;
     @include tablet {
       font-size: 18px;
       padding: 2vw 0;
