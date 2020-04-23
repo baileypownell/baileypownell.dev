@@ -51,7 +51,8 @@ nav {
 
 .nav {
   position: fixed;
-  backdrop-filter: blur(4px) brightness(150%);
+  backdrop-filter: blur(8px) brightness(150%);
+  z-index: 2000;
   width: 100%;
   padding: 10px;
   text-align: right;
