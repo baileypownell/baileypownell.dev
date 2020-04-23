@@ -1,3 +1,4 @@
+require('dotenv').config()
 const path = require('path');
 const express = require('express');
 var bodyParser = require('body-parser');
@@ -23,6 +24,7 @@ app.get('/bpownell_resume.pdf', (req, res) => {
 
 app.post('/contact', (request, response) => {
   const { name, email, message } = request.body;
+  console.log(`${process.env.SENDGRID_USERNAME}`, `${process.env.SENDGRID_PASSWORD}`)
 
   const transporter = nodemailer.createTransport(sgTransport({
       service: 'SendGrid',
@@ -50,6 +52,7 @@ app.get('*', (req, res) => {
 });
 
 app.listen(port, () => {
+  console.log(`${process.env.SENDGRID_USERNAME}`, `${process.env.SENDGRID_PASSWORD}`)
   console.log('project up on port', port)
 })
 
