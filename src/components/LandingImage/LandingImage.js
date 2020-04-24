@@ -19,7 +19,7 @@ class LandingImage extends React.Component {
 
   componentDidMount() {
     setTimeout(() => {
-      this.fadeInElements
+      this.fadeInElements()
     }, 700);
   }
 

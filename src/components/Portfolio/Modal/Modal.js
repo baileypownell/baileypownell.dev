@@ -16,12 +16,12 @@ class Modal extends React.Component {
       images: this.props.images
     });
     // hide nav
-    let nav = Array.from(document.querySelector('.nav'))[0];
+    let nav = document.querySelector('.nav');
     nav.style.display = 'none';
   }
 
   componentWillUnmount() {
-    let nav = Array.from(document.querySelector('.nav'))[0];
+    let nav = document.querySelector('.nav');
     nav.style.display = 'block';
   }
 

@@ -38,9 +38,11 @@ nav {
     top: 15px;
     position: absolute;
     cursor: pointer;
-    margin-right: 30px;
     &:hover {
       color: $primary-color;
+    }
+    @include tablet {
+      margin-right: 30px;
     }
   }
 }
