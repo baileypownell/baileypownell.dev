@@ -31,7 +31,7 @@ class Porfolio extends React.Component {
             name="React Weight Tracker Web App"
             github_link="https://github.com/baileypownell/React-Weight-Tracker-SPA"
             prod_link="https://weight-tracker-react.herokuapp.com/"
-            images={["images/homescreen.png", "images/userinterface.png", "images/mobile.png", "images/demonstration_RWT.mp4"]}
+            images={["images/homescreen.PNG", "images/userinterface.PNG", "images/mobile.PNG", "images/demonstration_RWT.mp4"]}
             video="images/demonstration_RWT.mp4"
             textblurbs={[
               `I built this single-page web app not because I thought I could build a better program than the already-existing weight trackers, but because I wanted to use React and Firebase to build a full-stack CRUD application, complete with authentication. This project really pushed the boundaries of what I knew, and was the first project I deployed with heroku.`,
@@ -93,7 +93,7 @@ class Porfolio extends React.Component {
           <Project
             name="Meal Picker App"
             github_link="https://github.com/baileypownell/Meal-Picker-React-App"
-            images={["images/mealPicker.jpg", "images/mealPicker.mp4"]}
+            images={["images/meal-picker.PNG", "images/mealPicker.mp4"]}
             textblurbs={[
               `This SPA is built with React. It uses an API to return recipes that match the parameters you give it, such as the type of food, which is optional, and as many ingredients as you would like.`
             ]}
