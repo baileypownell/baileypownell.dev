@@ -6,7 +6,7 @@ import MF from '../../../images/millsFarmsHome.jpg';
 import WA from '../../../images/weather.png';
 import ISBA from '../../../images/ISBA.jpg';
 import BW from '../../../images/3bdhome.jpg';
-import MP from '../../../images/meal-picker.png';
+import MP from '../../../images/meal-picker.PNG';
 import './Project.scss';
 
 class Project extends React.Component {

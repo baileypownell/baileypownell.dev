@@ -33,7 +33,7 @@ app.post('/contact', (request, response) => {
       api_key: `${process.env.SENDGRID_PASSWORD}`
   }}));
   const mailOptions = {
-    from: `${email}`,
+    from: `bailey.pownell@gmail.com`,
     to: `bailey.pownell@gmail.com`,
     subject: `Portolio Email from ${name}`,
     html: `<h2>${name}, email: ${email} has sent you a message.</h2><p>${message}<p>`

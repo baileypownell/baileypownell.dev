@@ -31,7 +31,7 @@ return {
         ],
       },
       {
-         test: /\.(png|svg|jpg|gif)$/,
+         test: /\.(png|svg|jpg|gif|PNG)$/,
          use: [
            'file-loader',
          ],
