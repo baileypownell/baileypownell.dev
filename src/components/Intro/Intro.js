@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import postgres from '../../images/postgresql.png';
+import heroku from '../../images/heroku.svg';
 import './Intro.scss';
 
 const Intro = () => {
@@ -16,6 +17,7 @@ const Intro = () => {
       <i className="fab fa-node "></i>
       <i className="fab fa-git-square "></i>
       <img src={postgres} alt="postgreSQL" />
+      <img src={heroku} alt="heroku" />
     </div>
   )
 }
