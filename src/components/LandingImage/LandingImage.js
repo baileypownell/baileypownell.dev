@@ -18,7 +18,9 @@ class LandingImage extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.fadeInElements)
+    setTimeout(() => {
+      this.fadeInElements
+    }, 700);
   }
 
   render() {

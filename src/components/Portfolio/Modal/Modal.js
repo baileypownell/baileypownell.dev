@@ -14,7 +14,15 @@ class Modal extends React.Component {
     this.setState({
       textblurbs: this.props.textblurbs,
       images: this.props.images
-    })
+    });
+    // hide nav
+    let nav = Array.from(document.querySelector('.nav'))[0];
+    nav.style.display = 'none';
+  }
+
+  componentWillUnmount() {
+    let nav = Array.from(document.querySelector('.nav'))[0];
+    nav.style.display = 'block';
   }
 
   decrement = () => {
