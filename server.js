@@ -23,16 +23,64 @@ app.get('/bpownell_resume.pdf', (req, res) => {
 });
 
 app.get('/udemy_certs', (req, res) => {
-  let filesArray = []
-  fs.readdir('./udemy_certs', (err, files) => {
-    files.forEach(file => {
-      filesArray.push(file)
-    })
-    res.send(filesArray)
-  });
-  // res.contentType("application/pdf");
-  // res.send(data);
+  // let filesArray = []
+  // fs.readdir('./udemy_certs', (err, files) => {
+  //   files.forEach(file => {
+  //     filesArray.push(file)
+  //   })
+  //   res.send(filesArray)
+  // });
+  
+  let udemy_certs = [
+    {
+      title: "Complete React Developer Course",
+      link: "UC-3SA9KV1T.pdf"
+    }, 
+    {
+      title: "Learn Database Design with MySQL",
+      link: "UC-7UX53JNK.jpg"
+    }, 
+    {
+      title: "100 Algorithms Challenge",
+      link: "UC-9J835G6E.pdf"
+    }, 
+    {
+      title: "Advanced JavaScript Concepts",
+      link: "UC-17LFFRO3.jpg"
+    },
+    {
+      title: "Node, SQL, & PostgreSQL - Mastering Backend Web Development", 
+      link: "UC-bbb6f811-bb95-4309-8f3a-6e6fbd7ad71d.jpg"
+    }, 
+    {
+      title: "Git Going Fast: One Hour of Git Crash Course",
+      link: "UC-D7BODFLQ.pdf"
+    },
+    {
+      title: "React - The Complete Guide",
+      link: "UC-Q4O7GA4H.pdf"
+    },
+    {
+      title: "JavaScript 360: Complete Introduction to EcmaScript",
+      link: "UC-R5BSRG94.pdf"
+    }
+  ]
+  res.send(udemy_certs);
 });
+
+app.get('/udemy_certs/:link', (request, response) => {
+  const { link } = request.params;
+  let contentType;
+  let content_type = link.split('.')[1];
+  if (content_type === 'pdf') {
+    contentType = "application/pdf";
+  } else if (content_type === 'jpg') {
+    contentType = "jpeg";
+  }
+  var data = fs.readFileSync(`./udemy_certs/${link}`);
+  response.contentType(contentType);
+  response.send(data);
+})
 
 app.post('/contact', (request, response) => {
   const { name, email, message } = request.body;
