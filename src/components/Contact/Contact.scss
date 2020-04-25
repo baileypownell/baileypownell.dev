@@ -91,7 +91,7 @@ form {
   width: 90%;
   margin: 0 auto;
   button {
-    width: 50%;
+    width: 100%;
     padding-top: 10px;
     margin: 0 auto;
     @include button;
@@ -101,6 +101,9 @@ form {
       background: linear-gradient(130deg, rgba(246, 96, 164, 0.89), $secondary-color);
       color: white!important;
       border: none;
+    }
+    @include tablet {
+      width: 50%;
     }
   }
   > div {
