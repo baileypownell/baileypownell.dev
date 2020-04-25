@@ -22,9 +22,20 @@ app.get('/bpownell_resume.pdf', (req, res) => {
   res.send(data);
 });
 
+app.get('/udemy_certs', (req, res) => {
+  let filesArray = []
+  fs.readdir('./udemy_certs', (err, files) => {
+    files.forEach(file => {
+      filesArray.push(file)
+    })
+    res.send(filesArray)
+  });
+  // res.contentType("application/pdf");
+  // res.send(data);
+});
+
 app.post('/contact', (request, response) => {
   const { name, email, message } = request.body;
-  console.log(`${process.env.SENDGRID_USERNAME}`, `${process.env.SENDGRID_PASSWORD}`)
 
   const transporter = nodemailer.createTransport(sgTransport({
       service: 'SendGrid',
