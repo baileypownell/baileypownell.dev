@@ -34,35 +34,43 @@ app.get('/udemy_certs', (req, res) => {
   let udemy_certs = [
     {
       title: "Complete React Developer Course",
-      link: "UC-3SA9KV1T.pdf"
+      link: "UC-3SA9KV1T.pdf",
+      issued: "Dec. 20, 2019"
     }, 
     {
       title: "Learn Database Design with MySQL",
-      link: "UC-7UX53JNK.jpg"
+      link: "UC-7UX53JNK.jpg",
+      issued: "Sept. 1, 2019"
     }, 
     {
       title: "100 Algorithms Challenge",
-      link: "UC-9J835G6E.pdf"
+      link: "UC-9J835G6E.pdf",
+      issued: "June 4, 2019"
     }, 
     {
       title: "Advanced JavaScript Concepts",
-      link: "UC-17LFFRO3.jpg"
+      link: "UC-17LFFRO3.jpg",
+      issued: "Oct. 4, 2019"
     },
     {
       title: "Node, SQL, & PostgreSQL - Mastering Backend Web Development", 
-      link: "UC-bbb6f811-bb95-4309-8f3a-6e6fbd7ad71d.jpg"
+      link: "UC-bbb6f811-bb95-4309-8f3a-6e6fbd7ad71d.jpg",
+      issued: "April 2, 2020"
     }, 
     {
       title: "Git Going Fast: One Hour of Git Crash Course",
-      link: "UC-D7BODFLQ.pdf"
+      link: "UC-D7BODFLQ.pdf",
+      issued: "June 4, 2019"
     },
     {
       title: "React - The Complete Guide",
-      link: "UC-Q4O7GA4H.pdf"
+      link: "UC-Q4O7GA4H.pdf",
+      issued: "Dec. 7, 2019"
     },
     {
       title: "JavaScript 360: Complete Introduction to EcmaScript",
-      link: "UC-R5BSRG94.pdf"
+      link: "UC-R5BSRG94.pdf",
+      issued: "April 9, 2019"
     }
   ]
   res.send(udemy_certs);
