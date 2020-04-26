@@ -21,8 +21,8 @@
   img {
     position: absolute;
     left: 10vw;
-    bottom: 15vw;
-    width: 50vw;
+    bottom: 10vw;
+    width: 40vw;
     @include tablet {
       width: 30vw;
       left: 15vw;
@@ -46,7 +46,7 @@
   h1 {
     font-family: 'EB Garamond', serif;
     color: white;
-    font-size: 55px;
+    font-size: 40px;
     margin: 0;
     @include tablet {
       font-size: 75px;
