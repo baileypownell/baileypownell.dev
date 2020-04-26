@@ -6,6 +6,7 @@ import linkedin from '../../images/linkedin.png';
 import codepen from '../../images/codepen.png';
 import resume from '../../images/resume.png';
 
+
 import './Contact.scss';
 
 class Contact extends React.Component {
@@ -30,7 +31,8 @@ class Contact extends React.Component {
     email: '',
     message: '',
     error: '',
-    submissionMessage: ''
+    submissionMessage: '',
+    sending: false
   }
 
   updateInput = (e) => {
@@ -41,6 +43,9 @@ class Contact extends React.Component {
 
   sendEmail = (e) => {
     const { name, email, message } = this.state;
+    this.setState({
+      sending: true
+    })
     e.preventDefault();
     if (name, email, message) {
       let payload = {
@@ -58,15 +63,22 @@ class Contact extends React.Component {
         if (res.ok === true) {
           this.setState({
             submissionMessage: 'Your email has been sent successfully.'
+          });
+          this.setState({
+            sending: false
           })
         } else {
           this.setState({
-            error: 'There has been an error.'
+            error: 'There has been an error.',
+            sending: false
           })
         }
       })
       .catch(err => {
-        console.log('there was an error', err)
+        console.log('there was an error', err);
+        this.setState({
+          sending: false
+        })
       })
     } else {
       this.setState({
@@ -107,7 +119,9 @@ class Contact extends React.Component {
               <label>MESSAGE</label>
               <textarea id="message" name="message" required maxlength="700" onChange={this.updateInput}></textarea>
             </div>
-            <button type="submit">SUBMIT</button>
+            <button type="submit">
+              SUBMIT
+            </button>
             {this.state.error.length > 1 ?
               <p>{this.state.error}</p>
             : null}

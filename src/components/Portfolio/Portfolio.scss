@@ -7,9 +7,6 @@
   @include tablet {
     width: 75%;
   }
-  @include desktop {
-    width: 60%;
-  }
     h2 {
     font-family: 'La Belle Aurore', cursive;
     text-align: center;
@@ -32,8 +29,8 @@
     grid-template-columns: 1fr 1fr;
   }
   @include desktop {
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
     grid-gap: 2vw;
   }
   @include IE10up {

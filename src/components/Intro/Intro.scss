@@ -37,7 +37,7 @@
     align-items: center;
     padding: 5px 10px;
     margin: 5px;
-    min-height: 80px;
+    min-height: 60px;
     transition: background-color .4s;
     &:hover {
       background: $primary-color;
@@ -47,6 +47,7 @@
     }
     @include tablet {
       justify-content: left;
+      min-height: 0px;
     }
     img {
       @include tablet {

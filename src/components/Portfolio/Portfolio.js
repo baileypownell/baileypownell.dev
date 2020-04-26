@@ -51,15 +51,23 @@ class Porfolio extends React.Component {
             ]}
           />
           <Project
-            name="Sample Beef Farm site"
-            github_link="https://github.com/baileypownell/Mills-Farms"
-            images={["images/millsFarmsHome.jpg", "images/millsFarmsContact.jpg", "images/millsFarmsAbout.jpg", "images/millsFarms.mp4"]}
-            video="images/millsFarms.mp4"
+            name="Band Website"
+            github_link="https://github.com/baileypownell/3-Beers-Deep"
+            images={["images/3bdhome.jpg", "images/3bddemo.mp4"]}
             textblurbs={[
-              `This is a sample small-business beef farm website. The purpose here was to integrate a Facebook feed, configure XAMPP to test the contact form, build a hamburger menu for mobile view, and integrate a brand logo.`,
-              `Contact page.`,
-              `About page.`
+              `This is a single-page website built with vanilla javascript and SASS, bundled with webpack and Babel for browser compatibility. It includes parallax effects and spotify player integration.`
             ]}
+            video="images/3bddemo.mp4"
+          />
+          <Project
+            name="Meal Picker App"
+            github_link="https://github.com/baileypownell/Meal-Picker-React-App"
+            images={["images/meal-picker.PNG", "images/mealPicker.mp4"]}
+            textblurbs={[
+              `This SPA is built with React. It uses an API to return recipes that match the parameters you give it, such as the type of food, which is optional, and as many ingredients as you would like.`
+            ]}
+            video="images/mealPicker.mp4"
+            prod_link="https://meal-picker-app.herokuapp.com/"
           />
           <Project
             name="Local Weather App"
@@ -81,25 +89,7 @@ class Porfolio extends React.Component {
             ]}
             video="images/isba.mp4"
           />
-          <Project
-            name="Band Website"
-            github_link="https://github.com/baileypownell/3-Beers-Deep"
-            images={["images/3bdhome.jpg", "images/3bddemo.mp4"]}
-            textblurbs={[
-              `This is a single-page website built with vanilla javascript and SASS, bundled with webpack and Babel for browser compatibility. It includes parallax effects and spotify player integration.`
-            ]}
-            video="images/3bddemo.mp4"
-          />
-          <Project
-            name="Meal Picker App"
-            github_link="https://github.com/baileypownell/Meal-Picker-React-App"
-            images={["images/meal-picker.PNG", "images/mealPicker.mp4"]}
-            textblurbs={[
-              `This SPA is built with React. It uses an API to return recipes that match the parameters you give it, such as the type of food, which is optional, and as many ingredients as you would like.`
-            ]}
-            video="images/mealPicker.mp4"
-            prod_link="https://meal-picker-app.herokuapp.com/"
-          />
+          
         <a name="about"></a>
         </div>
       </div>
