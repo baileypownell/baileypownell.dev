@@ -21,7 +21,7 @@ const Intro = () => {
   return (
     <div className="intro">
       <p className="faded">
-        I develop mobile-first and fully responsive websites and web applications. My passion is giving the user a stress-free and fun experience, and I use fundamental SEO standards, ES6+ JavaScript, and the latest and most supporte CSS capabilities to get there. My go-to stack: PERN (PostgreSQL, Express, React, & Node).
+        I develop mobile-first and fully responsive applications, using for the front end, Node.js/PostgreSQL on the back end, and connecting the two with RESTful API's.
       </p>
       <h2 className="faded">My favorite technologies</h2>
       <i className="fab fa-html5"></i>
