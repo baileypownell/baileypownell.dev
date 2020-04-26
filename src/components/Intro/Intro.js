@@ -12,7 +12,6 @@ const Intro = () => {
        return response.json();
     })
     .then((data) => {
-      //certifications = data;
       setCertifications(data)
     })
     .catch((err) => {

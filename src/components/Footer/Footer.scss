@@ -14,9 +14,9 @@ footer {
   a {
     text-decoration: none;
   }
-  @include desktop {
-    background-size: contain;
-  }
+  // @include desktop {
+  //   background-size: contain;
+  // }
   p {
     display: inline;
     padding: 0;
