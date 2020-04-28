@@ -24,15 +24,18 @@ const Intro = () => {
         I develop mobile-first and fully responsive applications, using React for the front end, Node.js/PostgreSQL on the back end, and connecting the two with RESTful API's.
       </p>
       <h2 className="faded">My favorite technologies</h2>
-      <i className="fab fa-html5"></i>
-      <i className="fab fa-css3-alt "></i>
-      <i class="fab fa-sass"></i>
-      <i className="fab fa-js "></i>
-      <i className="fab fa-react "></i>
-      <i className="fab fa-node "></i>
-      <i className="fab fa-git-square "></i>
-      <img src={postgres} alt="postgreSQL" />
-      <img src={heroku} alt="heroku" />
+      <div className="tech">
+        <i className="fab fa-html5"></i>
+        <i className="fab fa-css3-alt "></i>
+        <i class="fab fa-sass"></i>
+        <i className="fab fa-js "></i>
+        <i className="fab fa-react "></i>
+        <i className="fab fa-node "></i>
+        <i className="fab fa-git-square "></i>
+        <img src={postgres} alt="postgreSQL" />
+        <img src={heroku} alt="heroku" />
+      </div>
+      
       <div style={{ paddingTop: `4vw`}}>
         <h2 className="faded">Udemy Certificates</h2>
         <div className="faded certifications">
