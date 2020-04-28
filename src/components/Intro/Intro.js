@@ -21,11 +21,12 @@ const Intro = () => {
   return (
     <div className="intro">
       <p className="faded">
-        I develop mobile-first and fully responsive applications, using for the front end, Node.js/PostgreSQL on the back end, and connecting the two with RESTful API's.
+        I develop mobile-first and fully responsive applications, using React for the front end, Node.js/PostgreSQL on the back end, and connecting the two with RESTful API's.
       </p>
       <h2 className="faded">My favorite technologies</h2>
       <i className="fab fa-html5"></i>
       <i className="fab fa-css3-alt "></i>
+      <i class="fab fa-sass"></i>
       <i className="fab fa-js "></i>
       <i className="fab fa-react "></i>
       <i className="fab fa-node "></i>
