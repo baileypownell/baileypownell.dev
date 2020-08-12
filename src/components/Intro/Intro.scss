@@ -27,6 +27,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    a:last-child {
+        width: 100%;
+    }
   }
   .udemy {
     background-color: white;
@@ -45,9 +48,7 @@
     &:hover p {
       color: white;
     }
-    &:last-child {
-      width: 100%;
-    }
+    
     @include tablet {
       justify-content: left;
       min-height: 0px;
