@@ -45,6 +45,9 @@
     &:hover p {
       color: white;
     }
+    &:last-child {
+      width: 100%;
+    }
     @include tablet {
       justify-content: left;
       min-height: 0px;
