@@ -27,7 +27,7 @@ const Intro = () => {
       <div className="tech">
         <i className="fab fa-html5"></i>
         <i className="fab fa-css3-alt "></i>
-        <i class="fab fa-sass"></i>
+        <i className="fab fa-sass"></i>
         <i className="fab fa-js "></i>
         <i className="fab fa-react "></i>
         <i className="fab fa-node "></i>

@@ -91,19 +91,19 @@ class Contact extends React.Component {
     return (
       <div className="contact">
       <h2>Contact</h2>
-      <div class="contact-container">
+      <div className="contact-container">
 
       <div className="faded">
         <div id="call">
-          <h3 class="moved-left">Hiring?</h3>
+          <h3 className="moved-left">Hiring?</h3>
           <h3>Let's get in touch.</h3>
         </div>
-          <div class="contact-links">
-            <a href="https://github.com/baileypownell" target="_blank"><img class="logo" src={github} alt="Github logo"/></a>
-            <a href="https://teamtreehouse.com/baileypownell" target="_blank"><img class="logo" src={treehouse} alt="Treehouse logo"/></a>
-            <a href="https://www.linkedin.com/in/bailey-pownell-224606167/" target="_blank"><img class="logo" src={linkedin} alt="LinkedIn logo"/></a>
-            <a href="https://codepen.io/baileypownell/" target="_blank"><img class="logo" src={codepen} alt="Codepen logo"/></a>
-            <a href="bpownell_resume.pdf" target="_blank"><img class="logo" src={resume} alt="resume"/></a>
+          <div className="contact-links">
+            <a href="https://github.com/baileypownell" target="_blank"><img className="logo" src={github} alt="Github logo"/></a>
+            <a href="https://teamtreehouse.com/baileypownell" target="_blank"><img className="logo" src={treehouse} alt="Treehouse logo"/></a>
+            <a href="https://www.linkedin.com/in/bailey-pownell-224606167/" target="_blank"><img className="logo" src={linkedin} alt="LinkedIn logo"/></a>
+            <a href="https://codepen.io/baileypownell/" target="_blank"><img className="logo" src={codepen} alt="Codepen logo"/></a>
+            <a href="bpownell_resume.pdf" target="_blank"><img className="logo" src={resume} alt="resume"/></a>
           </div>
         </div>
         <form className="faded" onSubmit={this.sendEmail}>
@@ -117,7 +117,7 @@ class Contact extends React.Component {
             </div>
             <div>
               <label>MESSAGE</label>
-              <textarea id="message" name="message" required maxlength="700" onChange={this.updateInput}></textarea>
+              <textarea id="message" name="message" required maxLength="700" onChange={this.updateInput}></textarea>
             </div>
             <button type="submit">
               SUBMIT

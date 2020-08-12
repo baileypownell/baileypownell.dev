@@ -23,14 +23,7 @@ app.get('/bpownell_resume.pdf', (req, res) => {
 });
 
 app.get('/udemy_certs', (req, res) => {
-  // let filesArray = []
-  // fs.readdir('./udemy_certs', (err, files) => {
-  //   files.forEach(file => {
-  //     filesArray.push(file)
-  //   })
-  //   res.send(filesArray)
-  // });
-  
+  console.log('here')
   let udemy_certs = [
     {
       title: "Complete React Developer Course",
@@ -71,6 +64,11 @@ app.get('/udemy_certs', (req, res) => {
       title: "JavaScript 360: Complete Introduction to EcmaScript",
       link: "UC-R5BSRG94.pdf",
       issued: "April 9, 2019"
+    },
+    {
+      title: "Angular - The Complete Guide (2020 Edition)",
+      link: "UC-1a52642d-5cf0-446b-9afd-c5ce977ac91a.pdf",
+      issued: "August 6, 2020"
     }
   ]
   res.send(udemy_certs);
@@ -78,6 +76,7 @@ app.get('/udemy_certs', (req, res) => {
 
 app.get('/udemy_certs/:link', (request, response) => {
   const { link } = request.params;
+  console.log('link = ', link)
   let contentType;
   let content_type = link.split('.')[1];
   if (content_type === 'pdf') {
@@ -119,7 +118,6 @@ app.get('*', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`${process.env.SENDGRID_USERNAME}`, `${process.env.SENDGRID_PASSWORD}`)
   console.log('project up on port', port)
 })
 

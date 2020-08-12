@@ -23,7 +23,7 @@
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 1fr;
-  grid-gap: 5vw;
+  grid-gap: 3vw;
   @include tablet {
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
@@ -39,6 +39,12 @@
       content: "";
       display: table;
       clear: both;
+    }
+  }
+  .parent:first-child {
+    @include tablet {
+      grid-column-end: 3;
+      grid-column-start: 1;
     }
   }
 }
