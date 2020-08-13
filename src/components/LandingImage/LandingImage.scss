@@ -44,7 +44,8 @@
     margin-bottom: 5vh;
   }
   h1 {
-    font-family: 'EB Garamond', serif;
+    //font-family: 'EB Garamond', serif;
+    font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 40px;
     margin: 0;
@@ -68,7 +69,8 @@
     color: white;
     margin-bottom: 5px;
     margin-top: 0;
-    font-family: 'EB Garamond', serif;
+    //font-family: 'EB Garamond', serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 25px;
     @include desktop {
       font-size: 35px;

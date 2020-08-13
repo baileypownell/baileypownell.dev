@@ -104,7 +104,7 @@ class Project extends React.Component {
         <div className="website" style={{ backgroundImage: `url(${background_image})`}}></div>
           <div className="darken">
             <div className="information-banner">
-              <button><a href={github_link} target="_blank">See the Code</a></button>
+              <button><a href={github_link} target="_blank">View Source Code</a></button>
               <button className="modalBtn" onClick={this.toggleModal}>Learn More</button>
           </div>
         </div>

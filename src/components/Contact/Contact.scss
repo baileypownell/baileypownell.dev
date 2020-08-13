@@ -39,7 +39,8 @@
   }
   h3 {
     color: black;
-    font-family: 'EB Garamond', serif;
+    //font-family: 'EB Garamond', serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 5px 0;
     @include tablet {
@@ -79,7 +80,7 @@
     @include desktop {
       max-width: 5vw;
       &:hover {
-        @include prefix(transform, scale(1.1) translateY(-25px), webkit ms);
+        @include prefix(transform, scale(1.0) translateY(-10px), webkit ms);
       }
     }
   }
@@ -97,10 +98,9 @@ form {
     @include button;
     letter-spacing: 5px;
     border: none;
+    background: linear-gradient(130deg, rgba(246, 96, 164, 0.89), $secondary-color);
     &:hover {
-      background: linear-gradient(130deg, rgba(246, 96, 164, 0.89), $secondary-color);
-      color: white!important;
-      border: none;
+      transform: translateY(-5px);
     }
     @include tablet {
       width: 50%;
@@ -112,7 +112,8 @@ form {
     padding: 10px 0;
     label {
       color: #1c1a1b;
-      font-family: 'EB Garamond', serif;
+      //font-family: 'EB Garamond', serif;
+      font-family: 'Roboto', sans-serif;
       letter-spacing: 5px;
       padding: 5px;
       @include tablet {
@@ -124,11 +125,16 @@ form {
     }
     input, textarea {
       outline: none;
-      border: 2px solid #1c1a1b;
+      border: 2px solid #FBC7D1;
+      border-radius: 5px;
       padding: 5px;
       transition: border-color .3s;
       font-size: 1rem;
-      font-family: 'EB Garamond', serif;
+      //font-family: 'EB Garamond', serif;
+      font-family: 'Roboto', sans-serif;
+      @include desktop {
+        padding: 10px;
+      }
       &:focus {
         color: white;
         background-color: rgba(0, 0, 0, 0.86);
