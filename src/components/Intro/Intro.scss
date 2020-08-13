@@ -9,6 +9,9 @@
   font-family: 'EB Garamond', serif;
   text-align: center;
   padding: 8vh 0;
+  p {
+    font-family: 'Roboto', sans-serif;
+  }
   > div {
     width: 90%;
     margin: 0 auto;
@@ -61,16 +64,16 @@
     p {
       color: black;
       font-size: 14px;
-    font-family: 'EB Garamond', serif;
-    margin: 0;
-    text-align: left;
-    line-height: 1;
-    width: 100%!important;
-    transition: color .4s;
-    @include tablet {
-      padding-left: 10px;
-      font-size: 18px;
-    }
+      font-family: 'EB Garamond', serif;
+      margin: 0;
+      text-align: left;
+      line-height: 1;
+      width: 100%!important;
+      transition: color .4s;
+      @include tablet {
+        padding-left: 10px;
+        font-size: 18px;
+      }
     }
     .bold {
       font-weight: bold;
