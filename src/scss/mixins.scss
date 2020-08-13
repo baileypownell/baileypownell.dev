@@ -44,10 +44,13 @@ $tertiary-color: #F6738C;
   border: none!important;
   box-shadow: 0 10px 20px rgba(0,0,0,0.26);
   outline: none;
-  transition: color, background-color, transform, -webkit-transform, -ms-transform, border, .3s;
+  transition: transform, -webkit-transform, -ms-transform, .3s;
   a {
     transition: color .3s;
     color: $primary-color;
+  }
+  &:hover {
+    transform: translateY(-5px);
   }
 }
 
