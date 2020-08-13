@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import Modal from '../Modal/Modal';
 import RWT from '../../../images/userinterface.jpg';
 import VC from '../../../images/VChomescreen.png';
@@ -89,9 +90,11 @@ class Project extends React.Component {
   }
 
   toggleModal = () => {
-    this.setState(prevState => ({
-      open: !prevState.open
-    }));
+    // this.setState(prevState => ({
+    //   open: !prevState.open
+    // }));
+    this.props.history.push("/project");
+
   }
 
 
@@ -124,4 +127,4 @@ class Project extends React.Component {
   }
 }
 
-export default Project;
+export default withRouter(Project);
