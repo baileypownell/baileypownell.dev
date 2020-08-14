@@ -10,7 +10,8 @@ import {
 
 import {
   Home,
-  ProjectPage
+  VirtualCookbookProjectPage,
+  WeightTrackerProjectPage,
 } from './components/index';
 
 import './main.scss';
@@ -20,7 +21,8 @@ ReactDOM.render(
       <BrowserRouter>
         <Switch>
           <Route exact={true} path="/" component={Home}/>
-          <Route exact={true} path="/project" component={ProjectPage}/>
+          <Route exact={true} path="/virtual-cookbook" component={VirtualCookbookProjectPage}/>
+          <Route exact={true} path="/weight-tracker" component={WeightTrackerProjectPage} />
           <Redirect to="/" />
         </Switch>
       </BrowserRouter>,

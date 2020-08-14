@@ -29,6 +29,7 @@ class Porfolio extends React.Component {
         <div id="gallery" className="opaque">
           <Project
               name="Virtual Cookbook SPA"
+              route_link="virtual-cookbook"
               github_link="https://github.com/baileypownell/Virtual-Cookbook"
               prod_link="https://glacial-savannah-05736.herokuapp.com/"
               images={["images/VChomescreen.png", "images/VCdashboard.png", "images/VCprofile.png"]}
@@ -40,6 +41,7 @@ class Porfolio extends React.Component {
           />
           <Project
             name="React Weight Tracker Web App"
+            route_link="weight-tracker"
             github_link="https://github.com/baileypownell/React-Weight-Tracker-SPA"
             prod_link="https://weight-tracker-react.herokuapp.com/"
             images={["images/homescreen.PNG", "images/user-interface.png", "images/mobile.png"]}

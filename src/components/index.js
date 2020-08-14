@@ -1,7 +1,9 @@
 import Home from './Home/Home';
-import ProjectPage from './ProjectPage/ProjectPage'
+import VirtualCookbookProjectPage from './VirtualCookbookProjectPage/VirtualCookbookProjectPage';
+import WeightTrackerProjectPage from './WeightTrackerProjectPage/WeightTrackerProjectPage';
 
 export {
   Home,
-  ProjectPage
+  VirtualCookbookProjectPage,
+  WeightTrackerProjectPage
 };
