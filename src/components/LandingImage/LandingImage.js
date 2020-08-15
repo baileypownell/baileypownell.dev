@@ -26,7 +26,6 @@ class LandingImage extends React.Component {
   render() {
     return (
       <div className="LandingImage">
-        <a name="home"></a>
         <div className="points faded">
           <h1>Bailey Pownell</h1>
           <h2>Software Developer</h2>

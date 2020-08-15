@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import Modal from '../Modal/Modal';
 import RWT from '../../../images/user-interface.png';
 import VC from '../../../images/VChomescreen.png';
 import WA from '../../../images/weather.png';

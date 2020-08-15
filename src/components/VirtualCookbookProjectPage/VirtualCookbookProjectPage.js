@@ -1,9 +1,8 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import Nav from '../Nav/Nav';
 import './ProjectPage.scss';
 
-const VirtualCookbookProjectPage = withRouter(({ history }) => (
+const VirtualCookbookProjectPage = () => (
     <>
       <Nav/>
       <div className="project-page">
@@ -20,6 +19,6 @@ const VirtualCookbookProjectPage = withRouter(({ history }) => (
           </div>
       </div>
     </>
-  ))
+  )
 
 export default VirtualCookbookProjectPage;

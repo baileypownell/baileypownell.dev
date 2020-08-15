@@ -3,6 +3,7 @@
 .project-page {
     margin: 70px auto 0px auto;
     width: 90%;
+    text-align: center;
     @include tablet {
         width: 65%;
     }
@@ -11,13 +12,10 @@
     }
     h4 {
         font-family: 'Roboto', sans-serif;
-        font-size: 40px;
+        font-size: 30px;
         color: $primary-color;
         margin: 0;
         text-align: center;
-        @include tablet {
-        font-size: 55px;
-        }
     }
     .button-holder {
         display: flex;
@@ -46,5 +44,9 @@
         font-family: 'Roboto', sans-serif;
         line-height: 1.75;
         text-align: center;
+    }
+    .mobile-image {
+        height: 400px;
+        width: auto;
     }
 }
