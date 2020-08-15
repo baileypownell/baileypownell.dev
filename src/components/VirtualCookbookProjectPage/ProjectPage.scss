@@ -1,0 +1,52 @@
+@import '../../scss/mixins.scss';
+
+.project-page {
+    margin: 70px auto 0px auto;
+    width: 90%;
+    text-align: center;
+    @include tablet {
+        width: 65%;
+    }
+    @include desktop {
+        width: 50%;
+    }
+    h4 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 30px;
+        color: $primary-color;
+        margin: 0;
+        text-align: center;
+    }
+    .button-holder {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0px 30px 0px;
+    }
+    button {
+        @include button;
+        margin-top: 10px;
+    }
+    
+    .project-photo {
+        width: 100%;
+        //height: 40vh;
+        height: auto;
+        margin: 20px auto;
+        background-size: contain;
+        background-position: center;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.56);
+    }
+    
+    p {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.75;
+        text-align: center;
+    }
+    .mobile-image {
+        height: 400px;
+        width: auto;
+    }
+}

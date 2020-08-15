@@ -19,7 +19,7 @@
       width: 60%;
     }
     @include desktop {
-      width: 40%;
+      width: 50%;
     }
     a {
       text-decoration: none;
@@ -36,14 +36,13 @@
   }
   .udemy {
     background-color: white;
-    border-radius: 20px;
+    border-radius: 10px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: right;
     align-items: center;
-    padding: 5px 10px;
+    padding: 10px;
     margin: 5px;
-    min-height: 60px;
     transition: background-color .4s;
     &:hover {
       background: $primary-color;
@@ -64,7 +63,6 @@
     p {
       color: black;
       font-size: 14px;
-      font-family: 'EB Garamond', serif;
       margin: 0;
       text-align: left;
       line-height: 1;

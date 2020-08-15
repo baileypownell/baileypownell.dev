@@ -1,5 +1,5 @@
 import React from 'react';
-import Modal from '../Modal/Modal';
+import { withRouter } from 'react-router-dom';
 import RWT from '../../../images/user-interface.png';
 import VC from '../../../images/VChomescreen.png';
 import WA from '../../../images/weather.png';
@@ -18,7 +18,6 @@ class Project extends React.Component {
     background_image: '',
     video: '',
     background_image: '',
-    open: false,
     textblurbs: []
   }
 
@@ -71,6 +70,7 @@ class Project extends React.Component {
     this.setState({
       name: this.props.name,
       github_link: this.props.github_link,
+      route_link: this.props.route_link,
       images: this.props.images,
       textblurbs: this.props.textblurbs
     })
@@ -87,40 +87,26 @@ class Project extends React.Component {
     this.determineBackground();
   }
 
-  toggleModal = () => {
-    this.setState(prevState => ({
-      open: !prevState.open
-    }));
+  navigate = () => {
+    this.props.history.push(`/${this.props.route_link}`);
   }
 
 
   render() {
-    const { github_link, background_image, open, name, images, textblurbs, prod_link, video } = this.state;
+    const { github_link, background_image } = this.state;
 
     return (
-      <>
       <div className="parent fade">
         <div className="website" style={{ backgroundImage: `url(${background_image})`}}></div>
           <div className="darken">
             <div className="information-banner">
               <button><a href={github_link} target="_blank">View Source Code</a></button>
-              <button className="modalBtn" onClick={this.toggleModal}>Learn More</button>
+              <button className="modalBtn" onClick={this.navigate}>Learn More</button>
           </div>
         </div>
       </div>
-      {open ?
-        <Modal
-          video={video}
-          title={name}
-          images={images}
-          textblurbs={textblurbs}
-          prod_link={prod_link}
-          toggleModal={this.toggleModal}
-        />
-      : null}
-      </>
     )
   }
 }
 
-export default Project;
+export default withRouter(Project);

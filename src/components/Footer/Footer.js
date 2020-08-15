@@ -8,7 +8,9 @@ const Footer = () => {
     const fadeFooter = () => {
       const footer = document.querySelector('footer>div');
       let scrolled = window.pageYOffset;
-      footer.style.backgroundColor = 'rgba(0, 0, 0, ' + (document.body.offsetHeight-(window.innerHeight+window.pageYOffset))/500 + ')';
+      if (footer) {
+        footer.style.backgroundColor = 'rgba(0, 0, 0, ' + (document.body.offsetHeight-(window.innerHeight+window.pageYOffset))/500 + ')';
+      }
     }
     window.addEventListener('scroll', fadeFooter);
   })

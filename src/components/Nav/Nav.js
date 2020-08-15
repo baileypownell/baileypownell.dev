@@ -17,19 +17,19 @@ class Nav extends React.Component {
   render () {
       return (
         <>
-          <nav className={this.state.show ? null : 'hidden'}>
+          {/* <nav className={this.state.show ? null : 'hidden'}>
               <i className="fas fa-times-circle" onClick={this.toggleMenu}></i>
               <ul>
-                <li onClick={this.toggleMenu}><a href="#home">HOME</a></li>
-                <li onClick={this.toggleMenu}><a href="#portfolio">PORTFOLIO</a></li>
-                <li onClick={this.toggleMenu}><a href="#about">ABOUT</a></li>
-                <li onClick={this.toggleMenu}><a href="#contact">CONTACT</a></li>
+                <li onClick={this.toggleMenu}>HOME</li>
+                <li onClick={this.toggleMenu}>PORTFOLIO</li>
+                <li onClick={this.toggleMenu}>ABOUT</li>
+                <li onClick={this.toggleMenu}>CONTACT</li>
               </ul>
           </nav>
           {!this.state.show ?
           <div className="nav">
             <i className="fas fa-bars" onClick={this.toggleMenu}></i>
-          </div> : null}
+          </div> : null} */}
         </>
       )
   }

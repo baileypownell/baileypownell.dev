@@ -43,12 +43,23 @@ return {
       PRODUCTION: JSON.stringify(true),
     })
   ],
+  // devServer: {
+  //    contentBase: __dirname,
+  //    hot: true,
+  //    historyApiFallback: true,
+  //    contentBase: './',
+  //    open: true
+  // }
   devServer: {
-     contentBase: __dirname,
-     hot: true,
-     historyApiFallback: true,
-     contentBase: './',
-     open: true
-  }
+    contentBase: './dist',
+    historyApiFallback: true,
+    proxy: {
+     '/**': {
+       target: 'http://localhost:3000',
+       secure: false,
+       changeOrigin: true,
+     }
+    },
+ }
 }
 };

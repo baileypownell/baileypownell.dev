@@ -23,7 +23,6 @@ app.get('/bpownell_resume.pdf', (req, res) => {
 });
 
 app.get('/udemy_certs', (req, res) => {
-  console.log('here')
   let udemy_certs = [
     {
       title: "Complete React Developer Course",
