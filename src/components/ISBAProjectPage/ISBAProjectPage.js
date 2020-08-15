@@ -14,7 +14,7 @@ const ISBAProjectPage = () => (
               <img className="project-photo" src="images/isba_home.jpg" ></img>
               <img className="project-photo" src="images/isba_links.jpg" ></img>
           <div className="button-holder">
-              <button href="https://github.com/baileypownell/Indiana-State-Bar-Redesign">View Source Code</button>
+              <a target="_blank" href="https://github.com/baileypownell/Indiana-State-Bar-Redesign"><button>View Source Code</button></a>
           </div>
       </div>
     </>

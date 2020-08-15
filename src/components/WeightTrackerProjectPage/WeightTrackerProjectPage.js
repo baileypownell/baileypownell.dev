@@ -12,8 +12,8 @@ const WeightTrackerProjectPage = () => (
               <img className="project-photo" src="images/user-interface.png"></img>
               <img className="project-photo" src="images/mobile.png" className="mobile-image"></img>
           <div className="button-holder">
-              <button href="https://github.com/baileypownell/React-Weight-Tracker-SPA">View Source Code</button>
-              <button href="https://weight-tracker-react.herokuapp.com/">Visit Project</button>
+              <a target="_blank" href="https://github.com/baileypownell/React-Weight-Tracker-SPA"><button>View Source Code</button></a>
+              <a target="_blank" href="https://weight-tracker-react.herokuapp.com/"><button>Visit Project</button></a>
           </div>
       </div>
     </>

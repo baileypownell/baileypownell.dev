@@ -17,7 +17,7 @@ class Nav extends React.Component {
   render () {
       return (
         <>
-          <nav className={this.state.show ? null : 'hidden'}>
+          {/* <nav className={this.state.show ? null : 'hidden'}>
               <i className="fas fa-times-circle" onClick={this.toggleMenu}></i>
               <ul>
                 <li onClick={this.toggleMenu}>HOME</li>
@@ -29,7 +29,7 @@ class Nav extends React.Component {
           {!this.state.show ?
           <div className="nav">
             <i className="fas fa-bars" onClick={this.toggleMenu}></i>
-          </div> : null}
+          </div> : null} */}
         </>
       )
   }

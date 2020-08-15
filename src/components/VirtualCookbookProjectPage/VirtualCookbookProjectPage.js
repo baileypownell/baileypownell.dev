@@ -14,8 +14,8 @@ const VirtualCookbookProjectPage = () => (
               <img className="project-photo" src="images/VCdashboard.png"></img>
               <img className="project-photo" src="images/VCprofile.png"></img>
           <div className="button-holder">
-              <button href="https://github.com/baileypownell/Virtual-Cookbook">View Source Code</button>
-              <button href="https://glacial-savannah-05736.herokuapp.com/">Visit Project</button>
+              <a target="_blank" href="https://github.com/baileypownell/Virtual-Cookbook"><button>View Source Code</button></a>
+              <a target="_blank" href="https://glacial-savannah-05736.herokuapp.com/"><button>Visit Project</button></a>
           </div>
       </div>
     </>

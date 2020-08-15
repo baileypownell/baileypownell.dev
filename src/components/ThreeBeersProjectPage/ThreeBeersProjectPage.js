@@ -13,7 +13,7 @@ const ThreeBeersProjectPage = () => (
               <p>For reasons unknown to me now, I built this project with PHP.</p>
               <img className="project-photo" src="images/footer-3bd.png"></img>
           <div className="button-holder">
-              <button href="https://github.com/baileypownell/3-Beers-Deep">View Source Code</button>
+              <a target="_blank" href="https://github.com/baileypownell/3-Beers-Deep"><button>View Source Code</button></a>
           </div>
       </div>
     </>
