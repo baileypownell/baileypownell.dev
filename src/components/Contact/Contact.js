@@ -1,10 +1,10 @@
 import React from 'react';
 
-import github from '../../images/githublogo.png';
-import treehouse from '../../images/Treehouse-Logo.png';
-import linkedin from '../../images/linkedin.png';
-import codepen from '../../images/codepen.png';
-import resume from '../../images/resume.png';
+import github from '../../../dist/images/githublogo.png';
+import treehouse from '../../../dist/images/Treehouse-Logo.png';
+import linkedin from '../../../dist/images/linkedin.png';
+import codepen from '../../../dist/images/codepen.png';
+import resume from '../../../dist/images/resume.png';
 
 
 import './Contact.scss';

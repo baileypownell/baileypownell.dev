@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import computer from '../../images/data.svg';
+import computer from '../../../dist/images/data.svg';
 
 import './LandingImage.scss';
 

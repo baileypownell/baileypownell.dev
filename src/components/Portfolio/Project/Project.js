@@ -1,11 +1,10 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import RWT from '../../../images/user-interface.png';
-import VC from '../../../images/VChomescreen.png';
-import WA from '../../../images/weather.png';
-import ISBA from '../../../images/ISBA.jpg';
-import BW from '../../../images/3bdhome.jpg';
-import MP from '../../../images/meal-picker.PNG';
+import RWT from '../../../../dist/images/user-interface.png';
+import VC from '../../../../dist/images/VChomescreen.png';
+import ISBA from '../../../../dist/images/ISBA.jpg';
+import BW from '../../../../dist/images/3bdhome.jpg';
+import MP from '../../../../dist/images/meal-picker.PNG';
 import './Project.scss';
 
 class Project extends React.Component {

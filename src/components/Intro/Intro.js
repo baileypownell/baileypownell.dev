@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import postgres from '../../images/postgresql.png';
-import heroku from '../../images/heroku.svg';
-import udemy from '../../images/udemy.png';
+import postgres from '../../../dist/images/postgresql.png';
+import heroku from '../../../dist/images/heroku.svg';
+import udemy from '../../../dist/images/udemy.png';
 import './Intro.scss';
 
 const Intro = () => {
