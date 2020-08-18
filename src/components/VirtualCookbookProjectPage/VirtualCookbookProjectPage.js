@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Nav from '../Nav/Nav';
 import './ProjectPage.scss';
 
-const VirtualCookbookProjectPage = () => (
+function VirtualCookbookProjectPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []);  
+  
+  return (
     <>
       <Nav/>
       <div className="project-page">
@@ -20,5 +25,6 @@ const VirtualCookbookProjectPage = () => (
       </div>
     </>
   )
+}
 
 export default VirtualCookbookProjectPage;

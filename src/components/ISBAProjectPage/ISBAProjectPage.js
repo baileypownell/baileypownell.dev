@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Nav from '../Nav/Nav';
 
 
-const ISBAProjectPage = () => (
+function ISBAProjectPage() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []); 
+
+  return (
     <>
       <Nav/>
       <div className="project-page">
@@ -19,5 +25,6 @@ const ISBAProjectPage = () => (
       </div>
     </>
   )
+}
 
 export default ISBAProjectPage;

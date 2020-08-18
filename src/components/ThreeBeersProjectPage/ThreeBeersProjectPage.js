@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Nav from '../Nav/Nav';
 
 
-const ThreeBeersProjectPage = () => (
+function ThreeBeersProjectPage() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []); 
+
+  return (
     <>
       <Nav/>
       <div className="project-page">
@@ -18,5 +24,6 @@ const ThreeBeersProjectPage = () => (
       </div>
     </>
   )
+}
 
 export default ThreeBeersProjectPage;
