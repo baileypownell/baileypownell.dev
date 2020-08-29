@@ -94,10 +94,11 @@ class Contact extends React.Component {
       <div className="contact-container">
 
       <div className="faded">
-        <div id="call">
-          <h3 className="moved-left">Hiring?</h3>
-          <h3>Let's get in touch.</h3>
-        </div>
+        {/* <div id="call">
+          {/* <h3 className="moved-left">Hiring?</h3>
+          <h3>Let's get in touch.</h3> 
+          <h3>Links</h3>
+        </div> */}
           <div className="contact-links">
             <a href="https://github.com/baileypownell" target="_blank"><img className="logo" src={github} alt="Github logo"/></a>
             <a href="https://teamtreehouse.com/baileypownell" target="_blank"><img className="logo" src={treehouse} alt="Treehouse logo"/></a>

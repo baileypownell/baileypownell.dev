@@ -23,11 +23,11 @@
   font-size: 18px;
   @include tablet {
     display: flex;
-    width: 80%;
+    width: 60%;
     font-size: 20px;
-    > form {
-      width: 60%;
-    }
+    // > form {
+    //   //width: 60%;
+    // }
     > div {
       display: flex;
       flex-direction: column;
@@ -63,12 +63,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  @include tablet {
+    flex-direction: column;
+    margin-right: 50px;
+  }
   a img,
   a i {
     display: inline-block;
     padding: 1vw;
     flex-grow: 1;
-    max-width: 15vw;
+    max-width: 12vw;
     transition-property: transform, -webkit-transform, -ms-transform;
     transition-duration: .5s;
     &:hover {
@@ -78,7 +82,7 @@
       max-width: 8vw;
     }
     @include desktop {
-      max-width: 5vw;
+      max-width: 85px;
       &:hover {
         @include prefix(transform, scale(1.0) translateY(-10px), webkit ms);
       }

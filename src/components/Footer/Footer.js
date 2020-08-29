@@ -27,10 +27,10 @@ const Footer = () => {
                 <a href="https://github.com/baileypownell/Portfolio-React" target="_blank">
                 <p className="source">See the source code for this site</p></a>
               </div>
-              <div>
+              {/* <div>
                 <i className="fas fa-phone"></i>
                 <p>574.727.5898</p>
-              </div>
+              </div> */}
               <div>
                 <i className="fas fa-envelope"></i>
                 <p>bailey.pownell@gmail.com</p>

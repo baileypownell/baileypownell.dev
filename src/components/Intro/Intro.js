@@ -21,7 +21,7 @@ const Intro = () => {
   return (
     <div className="intro">
       <p className="faded">
-        I develop mobile-first and fully responsive applications, using React for the front end, Node.js/PostgreSQL on the back end, and connecting the two with RESTful API's.
+        I develop mobile-first and fully responsive web applications with React, Node, and Postgres. My professional experience focuses on the front end, but I have full stack experience building RESTful APIs as well for my own personal side projects.
       </p>
       <h2 className="faded">My favorite technologies</h2>
       <div className="tech">
