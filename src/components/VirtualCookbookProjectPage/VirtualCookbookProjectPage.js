@@ -17,6 +17,7 @@ function VirtualCookbookProjectPage() {
               </p>
               <img className="project-photo" src="images/desktop_dashboard_filtering.png"></img>
               <img className="project-photo" src="images/recipe_desktop.png"></img>
+              <p>I eventually added the ability to filter recipes by name and catgory. After that, I added functionality to "tag" recipes by features such as sugar-free, dair-free, vegan, etc.</p>
               <img className="project-photo mobile-view" src="images/settings_mobile.png"></img>
           <div className="button-holder">
               <a target="_blank" href="https://github.com/baileypownell/Virtual-Cookbook"><button>View Source Code</button></a>

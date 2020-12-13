@@ -32,6 +32,7 @@ class LandingImage extends React.Component {
         </div>
         <div className="skills faded">
           <h3>HTML5 | CSS3 | JavaScript </h3>
+          <h3>Angular</h3>
           <h3>React | Redux </h3>
           <h3>Node</h3>
           <h3>Express</h3>

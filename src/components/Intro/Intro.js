@@ -21,7 +21,7 @@ const Intro = () => {
   return (
     <div className="intro">
       <p className="faded">
-        I develop mobile-first and fully responsive web applications with React, Node, and Postgres. My professional experience focuses on the front end, but I have full stack experience building RESTful APIs as well for my own personal side projects.
+        I develop mobile-first and fully responsive web applications with React, Angular, Node, and PostgreSQL. My professional experience focuses on the front end, but I have full stack experience building RESTful APIs and using serverless solutions in my own personal side projects.
       </p>
       <h2 className="faded">My favorite technologies</h2>
       <div className="tech">
@@ -30,6 +30,7 @@ const Intro = () => {
         <i className="fab fa-sass"></i>
         <i className="fab fa-js "></i>
         <i className="fab fa-react "></i>
+        <i className="fab fa-angular "></i>
         <i className="fab fa-node "></i>
         <i className="fab fa-git-square "></i>
         <img src={postgres} alt="postgreSQL" />
