@@ -18,7 +18,7 @@ function WeightTrackerProjectPage() {
               The most difficult part of the project was converting the dates stored in the back end into an appropriate format for the "date" column of the Recent Weight Logs box and comparing and sorting them for display to the user. I used Chart.js for the graph, which was a piece of cake.
               One of the many reasons I chose React for this project is the possibility to use React Native to turn this into an actual mobile app.</p>
               <img className="project-photo" src="images/user-interface.png"></img>
-              <img className="project-photo" src="images/mobile.png" className="mobile-image"></img>
+              <img className="project-photo" src="images/rwt-mobile.png" className="mobile-image"></img>
           <div className="button-holder">
               <a target="_blank" href="https://github.com/baileypownell/React-Weight-Tracker-SPA"><button>View Source Code</button></a>
               <a target="_blank" href="https://weight-tracker-react.herokuapp.com/"><button>Visit Project</button></a>

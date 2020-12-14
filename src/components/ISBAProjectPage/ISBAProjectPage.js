@@ -19,6 +19,7 @@ function ISBAProjectPage() {
               <p>My objectives here included incorporating SASS, parallax scrolling, jQuery, and Javascript effects. For my version, I used parallax scroll with both "background-position: attached;" in some places and jQuery in others. I used some JavaScript fade-in effects and included a searchbar beneath the logo and menu button. For the navigation menu, I at first tried a more traditional approach with dropdown links that would appear on hover. However, the navigation menu is so content-heavy that a fullpage menu, like I had for mobile, was actually a better option for the desktop version as well.</p>
               <img className="project-photo" src="images/isba_home.jpg" ></img>
               <img className="project-photo" src="images/isba_links.jpg" ></img>
+              <img className="project-photo mobile-view" src="images/isba_mobile_nav.png" ></img>
           <div className="button-holder">
               <a target="_blank" href="https://github.com/baileypownell/Indiana-State-Bar-Redesign"><button>View Source Code</button></a>
           </div>
