@@ -42,11 +42,6 @@ class Porfolio extends React.Component {
             github_link="https://github.com/baileypownell/3-Beers-Deep"
           />
           <Project
-            name="Meal Picker App"
-            route_link="meal-picker"
-            github_link="https://github.com/baileypownell/Meal-Picker-React-App"
-          />
-          <Project
             name="Redesign of the Indiana State Bar website"
             route_link="isba"
             github_link="https://github.com/baileypownell/Indiana-State-Bar-Redesign"

@@ -44,5 +44,17 @@
       grid-column-end: 3;
       grid-column-start: 1;
     }
+    @include desktop {
+      grid-column-end: 4;
+    }
+  }
+  .parent:nth-child(2) {
+    @include tablet {
+      grid-column-end: 3;
+      grid-column-start: 1;
+    }
+    @include desktop {
+      grid-column-end: 2;
+    }
   }
 }

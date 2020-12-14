@@ -4,7 +4,6 @@ import RWT from '../../../../dist/images/user-interface.png';
 import VC from '../../../../dist/images/desktop_dashboard.png';
 import ISBA from '../../../../dist/images/ISBA.jpg';
 import BW from '../../../../dist/images/3bdhome.jpg';
-import MP from '../../../../dist/images/meal-picker.PNG';
 import './Project.scss';
 
 class Project extends React.Component {

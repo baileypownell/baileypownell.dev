@@ -13,7 +13,6 @@ import {
   VirtualCookbookProjectPage,
   WeightTrackerProjectPage,
   ThreeBeersProjectPage, 
-  MealPickerProjectPage, 
   ISBAProjectPage
 } from './components/index';
 
@@ -27,7 +26,6 @@ ReactDOM.render(
           <Route exact={true} path="/virtual-cookbook" component={VirtualCookbookProjectPage}/>
           <Route exact={true} path="/weight-tracker" component={WeightTrackerProjectPage} />
           <Route exact={true} path='/three-beers-deep' component={ThreeBeersProjectPage} />
-          <Route exact={true} path='/meal-picker' component={MealPickerProjectPage} />
           <Route exact={true} path='/isba' component={ISBAProjectPage} />
           <Redirect to="/" />
         </Switch>
