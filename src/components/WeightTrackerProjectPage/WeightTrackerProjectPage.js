@@ -19,8 +19,9 @@ function WeightTrackerProjectPage() {
               One of the many reasons I chose React for this project is the possibility to use React Native to turn this into an actual mobile app.</p>
               <img className="project-photo" src="images/user-interface.png"></img>
               <img className="project-photo" src="images/rwt-mobile.png" className="mobile-image"></img>
+              <p>This is a closed source project.</p>
           <div className="button-holder">
-              <a target="_blank" href="https://github.com/baileypownell/React-Weight-Tracker-SPA"><button>View Source Code</button></a>
+              {/* <a target="_blank" href="https://github.com/baileypownell/React-Weight-Tracker-SPA"><button>View Source Code</button></a> */}
               <a target="_blank" href="https://weight-tracker-react.herokuapp.com/"><button>Visit Project</button></a>
           </div>
       </div>

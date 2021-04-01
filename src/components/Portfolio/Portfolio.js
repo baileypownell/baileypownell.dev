@@ -29,12 +29,10 @@ class Porfolio extends React.Component {
           <Project
               name="Virtual Cookbook SPA"
               route_link="virtual-cookbook"
-              github_link="https://github.com/baileypownell/Virtual-Cookbook"
           />
           <Project
             name="React Weight Tracker Web App"
             route_link="weight-tracker"
-            github_link="https://github.com/baileypownell/React-Weight-Tracker-SPA"
           />
           <Project
             name="Band Website"
