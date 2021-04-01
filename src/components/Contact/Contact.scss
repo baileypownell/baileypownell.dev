@@ -100,14 +100,15 @@ form {
     padding-top: 10px;
     margin: 0 auto;
     @include button;
-    letter-spacing: 5px;
+    letter-spacing: 8px;
     border: none;
     background: linear-gradient(130deg, rgba(246, 96, 164, 0.89), $secondary-color);
     &:hover {
       transform: translateY(-5px);
     }
     @include tablet {
-      width: 50%;
+      width: auto;
+      font-size: 18px;
     }
   }
   > div {
