@@ -1,16 +1,9 @@
-import React, { useEffect } from 'react';
-import Nav from '../Nav/Nav';
+import React from 'react'
 
 
 function ThreeBeersProjectPage() {
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, []); 
-
   return (
-    <>
-      <Nav/>
       <div className="project-page">
         <h4>Three Beers Deep Band Website</h4>
               <img className="project-photo" src="images/3bdhome.jpg" ></img>
@@ -22,7 +15,6 @@ function ThreeBeersProjectPage() {
               <a target="_blank" href="https://github.com/baileypownell/3-Beers-Deep"><button>View Source Code</button></a>
           </div>
       </div>
-    </>
   )
 }
 

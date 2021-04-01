@@ -1,15 +1,9 @@
-import React, { useEffect } from 'react';
-import Nav from '../Nav/Nav';
-import './ProjectPage.scss';
+import React from 'react'
+import './ProjectPage.scss'
 
 function VirtualCookbookProjectPage() {
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, []);  
   
   return (
-    <>
-      <Nav/>
       <div className="project-page">
         <h4>Virtual Cookbook SPA</h4>
               <img className="project-photo" src="images/desktop_dashboard.png" ></img>
@@ -25,7 +19,6 @@ function VirtualCookbookProjectPage() {
               <a target="_blank" href="https://virtual-cookbook-1.herokuapp.com/"><button>Visit Project</button></a>
           </div>
       </div>
-    </>
   )
 }
 

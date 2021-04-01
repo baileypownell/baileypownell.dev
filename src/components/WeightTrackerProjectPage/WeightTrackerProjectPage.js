@@ -1,16 +1,8 @@
-import React, { useEffect } from 'react';
-import Nav from '../Nav/Nav';
-
+import React from 'react'
 
 function WeightTrackerProjectPage() {
-
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, []); 
   
   return (
-    <>
-      <Nav/>
       <div className="project-page">
         <h4>React Weight Tracker</h4>
               <img className="project-photo" src="images/homescreen.PNG" ></img>
@@ -25,7 +17,6 @@ function WeightTrackerProjectPage() {
               <a target="_blank" href="https://weight-tracker-react.herokuapp.com/"><button>Visit Project</button></a>
           </div>
       </div>
-    </>
   )
 }
 

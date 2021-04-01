@@ -1,16 +1,9 @@
-import React, { useEffect } from 'react';
-import Nav from '../Nav/Nav';
+import React from 'react'
 
 
 function ISBAProjectPage() {
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, []); 
-
   return (
-    <>
-      <Nav/>
       <div className="project-page">
         <h4>Redesign of the Indiana State Bar website</h4>
               <img className="project-photo" src="images/isba_real.jpg" ></img>
@@ -24,7 +17,6 @@ function ISBAProjectPage() {
               <a target="_blank" href="https://github.com/baileypownell/Indiana-State-Bar-Redesign"><button>View Source Code</button></a>
           </div>
       </div>
-    </>
   )
 }
 
