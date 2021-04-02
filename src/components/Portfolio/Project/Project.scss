@@ -83,31 +83,6 @@
     justify-content: center;
     transition: transform, -webkit-transform, -ms-transform, .5s;
   }
-  button {
-    @include button;
-    text-transform: uppercase;
-    padding: 10px 15px;
-    margin: 5px;
-    cursor: pointer;
-    // font-size: 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.26);
-    color: $primary-color;
-    background-color: white;
-    outline: none;
-    transition: color, background-color, transform, -webkit-transform, -ms-transform, border, .3s;
-    &:hover {
-      color: white;
-      background-color: pink;
-      transform: translateY(-5px);
-    }
-    > a {
-      text-decoration: none;
-      color: $primary-color!important;
-      &:hover {
-        color: white!important;
-      }
-    }
-  }
 }
 
 
@@ -115,6 +90,42 @@
     color: white!important;
 }
 
-.body-hidden {
-  overflow: hidden;
+.ub-max-h_100vh {
+  width: 100%!important;
+  @include tablet {
+    width: auto;
+  }
+}
+
+.side-sheet-content {
+  margin-top: 20px;
+  margin: 10px auto 0px auto;
+  width: 90%;
+  button {
+    box-shadow: none;
+  }
+}
+
+button {
+  @include button;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  color: $primary-color;
+  background-color: white;
+  outline: none;
+  transition: color, background-color, transform, -webkit-transform, -ms-transform, border, .3s;
+  &:hover {
+    color: white;
+    background-color: pink;
+    transform: translateY(-5px);
+  }
+  > a {
+    text-decoration: none;
+    color: $primary-color!important;
+    &:hover {
+      color: white!important;
+    }
+  }
 }

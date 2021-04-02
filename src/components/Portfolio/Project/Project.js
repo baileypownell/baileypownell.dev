@@ -5,7 +5,7 @@ import VC from '../../../../dist/images/desktop_dashboard.png';
 import ISBA from '../../../../dist/images/ISBA.jpg';
 import BW from '../../../../dist/images/3bdhome.jpg';
 import './Project.scss';
-import { SideSheet } from 'evergreen-ui'
+import { SideSheet, Position, Button, ArrowLeftIcon } from 'evergreen-ui'
 import { VirtualCookbookProjectPage, WeightTrackerProjectPage, ThreeBeersProjectPage, ISBAProjectPage } from '../../../components/index'
 
 class Project extends React.Component {
@@ -74,15 +74,11 @@ class Project extends React.Component {
   }
 
   openSideSheet = () => {
-    this.setState({ isShown: true }, () => {
-      document.body.classList.add('body-hidden')
-    })
+    this.setState({ isShown: true })
   }
 
   closeSideSheet = () => {
-    this.setState({ isShown: false }, () => {
-      document.body.classList.remove('body-hidden')
-    })
+    this.setState({ isShown: false })
   }
 
 
@@ -104,13 +100,19 @@ class Project extends React.Component {
         </div>
 
         <SideSheet
+            width={1000}
             isShown={isShown}
+            preventBodyScrolling={true}
+            position={Position.RIGHT}
             onCloseComplete={() => this.closeSideSheet()}
           >
-          { this.props.name === 'React Weight Tracker Web App' ? <WeightTrackerProjectPage></WeightTrackerProjectPage> : null }
-          { this.props.name === 'Virtual Cookbook SPA' ? <VirtualCookbookProjectPage></VirtualCookbookProjectPage> : null }
-          { this.props.name === 'Band Website' ? <ThreeBeersProjectPage></ThreeBeersProjectPage> : null }
-          { this.props.name === 'Redesign of the Indiana State Bar website' ? <ISBAProjectPage></ISBAProjectPage> : null }
+            <div class="side-sheet-content">
+                <button onClick={this.closeSideSheet}><ArrowLeftIcon size={16} marginRight={8} /> Close </button>
+                { this.props.name === 'React Weight Tracker Web App' ? <WeightTrackerProjectPage></WeightTrackerProjectPage> : null }
+                { this.props.name === 'Virtual Cookbook SPA' ? <VirtualCookbookProjectPage></VirtualCookbookProjectPage> : null }
+                { this.props.name === 'Band Website' ? <ThreeBeersProjectPage></ThreeBeersProjectPage> : null }
+                { this.props.name === 'Redesign of the Indiana State Bar website' ? <ISBAProjectPage></ISBAProjectPage> : null }
+            </div>
         </SideSheet>
       </>
     )
