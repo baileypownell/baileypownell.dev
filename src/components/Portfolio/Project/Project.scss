@@ -2,7 +2,6 @@
 
 .parent {
   position: relative;
-  overflow: hidden;
   box-shadow: 10px 1px 40px rgba(51, 51, 51, 0.53);
   border-radius: 10px;
   @include desktop {
@@ -11,7 +10,7 @@
   }
   @include IE10up {
     margin: 20px 0;
-      @media (min-width: 900px) {
+      @media (min-width: 900px) { 
         width:45%;
         margin: 20px;
         float: right;
@@ -28,6 +27,8 @@
   }
 
 .darken {
+  overflow: hidden;
+  border-radius: 10px;
   @include desktop {
     position: absolute;
     display: block;
@@ -37,11 +38,9 @@
     top: 0;
     background-color: rgba(0, 0, 0, 0.0);
     transition: background-color .5s ease;
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.3);
-    }
     &:hover .information-banner {
       @include prefix(transform, translateY(0px), webkit ms);
+      opacity: 1;
     }
   }
 }
@@ -56,6 +55,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   transition: transform, -webkit-transform, -ms-transform, .5s;
+  border-radius: 10px;
   @include desktop {
     min-height: 200px;
     height: 30vh;
@@ -72,6 +72,7 @@
   padding: 20px 0;
   width: 100%;
   bottom: 0;
+  opacity: 0;
   @include desktop {
     background-color: transparent;
     position: relative;
