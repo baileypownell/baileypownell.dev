@@ -12,7 +12,7 @@ const Projects = {
   ISBA: 'isba', 
   COOKBOOK: 'cookbook', 
   WEIGHT_TRACKER: 'weight-tracker', 
-  BAND_WEBSITE: 'band-webiste'
+  BAND_WEBSITE: 'band-website'
 }
 
 class Project extends React.Component {

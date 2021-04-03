@@ -4,7 +4,8 @@ import React from 'react'
 function ThreeBeersProjectPage() {
 
   return (
-      <div className="project-page">
+      <div className="project-page" autofocus={true}>
+        <input style={{display: 'none'}} tabIndex="1"></input>
         <h4>Three Beers Deep Band Website</h4>
               <img className="project-photo" src="images/3bdhome.jpg" ></img>
               <p>This is a single-page website built with vanilla javascript and SASS, bundled with webpack and Babel for browser compatibility. It includes parallax effects and spotify player integration.</p>
