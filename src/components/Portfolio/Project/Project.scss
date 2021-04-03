@@ -23,7 +23,7 @@
 .parent:hover {
   @include desktop {
     @include prefix(transform, translateY(-15px), webkit ms);
-    box-shadow: 25px 25px 55px rgba(51, 51, 51, 0.83);
+      box-shadow: 25px 25px 55px rgba(51, 51, 51, 0.83);
     }
   }
 

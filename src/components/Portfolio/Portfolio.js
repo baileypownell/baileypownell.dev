@@ -27,22 +27,18 @@ class Porfolio extends React.Component {
         <h2>Portfolio</h2>
         <div id="gallery" className="opaque">
           <Project
-              name="Virtual Cookbook SPA"
-              route_link="virtual-cookbook"
+              id="cookbook"
           />
           <Project
-            name="React Weight Tracker Web App"
-            route_link="weight-tracker"
+            id="weight-tracker"
           />
           <Project
-            name="Band Website"
-            route_link="three-beers-deep"
             github_link="https://github.com/baileypownell/3-Beers-Deep"
+            id="band-website"
           />
           <Project
-            name="Redesign of the Indiana State Bar website"
-            route_link="isba"
             github_link="https://github.com/baileypownell/Indiana-State-Bar-Redesign"
+            id="isba"
           />
         </div>
       </div>

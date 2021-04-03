@@ -8,6 +8,13 @@ import './Project.scss'
 import { SideSheet, Position, ArrowLeftIcon } from 'evergreen-ui'
 import { VirtualCookbookProjectPage, WeightTrackerProjectPage, ThreeBeersProjectPage, ISBAProjectPage } from '../../../components/index'
 
+const Projects = {
+  ISBA: 'isba', 
+  COOKBOOK: 'cookbook', 
+  WEIGHT_TRACKER: 'weight-tracker', 
+  BAND_WEBSITE: 'band-webiste'
+}
+
 class Project extends React.Component {
 
   state = {
@@ -17,23 +24,23 @@ class Project extends React.Component {
   }
 
   determineBackground = () => {
-    switch(this.props.name) {
-      case 'React Weight Tracker Web App':
+    switch(this.props.id) {
+      case Projects.WEIGHT_TRACKER:
         this.setState({
           background_image: RWT
         })
         break;
-      case 'Virtual Cookbook SPA':
+      case Projects.COOKBOOK:
         this.setState({
           background_image: VC
         })
         break;
-      case 'Redesign of the Indiana State Bar website':
+      case Projects.ISBA:
         this.setState({
           background_image: ISBA
         });
       break;
-      case 'Band Website':
+      case Projects.BAND_WEBSITE:
         this.setState({
           background_image: BW
         });
@@ -71,7 +78,7 @@ class Project extends React.Component {
 
   render() {
     const { background_image, showButton, isShown } = this.state;
-    const { name, github_link } = this.props
+    const { github_link, id } = this.props
 
     return (
       <>
@@ -95,10 +102,10 @@ class Project extends React.Component {
           >
             <div class="side-sheet-content">
                 { showButton ? <button onClick={this.closeSideSheet}><ArrowLeftIcon size={16} marginRight={8} /> Close </button> : null }
-                { name === 'React Weight Tracker Web App' ? <WeightTrackerProjectPage></WeightTrackerProjectPage> : null }
-                { name === 'Virtual Cookbook SPA' ? <VirtualCookbookProjectPage></VirtualCookbookProjectPage> : null }
-                { name === 'Band Website' ? <ThreeBeersProjectPage></ThreeBeersProjectPage> : null }
-                { name === 'Redesign of the Indiana State Bar website' ? <ISBAProjectPage></ISBAProjectPage> : null }
+                { id === Projects.WEIGHT_TRACKER ? <WeightTrackerProjectPage></WeightTrackerProjectPage> : null }
+                { id === Projects.COOKBOOK ? <VirtualCookbookProjectPage></VirtualCookbookProjectPage> : null }
+                { id === Projects.BAND_WEBSITE ? <ThreeBeersProjectPage></ThreeBeersProjectPage> : null }
+                { id === Projects.ISBA ? <ISBAProjectPage></ISBAProjectPage> : null }
             </div>
         </SideSheet>
       </>
