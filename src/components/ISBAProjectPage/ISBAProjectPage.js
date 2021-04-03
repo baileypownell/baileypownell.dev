@@ -1,17 +1,11 @@
-import React, { useEffect } from 'react';
-import Nav from '../Nav/Nav';
+import React from 'react'
 
 
 function ISBAProjectPage() {
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, []); 
-
   return (
-    <>
-      <Nav/>
       <div className="project-page">
+        <input style={{display: 'none'}} tabIndex="1"></input>
         <h4>Redesign of the Indiana State Bar website</h4>
               <img className="project-photo" src="images/isba_real.jpg" ></img>
               <p>I got the inspiration to redesign the Indiana State Bar's website when I had to visit it in the course of my job, and noticed how outdated and unresponsive it is. This is my take on a good makeover, while still retaining the basic set up of the site (The current site has changed slightly since I created my version, and between the time of my redesign and the time these screenshots were taken).</p>
@@ -24,7 +18,6 @@ function ISBAProjectPage() {
               <a target="_blank" href="https://github.com/baileypownell/Indiana-State-Bar-Redesign"><button>View Source Code</button></a>
           </div>
       </div>
-    </>
   )
 }
 

@@ -1,59 +1,48 @@
-import React from 'react';
-import { withRouter } from 'react-router-dom';
-import RWT from '../../../../dist/images/user-interface.png';
-import VC from '../../../../dist/images/desktop_dashboard.png';
-import ISBA from '../../../../dist/images/ISBA.jpg';
-import BW from '../../../../dist/images/3bdhome.jpg';
-import './Project.scss';
+import React from 'react'
+import { withRouter } from 'react-router-dom'
+import RWT from '../../../../dist/images/user-interface.png'
+import VC from '../../../../dist/images/desktop_dashboard.png'
+import ISBA from '../../../../dist/images/ISBA.jpg'
+import BW from '../../../../dist/images/3bdhome.jpg'
+import './Project.scss'
+import { SideSheet, Position, ArrowLeftIcon } from 'evergreen-ui'
+import { VirtualCookbookProjectPage, WeightTrackerProjectPage, ThreeBeersProjectPage, ISBAProjectPage } from '../../../components/index'
+
+const Projects = {
+  ISBA: 'isba', 
+  COOKBOOK: 'cookbook', 
+  WEIGHT_TRACKER: 'weight-tracker', 
+  BAND_WEBSITE: 'band-website'
+}
 
 class Project extends React.Component {
 
   state = {
-    name: '',
-    github_link: '',
-    prod_link: '',
-    images: [],
+    showButton: false,
     background_image: '',
-    video: '',
-    background_image: '',
-    textblurbs: []
+    isShown: false
   }
 
   determineBackground = () => {
-    switch(this.props.name) {
-      case 'React Weight Tracker Web App':
+    switch(this.props.id) {
+      case Projects.WEIGHT_TRACKER:
         this.setState({
           background_image: RWT
         })
         break;
-      case 'Virtual Cookbook SPA':
+      case Projects.COOKBOOK:
         this.setState({
           background_image: VC
         })
         break;
-      case 'Sample Beef Farm site':
-        this.setState({
-          background_image: MF
-        });
-        break;
-      case 'Local Weather App':
-        this.setState({
-          background_image: WA
-        });
-      break;
-      case 'Redesign of the Indiana State Bar website':
+      case Projects.ISBA:
         this.setState({
           background_image: ISBA
         });
       break;
-      case 'Band Website':
+      case Projects.BAND_WEBSITE:
         this.setState({
           background_image: BW
-        });
-      break;
-      case 'Meal Picker App':
-        this.setState({
-          background_image: MP
         });
       break;
       default:
@@ -65,44 +54,61 @@ class Project extends React.Component {
   }
 
   componentDidMount = () => {
-    this.setState({
-      name: this.props.name,
-      github_link: this.props.github_link,
-      route_link: this.props.route_link,
-      images: this.props.images,
-      textblurbs: this.props.textblurbs
-    })
-    if (this.props.video) {
-      this.setState({
-        video: this.props.video
-      })
-    }
-    if (this.props.prod_link) {
-      this.setState({
-        prod_link: this.props.prod_link
-      })
-    }
-    this.determineBackground();
+    this.determineBackground()
+    window.addEventListener("resize", this.resize.bind(this))
+    this.resize()
   }
 
-  navigate = () => {
-    this.props.history.push(`/${this.props.route_link}`);
+  resize() {
+    this.setState({showButton: window.innerWidth <= 1000});
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.resize.bind(this));
+  }
+
+  openSideSheet = () => {
+    this.setState({ isShown: true })
+  }
+
+  closeSideSheet = () => {
+    this.setState({ isShown: false })
   }
 
 
   render() {
-    const { github_link, background_image } = this.state;
+    const { background_image, showButton, isShown } = this.state;
+    const { github_link, id } = this.props
 
     return (
-      <div className="parent fade">
-        <div className="website" style={{ backgroundImage: `url(${background_image})`}}></div>
-          <div className="darken">
-            <div className="information-banner">
-              { github_link ? <button><a href={github_link} target="_blank">View Source Code</a></button> : null }
-              <button className="modalBtn" onClick={this.navigate}>Learn More</button>
+      <>
+        <div className="parent fade">
+          <div className="website" style={{ backgroundImage: `url(${background_image})`}}></div>
+            <div className="darken">
+              <div className="information-banner">
+                { github_link ? <button><a href={github_link} target="_blank">View Source Code</a></button> : null }
+                <button
+                onClick={() => this.openSideSheet()}>Learn More</button>
+            </div>
           </div>
         </div>
-      </div>
+
+        <SideSheet
+            width={1000}
+            isShown={isShown}
+            preventBodyScrolling={true}
+            position={Position.RIGHT}
+            onCloseComplete={() => this.closeSideSheet()}
+          >
+            <div class="side-sheet-content">
+                { showButton ? <button onClick={this.closeSideSheet}><ArrowLeftIcon size={16} marginRight={8} /> Close </button> : null }
+                { id === Projects.WEIGHT_TRACKER ? <WeightTrackerProjectPage></WeightTrackerProjectPage> : null }
+                { id === Projects.COOKBOOK ? <VirtualCookbookProjectPage></VirtualCookbookProjectPage> : null }
+                { id === Projects.BAND_WEBSITE ? <ThreeBeersProjectPage></ThreeBeersProjectPage> : null }
+                { id === Projects.ISBA ? <ISBAProjectPage></ISBAProjectPage> : null }
+            </div>
+        </SideSheet>
+      </>
     )
   }
 }

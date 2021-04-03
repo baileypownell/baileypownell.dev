@@ -1,15 +1,7 @@
 @import '../../scss/mixins.scss';
 
 .project-page {
-    margin: 70px auto 0px auto;
-    width: 90%;
     text-align: center;
-    @include tablet {
-        width: 65%;
-    }
-    @include desktop {
-        width: 50%;
-    }
     h4 {
         font-family: 'Roboto', sans-serif;
         font-size: 30px;

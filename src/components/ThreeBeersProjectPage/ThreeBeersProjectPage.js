@@ -1,17 +1,11 @@
-import React, { useEffect } from 'react';
-import Nav from '../Nav/Nav';
+import React from 'react'
 
 
 function ThreeBeersProjectPage() {
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, []); 
-
   return (
-    <>
-      <Nav/>
-      <div className="project-page">
+      <div className="project-page" autofocus={true}>
+        <input style={{display: 'none'}} tabIndex="1"></input>
         <h4>Three Beers Deep Band Website</h4>
               <img className="project-photo" src="images/3bdhome.jpg" ></img>
               <p>This is a single-page website built with vanilla javascript and SASS, bundled with webpack and Babel for browser compatibility. It includes parallax effects and spotify player integration.</p>
@@ -22,7 +16,6 @@ function ThreeBeersProjectPage() {
               <a target="_blank" href="https://github.com/baileypownell/3-Beers-Deep"><button>View Source Code</button></a>
           </div>
       </div>
-    </>
   )
 }
 

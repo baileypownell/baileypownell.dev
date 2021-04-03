@@ -2,7 +2,6 @@
 
 .parent {
   position: relative;
-  overflow: hidden;
   box-shadow: 10px 1px 40px rgba(51, 51, 51, 0.53);
   border-radius: 10px;
   @include desktop {
@@ -11,7 +10,7 @@
   }
   @include IE10up {
     margin: 20px 0;
-      @media (min-width: 900px) {
+      @media (min-width: 900px) { 
         width:45%;
         margin: 20px;
         float: right;
@@ -23,11 +22,13 @@
 .parent:hover {
   @include desktop {
     @include prefix(transform, translateY(-15px), webkit ms);
-    box-shadow: 25px 25px 55px rgba(51, 51, 51, 0.83);
+      box-shadow: 25px 25px 55px rgba(51, 51, 51, 0.83);
     }
   }
 
 .darken {
+  overflow: hidden;
+  border-radius: 10px;
   @include desktop {
     position: absolute;
     display: block;
@@ -37,11 +38,9 @@
     top: 0;
     background-color: rgba(0, 0, 0, 0.0);
     transition: background-color .5s ease;
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.3);
-    }
     &:hover .information-banner {
       @include prefix(transform, translateY(0px), webkit ms);
+      opacity: 1;
     }
   }
 }
@@ -56,6 +55,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   transition: transform, -webkit-transform, -ms-transform, .5s;
+  border-radius: 10px;
   @include desktop {
     min-height: 200px;
     height: 30vh;
@@ -72,6 +72,7 @@
   padding: 20px 0;
   width: 100%;
   bottom: 0;
+  opacity: 0;
   @include desktop {
     background-color: transparent;
     position: relative;
@@ -83,34 +84,49 @@
     justify-content: center;
     transition: transform, -webkit-transform, -ms-transform, .5s;
   }
-  button {
-    @include button;
-    text-transform: uppercase;
-    padding: 10px 15px;
-    margin: 5px;
-    cursor: pointer;
-    // font-size: 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.26);
-    color: $primary-color;
-    background-color: white;
-    outline: none;
-    transition: color, background-color, transform, -webkit-transform, -ms-transform, border, .3s;
-    &:hover {
-      color: white;
-      background-color: pink;
-      transform: translateY(-5px);
-    }
-    > a {
-      text-decoration: none;
-      color: $primary-color!important;
-      &:hover {
-        color: white!important;
-      }
-    }
-  }
 }
 
 
 .information-banner button:hover >a {
     color: white!important;
+}
+
+.ub-max-h_100vh {
+  width: 100%!important;
+  @include tablet {
+    width: auto;
+  }
+}
+
+.side-sheet-content {
+  margin-top: 20px;
+  margin: 10px auto 0px auto;
+  width: 90%;
+  button {
+    box-shadow: none;
+  }
+}
+
+button {
+  @include button;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  color: $primary-color;
+  background-color: white;
+  outline: none;
+  transition: color, background-color, transform, -webkit-transform, -ms-transform, border, .3s;
+  &:hover {
+    color: white;
+    background-color: pink;
+    transform: translateY(-5px);
+  }
+  > a {
+    text-decoration: none;
+    color: $primary-color!important;
+    &:hover {
+      color: white!important;
+    }
+  }
 }
