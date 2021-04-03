@@ -1,24 +1,18 @@
-import React from 'react';
-import { withRouter } from 'react-router-dom';
-import RWT from '../../../../dist/images/user-interface.png';
-import VC from '../../../../dist/images/desktop_dashboard.png';
-import ISBA from '../../../../dist/images/ISBA.jpg';
-import BW from '../../../../dist/images/3bdhome.jpg';
-import './Project.scss';
-import { SideSheet, Position, Button, ArrowLeftIcon } from 'evergreen-ui'
+import React from 'react'
+import { withRouter } from 'react-router-dom'
+import RWT from '../../../../dist/images/user-interface.png'
+import VC from '../../../../dist/images/desktop_dashboard.png'
+import ISBA from '../../../../dist/images/ISBA.jpg'
+import BW from '../../../../dist/images/3bdhome.jpg'
+import './Project.scss'
+import { SideSheet, Position, ArrowLeftIcon } from 'evergreen-ui'
 import { VirtualCookbookProjectPage, WeightTrackerProjectPage, ThreeBeersProjectPage, ISBAProjectPage } from '../../../components/index'
 
 class Project extends React.Component {
 
   state = {
-    name: '',
-    github_link: '',
-    prod_link: '',
-    images: [],
+    showButton: false,
     background_image: '',
-    video: '',
-    background_image: '',
-    textblurbs: [],
     isShown: false
   }
 
@@ -53,24 +47,17 @@ class Project extends React.Component {
   }
 
   componentDidMount = () => {
-    this.setState({
-      name: this.props.name,
-      github_link: this.props.github_link,
-      route_link: this.props.route_link,
-      images: this.props.images,
-      textblurbs: this.props.textblurbs
-    })
-    if (this.props.video) {
-      this.setState({
-        video: this.props.video
-      })
-    }
-    if (this.props.prod_link) {
-      this.setState({
-        prod_link: this.props.prod_link
-      })
-    }
-    this.determineBackground();
+    this.determineBackground()
+    window.addEventListener("resize", this.resize.bind(this))
+    this.resize()
+  }
+
+  resize() {
+    this.setState({showButton: window.innerWidth <= 1000});
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.resize.bind(this));
   }
 
   openSideSheet = () => {
@@ -83,8 +70,8 @@ class Project extends React.Component {
 
 
   render() {
-    const { github_link, background_image } = this.state;
-    const { isShown } = this.state;
+    const { background_image, showButton, isShown } = this.state;
+    const { name, github_link } = this.props
 
     return (
       <>
@@ -107,11 +94,11 @@ class Project extends React.Component {
             onCloseComplete={() => this.closeSideSheet()}
           >
             <div class="side-sheet-content">
-                <button onClick={this.closeSideSheet}><ArrowLeftIcon size={16} marginRight={8} /> Close </button>
-                { this.props.name === 'React Weight Tracker Web App' ? <WeightTrackerProjectPage></WeightTrackerProjectPage> : null }
-                { this.props.name === 'Virtual Cookbook SPA' ? <VirtualCookbookProjectPage></VirtualCookbookProjectPage> : null }
-                { this.props.name === 'Band Website' ? <ThreeBeersProjectPage></ThreeBeersProjectPage> : null }
-                { this.props.name === 'Redesign of the Indiana State Bar website' ? <ISBAProjectPage></ISBAProjectPage> : null }
+                { showButton ? <button onClick={this.closeSideSheet}><ArrowLeftIcon size={16} marginRight={8} /> Close </button> : null }
+                { name === 'React Weight Tracker Web App' ? <WeightTrackerProjectPage></WeightTrackerProjectPage> : null }
+                { name === 'Virtual Cookbook SPA' ? <VirtualCookbookProjectPage></VirtualCookbookProjectPage> : null }
+                { name === 'Band Website' ? <ThreeBeersProjectPage></ThreeBeersProjectPage> : null }
+                { name === 'Redesign of the Indiana State Bar website' ? <ISBAProjectPage></ISBAProjectPage> : null }
             </div>
         </SideSheet>
       </>
