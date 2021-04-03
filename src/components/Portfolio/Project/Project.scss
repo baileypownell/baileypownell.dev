@@ -4,7 +4,9 @@
   position: relative;
   box-shadow: 10px 1px 40px rgba(51, 51, 51, 0.53);
   border-radius: 10px;
+  overflow: hidden;
   @include desktop {
+    overflow: unset;
     transition: transform, -webkit-transform, -ms-transform, box-shadow;
     transition-duration: .5s;
   }
@@ -72,8 +74,8 @@
   padding: 20px 0;
   width: 100%;
   bottom: 0;
-  opacity: 0;
   @include desktop {
+    opacity: 0;
     background-color: transparent;
     position: relative;
     padding: 0;

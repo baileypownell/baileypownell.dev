@@ -21,7 +21,7 @@
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 1fr;
-  grid-gap: 3vw;
+  grid-gap: 30px;
   @include tablet {
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
