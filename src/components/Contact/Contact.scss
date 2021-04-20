@@ -16,18 +16,15 @@
 }
 
 .contact-container {
+  font-family: 'Roboto', sans-serif;
   width: 90%;
   margin: 0 auto;
   text-align: center;
-  font-family: 'EB Garamond', serif;
   font-size: 18px;
   @include tablet {
     display: flex;
     width: 60%;
     font-size: 20px;
-    // > form {
-    //   //width: 60%;
-    // }
     > div {
       display: flex;
       flex-direction: column;
@@ -39,8 +36,6 @@
   }
   h3 {
     color: black;
-    //font-family: 'EB Garamond', serif;
-    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 5px 0;
     @include tablet {
@@ -48,12 +43,6 @@
     }
     @include desktop {
       font-size: 34px;
-    }
-  }
-  #call {
-    padding-bottom: 8vw;
-    @include tablet {
-      padding-bottom: 50px;
     }
   }
 }
@@ -95,7 +84,7 @@ form {
   flex-direction: column;
   width: 90%;
   margin: 0 auto;
-  button {
+  Button {
     width: 100%;
     padding-top: 10px;
     margin: 0 auto;
@@ -104,20 +93,18 @@ form {
     border: none;
     background: linear-gradient(130deg, rgba(246, 96, 164, 0.89), $secondary-color);
     &:hover {
-      transform: translateY(-5px);
+      transform: none;
     }
     @include tablet {
-      width: auto;
+      width: fit-content!important;
       font-size: 18px;
     }
   }
   > div {
     display: flex;
     flex-direction: column;
-    padding: 10px 0;
     label {
       color: #1c1a1b;
-      //font-family: 'EB Garamond', serif;
       font-family: 'Roboto', sans-serif;
       letter-spacing: 5px;
       padding: 5px;
@@ -128,35 +115,43 @@ form {
         font-size: 22px;
       }
     }
-    input, textarea {
-      outline: none;
-      border: 2px solid #FBC7D1;
-      border-radius: 5px;
-      padding: 5px;
-      transition: border-color .3s;
-      font-size: 1rem;
-      //font-family: 'EB Garamond', serif;
-      font-family: 'Roboto', sans-serif;
-      @include desktop {
-        padding: 10px;
-      }
-      &:focus {
-        color: white;
-        background-color: rgba(0, 0, 0, 0.86);
-      }
-      @include tablet {
-        font-size: 18px;
-      }
-      @include desktop {
-        font-size: 22px;
-      }
+  }
+  .inputs {
+    padding-bottom: 30px;
+    > div {
+      margin: 5px 0;
     }
-    textarea {
-      height: 150px;
-      margin-bottom: 15px;
-      @include desktop {
-          height: 200px;
-      }
-    }
+  }
+}
+
+.MuiInput-underline:hover:not(.Mui-disabled):before {
+  border-color: $secondary-color!important;
+}
+
+.MuiInputLabel-animated {
+  color: black!important;
+}
+
+.MuiInput-underline:after {
+    border-bottom: 2px solid $primary-color!important;
+}
+
+.MuiSnackbar-root div {
+  background-color: white;
+  color: #333333;
+  width: 100%;
+  span {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+#button {
+  margin: 0 auto;
+  width: 100%;
+  @include tablet {
+    width: auto;
   }
 }

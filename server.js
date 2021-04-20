@@ -1,4 +1,4 @@
-//require('dotenv').config()
+// require('dotenv').config()
 const path = require('path');
 const express = require('express');
 var bodyParser = require('body-parser');
@@ -74,8 +74,7 @@ app.get('/udemy_certs', (req, res) => {
 });
 
 app.get('/udemy_certs/:link', (request, response) => {
-  const { link } = request.params;
-  console.log('link = ', link)
+  const { link } = request.params
   let contentType;
   let content_type = link.split('.')[1];
   if (content_type === 'pdf') {
@@ -89,25 +88,24 @@ app.get('/udemy_certs/:link', (request, response) => {
 })
 
 app.post('/contact', (request, response) => {
-  const { name, email, message } = request.body;
-
-  const transporter = nodemailer.createTransport(sgTransport({
-      service: 'SendGrid',
-      auth: {
-      api_user: `${process.env.SENDGRID_USERNAME}`,
-      api_key: `${process.env.SENDGRID_PASSWORD}`
-  }}));
-  const mailOptions = {
+  const { name, email, message } = request.body; 
+  const options = {
+    auth: {
+      api_key: `${process.env.SENDGRID_API_KEY}`,
+    }
+  }
+  const mailer = nodemailer.createTransport(sgTransport(options))
+  const emailToSend = {
     from: `bailey.pownell@gmail.com`,
     to: `bailey.pownell@gmail.com`,
     subject: `Portolio Email from ${name}`,
     html: `<h2>${name}, email: ${email} has sent you a message.</h2><p>${message}<p>`
   };
-  transporter.sendMail(mailOptions, (err, res) => {
+  mailer.sendMail(emailToSend, function(err, res) {
     if (err) {
-      return response.status(500).json({ success: false, message: 'there was an error sending the email', error: err.message, name: err.name})
+      return response.status(500).json({ success: false, message: 'There was an error sending the email', error: err.message, name: err.name})
     } else {
-      return response.status(200).json('email sent');
+      return response.status(200).json('Email sent.');
     }
   })
 })
