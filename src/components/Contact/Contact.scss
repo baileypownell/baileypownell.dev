@@ -135,3 +135,15 @@ form {
 .MuiInput-underline:after {
     border-bottom: 2px solid $primary-color!important;
 }
+
+.MuiSnackbar-root div {
+  background-color: white;
+  color: #333333;
+  width: 100%;
+  span {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

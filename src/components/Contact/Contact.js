@@ -5,8 +5,8 @@ import linkedin from '../../../dist/images/linkedin.png'
 import codepen from '../../../dist/images/codepen.png'
 import resume from '../../../dist/images/resume.png'
 import TextField from '@material-ui/core/TextField'
-import { toaster } from 'evergreen-ui'
-import './Contact.scss';
+import Snackbar from '@material-ui/core/Snackbar'
+import './Contact.scss'
 
 
 class Contact extends React.Component {
@@ -30,7 +30,9 @@ class Contact extends React.Component {
     name: '',
     email: '',
     message: '',
-    sending: false
+    sending: false,
+    showSuccessSnackBar: false,
+    showErrorSnackBar: false
   }
 
   updateInput = (e) => {
@@ -59,18 +61,14 @@ class Contact extends React.Component {
       .then(res => {
         if (res.ok) {
           this.setState({
-            sending: false
+            sending: false,
+            showSuccessSnackBar: true
           })
-          toaster.success(
-            'Email sent.'
-          )
         } else {
           this.setState({
-            sending: false
+            sending: false,
+            showErrorSnackBar: true
           })
-          toaster.danger(
-            'There was an error. Email could not be sent.'
-          )
         }
       })
       .catch(err => {
@@ -80,6 +78,12 @@ class Contact extends React.Component {
         })
       })
     } 
+  }
+
+  handleClose = () => {
+    this.setState({
+      showSuccessSnackBar: false
+    })
   }
 
   render() {
@@ -98,40 +102,48 @@ class Contact extends React.Component {
             <a href="bpownell_resume.pdf" target="_blank"><img className="logo" src={resume} alt="resume"/></a>
           </div>
         </div>
-        {/* <form className="faded" onSubmit={this.sendEmail}>
-            <div>
-              <label>NAME</label>
-              <input type="text" id="name" name="name" required onChange={this.updateInput}></input>
-            </div>
-            <div>
-              <label>EMAIL</label>
-              <input type="email" name="email" id="email" required onChange={this.updateInput}></input>
-            </div>
-            <div>
-              <label>MESSAGE</label>
-              <textarea id="message" name="message" required maxLength="700" onChange={this.updateInput}></textarea>
-            </div>
-            <button type="submit">
-              SUBMIT
-            </button>
-            {this.state.error.length > 1 ?
-              <p>{this.state.error}</p>
-            : null}
-            {this.state.submissionMessage.length > 1 ?
-            <p>{this.state.submissionMessage}</p>
-            : null}
-          </form> */}
           <form className="faded" onSubmit={this.sendEmail} noValidate autoComplete="off">
             <div className="inputs">
-              <TextField id="standard-basic" id="name" name="name" required onChange={this.updateInput} label="Name" />
-              <TextField id="standard-basic" name="email" id="email" required onChange={this.updateInput} label="Email" />
-              <TextField id="standard-basic" id="message" name="message" required maxLength="700" onChange={this.updateInput} label="Message" />
+              <TextField id="standard-basic" id="name" name="name" onChange={this.updateInput} label="Name" />
+              <TextField id="standard-basic" name="email" id="email" onChange={this.updateInput} label="Email" />
+              <TextField id="standard-basic" id="message" name="message" maxLength="700" onChange={this.updateInput} label="Message" />
             </div>
             
             <button type="submit">
               SUBMIT
             </button>
           </form>
+
+
+
+
+
+          <Snackbar
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'center',
+            }}
+            open={this.state.showSuccessSnackBar}
+            autoHideDuration={6000}
+            onClose={this.handleClose}
+            ContentProps={{
+              'aria-describedby': 'message-id',
+            }}
+            message={<span id="message-id">Email sent! <i className="fas fa-check-square"></i></span>}
+          />
+          <Snackbar
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'center',
+            }}
+            open={this.state.showErrorSnackBar}
+            autoHideDuration={6000}
+            onClose={this.handleClose}
+            ContentProps={{
+              'aria-describedby': 'message-id',
+            }}
+            message={<span id="message-id">There was an error. <i className="fas fa-times"></i></span>}
+          />
         </div>
       </div>
     )
