@@ -7,6 +7,7 @@ import resume from '../../../dist/images/resume.png'
 import TextField from '@material-ui/core/TextField'
 import Snackbar from '@material-ui/core/Snackbar'
 import './Contact.scss'
+import Button from '@material-ui/core/Button'
 
 
 class Contact extends React.Component {
@@ -87,7 +88,7 @@ class Contact extends React.Component {
   }
 
   render() {
-  
+    const {message, email, name} = this.state
     return (
       <div className="contact">
       <h2>Contact</h2>
@@ -109,13 +110,12 @@ class Contact extends React.Component {
               <TextField id="standard-basic" id="message" name="message" maxLength="700" onChange={this.updateInput} label="Message" />
             </div>
             
-            <button type="submit">
-              SUBMIT
-            </button>
+            <div id="button">
+              <Button boxShadow={3} type="submit" variant="contained" color="primary" disabled={!(message && email && name)}>
+                Send
+              </Button>
+            </div>
           </form>
-
-
-
 
 
           <Snackbar
