@@ -1,13 +1,13 @@
-import React from 'react';
-
-import github from '../../../dist/images/githublogo.png';
-import treehouse from '../../../dist/images/Treehouse-Logo.png';
-import linkedin from '../../../dist/images/linkedin.png';
-import codepen from '../../../dist/images/codepen.png';
-import resume from '../../../dist/images/resume.png';
-
-
+import React from 'react'
+import github from '../../../dist/images/githublogo.png'
+import treehouse from '../../../dist/images/Treehouse-Logo.png'
+import linkedin from '../../../dist/images/linkedin.png'
+import codepen from '../../../dist/images/codepen.png'
+import resume from '../../../dist/images/resume.png'
+import TextField from '@material-ui/core/TextField'
+import { toaster } from 'evergreen-ui'
 import './Contact.scss';
+
 
 class Contact extends React.Component {
 
@@ -30,8 +30,6 @@ class Contact extends React.Component {
     name: '',
     email: '',
     message: '',
-    error: '',
-    submissionMessage: '',
     sending: false
   }
 
@@ -46,7 +44,7 @@ class Contact extends React.Component {
     this.setState({
       sending: true
     })
-    e.preventDefault();
+    e.preventDefault()
     if (name, email, message) {
       let payload = {
         name: name,
@@ -59,46 +57,39 @@ class Contact extends React.Component {
         body: JSON.stringify(payload)
       })
       .then(res => {
-        console.log('the result is: ', res);
-        if (res.ok === true) {
-          this.setState({
-            submissionMessage: 'Your email has been sent successfully.'
-          });
+        if (res.ok) {
           this.setState({
             sending: false
           })
+          toaster.success(
+            'Email sent.'
+          )
         } else {
           this.setState({
-            error: 'There has been an error.',
             sending: false
           })
+          toaster.danger(
+            'There was an error. Email could not be sent.'
+          )
         }
       })
       .catch(err => {
-        console.log('there was an error', err);
+        console.log(err)
         this.setState({
           sending: false
         })
       })
-    } else {
-      this.setState({
-        error: 'Fill out each form input.'
-      })
-    }
+    } 
   }
 
   render() {
+  
     return (
       <div className="contact">
       <h2>Contact</h2>
       <div className="contact-container">
 
       <div className="faded">
-        {/* <div id="call">
-          {/* <h3 className="moved-left">Hiring?</h3>
-          <h3>Let's get in touch.</h3> 
-          <h3>Links</h3>
-        </div> */}
           <div className="contact-links">
             <a href="https://github.com/baileypownell" target="_blank"><img className="logo" src={github} alt="Github logo"/></a>
             <a href="https://teamtreehouse.com/baileypownell" target="_blank"><img className="logo" src={treehouse} alt="Treehouse logo"/></a>
@@ -107,7 +98,7 @@ class Contact extends React.Component {
             <a href="bpownell_resume.pdf" target="_blank"><img className="logo" src={resume} alt="resume"/></a>
           </div>
         </div>
-        <form className="faded" onSubmit={this.sendEmail}>
+        {/* <form className="faded" onSubmit={this.sendEmail}>
             <div>
               <label>NAME</label>
               <input type="text" id="name" name="name" required onChange={this.updateInput}></input>
@@ -129,8 +120,19 @@ class Contact extends React.Component {
             {this.state.submissionMessage.length > 1 ?
             <p>{this.state.submissionMessage}</p>
             : null}
+          </form> */}
+          <form className="faded" onSubmit={this.sendEmail} noValidate autoComplete="off">
+            <div className="inputs">
+              <TextField id="standard-basic" id="name" name="name" required onChange={this.updateInput} label="Name" />
+              <TextField id="standard-basic" name="email" id="email" required onChange={this.updateInput} label="Email" />
+              <TextField id="standard-basic" id="message" name="message" required maxLength="700" onChange={this.updateInput} label="Message" />
+            </div>
+            
+            <button type="submit">
+              SUBMIT
+            </button>
           </form>
-      </div>
+        </div>
       </div>
     )
   }

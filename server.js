@@ -1,4 +1,4 @@
-//require('dotenv').config()
+require('dotenv').config()
 const path = require('path');
 const express = require('express');
 var bodyParser = require('body-parser');
@@ -74,8 +74,7 @@ app.get('/udemy_certs', (req, res) => {
 });
 
 app.get('/udemy_certs/:link', (request, response) => {
-  const { link } = request.params;
-  console.log('link = ', link)
+  const { link } = request.params
   let contentType;
   let content_type = link.split('.')[1];
   if (content_type === 'pdf') {
