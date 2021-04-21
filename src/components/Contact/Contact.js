@@ -141,7 +141,10 @@ class Contact extends React.Component {
                 id="standard-basic" 
                 id="message" 
                 name="message" 
-                maxLength="700" 
+                maxLength="500" 
+                multiline
+                rows={6}
+                placeholder="Message"
                 value={message}
                 onChange={this.updateInput} 
                 label="Message" />
