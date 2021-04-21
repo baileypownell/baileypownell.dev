@@ -8,6 +8,7 @@ import TextField from '@material-ui/core/TextField'
 import Snackbar from '@material-ui/core/Snackbar'
 import './Contact.scss'
 import Button from '@material-ui/core/Button'
+import CircularProgress from '@material-ui/core/CircularProgress'
 
 
 class Contact extends React.Component {
@@ -33,22 +34,39 @@ class Contact extends React.Component {
     message: '',
     sending: false,
     showSuccessSnackBar: false,
-    showErrorSnackBar: false
+    showErrorSnackBar: false,
+    invalidEmail: false,
+    emailErrorText: ''
   }
 
   updateInput = (e) => {
+    
+    if (e.target.id === 'email') {
+      const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if (regex.test(e.target.value)) {
+        this.setState({
+          invalidEmail: false, 
+          emailErrorText: ''
+        })
+      } else {
+        this.setState({
+          invalidEmail: true, 
+          emailErrorText: 'Invalid email.'
+        })
+      }
+    }
     this.setState({
       [e.target.id]: e.target.value
     })
   }
 
   sendEmail = (e) => {
-    const { name, email, message } = this.state;
+    const { name, email, message, invalidEmail } = this.state;
     this.setState({
       sending: true
     })
     e.preventDefault()
-    if (name, email, message) {
+    if (name && email && message && !invalidEmail) {
       let payload = {
         name: name,
         email: email,
@@ -60,17 +78,14 @@ class Contact extends React.Component {
         body: JSON.stringify(payload)
       })
       .then(res => {
-        if (res.ok) {
-          this.setState({
-            sending: false,
-            showSuccessSnackBar: true
-          })
-        } else {
-          this.setState({
-            sending: false,
-            showErrorSnackBar: true
-          })
-        }
+        this.setState({
+          sending: false,
+          showSuccessSnackBar: res.ok, 
+          showErrorSnackBar: !res.ok,
+          name: '', 
+          message: '', 
+          email: ''
+        })
       })
       .catch(err => {
         console.log(err)
@@ -88,7 +103,7 @@ class Contact extends React.Component {
   }
 
   render() {
-    const {message, email, name} = this.state
+    const {message, email, name, invalidEmail} = this.state
     return (
       <div className="contact">
       <h2>Contact</h2>
@@ -105,14 +120,41 @@ class Contact extends React.Component {
         </div>
           <form className="faded" onSubmit={this.sendEmail} noValidate autoComplete="off">
             <div className="inputs">
-              <TextField id="standard-basic" id="name" name="name" onChange={this.updateInput} label="Name" />
-              <TextField id="standard-basic" name="email" id="email" onChange={this.updateInput} label="Email" />
-              <TextField id="standard-basic" id="message" name="message" maxLength="700" onChange={this.updateInput} label="Message" />
+              <TextField 
+                id="standard-basic" 
+                id="name" 
+                name="name" 
+                onChange={this.updateInput} 
+                value={name}
+                label="Name" />
+              <TextField 
+                id="standard-basic" 
+                name="email" 
+                error={this.state.invalidEmail} 
+                helperText={this.state.emailErrorText} 
+                id="email" 
+                type="email" 
+                value={email}
+                onChange={this.updateInput} 
+                label="Email" />
+              <TextField 
+                id="standard-basic" 
+                id="message" 
+                name="message" 
+                maxLength="700" 
+                value={message}
+                onChange={this.updateInput} 
+                label="Message" />
             </div>
             
             <div id="button">
-              <Button boxShadow={3} type="submit" variant="contained" color="primary" disabled={!(message && email && name)}>
-                Send
+              <Button 
+                boxShadow={3} 
+                type="submit" 
+                variant="contained" 
+                color="primary" 
+                disabled={!(message && email && name && !invalidEmail)}>
+                {this.state.sending ? <CircularProgress /> : 'Send' }
               </Button>
             </div>
           </form>

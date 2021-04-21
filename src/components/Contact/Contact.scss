@@ -155,3 +155,13 @@ form {
     width: auto;
   }
 }
+
+.MuiFormHelperText-root.Mui-error {
+  color: #333333!important; 
+}
+
+.MuiCircularProgress-colorPrimary {
+  color: white!important;
+  width: 30px!important;
+  height: 30px!important;
+}
