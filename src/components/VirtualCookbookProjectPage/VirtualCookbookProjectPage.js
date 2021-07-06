@@ -12,7 +12,7 @@ function VirtualCookbookProjectPage() {
               </p>
               <img className="project-photo" src="images/desktop_dashboard_filtering.png"></img>
               <img className="project-photo" src="images/recipe_desktop.png"></img>
-              <p>I eventually added the ability to filter recipes by name and catgory. After that, I added functionality to "tag" recipes by features such as sugar-free, dair-free, vegan, etc.</p>
+              <p>I eventually added the ability to filter recipes by name and catgory. After that, I added functionality to "tag" recipes by features such as sugar-free, dairy-free, vegan, etc.</p>
               <img className="project-photo mobile-view" src="images/settings_mobile.png"></img>
               <p>This is a closed source project.</p>
           <div className="button-holder">
