@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import profile from '../../../dist/images/profile2.jpg';
+import profile from '../../../dist/images/20210716_142444.jpg';
 
 import './About.scss';
 
