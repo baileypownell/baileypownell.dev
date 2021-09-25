@@ -8,7 +8,14 @@ function VirtualCookbookProjectPage() {
       <div className="project-page">
         <input style={{display: 'none'}} tabIndex="1"></input>
         <img className="logo" src={logo}></img>
-        <img className="project-photo" src="images/desktop_dashboard.png" ></img>
+        <video style={{'display': 'block', 'width': '100%'}}controls muted width="250">
+
+            <source src="images/recipe-stash-demo-muted.mp4"
+                    type="video/mp4"/>
+
+            Sorry, your browser doesn't support embedded videos.
+        </video>
+        <img className="project-photo" src="images/recipe-stash-main.png" ></img>
         <p>
           Built with React, Node.js, Express, MaterializeCSS, and PostgreSQL, Recipe Stash is a fullstack single page application involved a lot of software design concepts 
           I hadn't used before. Although I would never do this for a truly production-level application, 
@@ -18,13 +25,13 @@ function VirtualCookbookProjectPage() {
           <a target="_blank" href="http://cryto.net/~joepie91/blog/2016/06/13/stop-using-jwt-for-sessions/">here</a>. 
           This project came about not by following a tutorial, but rather because I actually needed something like this.
         </p>
-        <img className="project-photo" src="images/desktop_dashboard_filtering.png"></img>
-        <img className="project-photo" src="images/recipe_desktop.png"></img>
+        <img className="project-photo" src="images/recipe-stash-recipe.png"></img>
+        <img className="project-photo" src="images/recipe-stash-editing.png"></img>
         <p>
           I eventually added the ability to filter recipes by name and catgory. 
           After that, I added functionality to "tag" recipes by features such as sugar-free, dairy-free, vegan, etc.
         </p>
-        <img className="project-photo mobile-view" src="images/settings_mobile.png"></img>
+        <img className="project-photo mobile-view" src="images/mobile-recipe-stash-recipe.png"></img>
         <p>This is a closed source project.</p>
         <div className="button-holder">
             <a target="_blank" href="https://recipe-stash-1.herokuapp.com/"><button>Visit Project</button></a>
