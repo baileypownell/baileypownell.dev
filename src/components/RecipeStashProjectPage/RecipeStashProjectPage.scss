@@ -2,6 +2,9 @@
 
 .project-page {
     text-align: center;
+    a {
+        color: $primary-color;
+      }
     h4 {
         font-family: 'Roboto', sans-serif;
         font-size: 30px;

@@ -15,14 +15,15 @@ function WeightTrackerProjectPage() {
             Sorry, your browser doesn't support embedded videos.
         </video>
         <p>
-          I built this single-page web app not because I thought I could build a better program than the already-existing weight trackers, 
-          but because I wanted to use React and Firebase to build a full-stack CRUD application, complete with authentication. 
-          This project really pushed the boundaries of what I knew, and was the first project I deployed with heroku.
-          The most difficult part of the project was converting the dates stored in the back end into an appropriate format for the "date" column 
-          of the Recent Weight Logs box and comparing and sorting them for display to the user. I used Chart.js for the graph, which was a piece of cake.
-          One of the many reasons I chose React for this project is the possibility to use React Native to turn this into an actual mobile app.
+          This weight tracker app is a straightforward application whereby users can log their weight, 
+          view their weight history via a graph, and set goals for themselves.
         </p>
         <img className="project-photo" src="images/happy-balance.png" ></img>
+        <p>
+          I built this single-page web app because I wanted to use React and Firebase to build a full-stack CRUD application. 
+          This project really pushed the boundaries of what I knew at the time, and was the first project I deployed with heroku.
+          I used Chart.js for building the graphs.
+        </p>
         <img className="project-photo" src="images/happy-balance-mobile.png" className="mobile-image"></img>
         <p>This is a closed source project.</p>
         <div className="button-holder">

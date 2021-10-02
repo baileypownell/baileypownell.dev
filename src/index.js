@@ -10,7 +10,7 @@ import {
 
 import {
   Home,
-  VirtualCookbookProjectPage,
+  RecipeStashProjectPage,
   WeightTrackerProjectPage,
   ThreeBeersProjectPage, 
   ISBAProjectPage
@@ -23,7 +23,7 @@ ReactDOM.render(
       <BrowserRouter>
         <Switch>
           <Route exact={true} path="/" component={Home}/>
-          <Route exact={true} path="/virtual-cookbook" component={VirtualCookbookProjectPage}/>
+          <Route exact={true} path="/virtual-cookbook" component={RecipeStashProjectPage}/>
           <Route exact={true} path="/weight-tracker" component={WeightTrackerProjectPage} />
           <Route exact={true} path='/three-beers-deep' component={ThreeBeersProjectPage} />
           <Route exact={true} path='/isba' component={ISBAProjectPage} />

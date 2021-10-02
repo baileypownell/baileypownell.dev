@@ -6,7 +6,7 @@ import ISBA from '../../../../dist/images/ISBA.jpg'
 import BW from '../../../../dist/images/3bdhome.jpg'
 import './Project.scss'
 import { SideSheet, Position, ArrowLeftIcon } from 'evergreen-ui'
-import { VirtualCookbookProjectPage, WeightTrackerProjectPage, ThreeBeersProjectPage, ISBAProjectPage } from '../../../components/index'
+import { RecipeStashProjectPage, WeightTrackerProjectPage, ThreeBeersProjectPage, ISBAProjectPage } from '../../../components/index'
 
 const Projects = {
   ISBA: 'isba', 
@@ -103,7 +103,7 @@ class Project extends React.Component {
             <div class="side-sheet-content">
                 { showButton ? <button onClick={this.closeSideSheet}><ArrowLeftIcon size={16} marginRight={8} /> Close </button> : null }
                 { id === Projects.WEIGHT_TRACKER ? <WeightTrackerProjectPage></WeightTrackerProjectPage> : null }
-                { id === Projects.COOKBOOK ? <VirtualCookbookProjectPage></VirtualCookbookProjectPage> : null }
+                { id === Projects.COOKBOOK ? <RecipeStashProjectPage></RecipeStashProjectPage> : null }
                 { id === Projects.BAND_WEBSITE ? <ThreeBeersProjectPage></ThreeBeersProjectPage> : null }
                 { id === Projects.ISBA ? <ISBAProjectPage></ISBAProjectPage> : null }
             </div>

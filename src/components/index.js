@@ -1,12 +1,12 @@
 import Home from './Home/Home';
-import VirtualCookbookProjectPage from './VirtualCookbookProjectPage/VirtualCookbookProjectPage';
+import RecipeStashProjectPage from './RecipeStashProjectPage/RecipeStashProjectPage';
 import WeightTrackerProjectPage from './WeightTrackerProjectPage/WeightTrackerProjectPage';
 import ThreeBeersProjectPage from './ThreeBeersProjectPage/ThreeBeersProjectPage';
 import ISBAProjectPage from './ISBAProjectPage/ISBAProjectPage';
 
 export {
   Home,
-  VirtualCookbookProjectPage,
+  RecipeStashProjectPage,
   WeightTrackerProjectPage,
   ThreeBeersProjectPage,
   ISBAProjectPage
