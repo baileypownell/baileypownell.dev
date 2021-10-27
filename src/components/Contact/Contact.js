@@ -115,7 +115,7 @@ class Contact extends React.Component {
             <a href="https://teamtreehouse.com/baileypownell" target="_blank"><img className="logo" src={treehouse} alt="Treehouse logo"/></a>
             <a href="https://www.linkedin.com/in/bailey-pownell-224606167/" target="_blank"><img className="logo" src={linkedin} alt="LinkedIn logo"/></a>
             <a href="https://codepen.io/baileypownell/" target="_blank"><img className="logo" src={codepen} alt="Codepen logo"/></a>
-            <a href="bpownell_resume.pdf" target="_blank"><img className="logo" src={resume} alt="resume"/></a>
+            <a href="bpownell_resume2.pdf" target="_blank"><img className="logo" src={resume} alt="resume"/></a>
           </div>
         </div>
           <form className="faded" onSubmit={this.sendEmail} noValidate autoComplete="off">
