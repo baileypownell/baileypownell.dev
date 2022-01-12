@@ -1,5 +1,13 @@
 @import './scss/mixins.scss';
 
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration-color: none;
+}
+
 #app {
   min-height: 100vh;
 }

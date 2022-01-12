@@ -4,11 +4,12 @@
   width: 90%;
   margin: 0 auto;
   padding: 8vh 0;
+  background-color: $white;
   @include tablet {
     width: 75%;
   }
     h2 {
-    font-family: 'La Belle Aurore', cursive;
+    font-family: 'Cormorant Garamond', sans-serif;
     text-align: center;
     font-size: 40px;
     color: $primary-color;

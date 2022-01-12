@@ -1,52 +1,33 @@
 
 @import '../../scss/mixins.scss';
 
-.LandingImage {
-  height: 100vh;
-  background-image: url(../../../dist/images/screen.jpg),linear-gradient(120deg, rgba(246,96,164,0.89), #fcab3a);
-  background-blend-mode: soft-light;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+.landing-screen {
+  padding: 5vw;
+  background-color: $white;
   display: flex;
   flex-direction: column;
-  justify-content: top;
-  align-items: flex-end;
-  padding-top: 90px;
+  justify-content: space-between;
+  align-items: center;
   @include tablet {
-    padding-top: 10vw;
+    flex-direction: row;
+    height: 100vh;
   }
   img {
-    position: absolute;
-    left: 10vw;
-    bottom: 10vw;
-    width: 40vw;
+    width: 75%;
+    flex-grow: 1;
+    border-radius: 50%;
     @include tablet {
-      width: 30vw;
-      left: 15vw;
-    }
-    @include desktop {
-      left: 8vw;
-      bottom: 5vw;
+      width: 350px;
     }
   }
   .points, .skills {
-    margin-right: 5vw;
     text-align: right;
-    @include tablet {
-      margin-right: 10vw;
-    }
   }
   .points {
     border-bottom: 2px solid white;
     margin-bottom: 5vh;
   }
   h1 {
-    //font-family: 'EB Garamond', serif;
-    font-family: 'Roboto', sans-serif;
-    color: white;
     font-size: 40px;
     margin: 0;
     @include tablet {
@@ -57,7 +38,6 @@
     }
   }
   h2 {
-    font-family: 'La Belle Aurore', cursive;
     color: white;
     font-size: 35px;
     margin: 10px 0;
@@ -69,7 +49,6 @@
     color: white;
     margin-bottom: 5px;
     margin-top: 0;
-    //font-family: 'EB Garamond', serif;
     font-family: 'Roboto', sans-serif;
     font-size: 25px;
     @include desktop {
@@ -77,4 +56,34 @@
       margin-bottom: 15px;
     }
   }
+
+  h1, h2, h3 {
+    color: $spanish-pink;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  h2 {
+    margin-top: 25px;
+  }
+
+
+  h2 {
+    font-family: 'Raleway', sans-serif;
+  }
+}
+
+#hello {
+  color: $brown;
+}
+
+button {
+  transition: 0.5s;
+  box-shadow: 0 0 10px $muted-pink;
+  margin-left: 25px!important;
+  &:hover {
+    background-position: right center; /* change the direction of the change here */
+    // background-size: 200%;
+  }
+  background-size: 250% auto;
+  background-image: linear-gradient(to right, $spanish-pink 0%, $muted-pink 51%, $spanish-pink 100%);
 }

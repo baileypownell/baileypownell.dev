@@ -13,7 +13,12 @@ import {
   RecipeStashProjectPage,
   WeightTrackerProjectPage,
   ThreeBeersProjectPage, 
-  ISBAProjectPage
+  ISBAProjectPage,
+  Contact,
+  Navigation,
+  Portfolio,
+  LandingImage,
+  Footer,
 } from './components/index';
 
 import './main.scss';
@@ -21,12 +26,16 @@ import './main.scss';
 
 ReactDOM.render(
       <BrowserRouter>
+        <Navigation></Navigation>
+        <Footer></Footer>
         <Switch>
-          <Route exact={true} path="/" component={Home}/>
-          <Route exact={true} path="/virtual-cookbook" component={RecipeStashProjectPage}/>
+          <Route exact={true} path="/" component={LandingImage}/>
+          <Route exact={true} path="/contact" component={Contact}/>,
+          <Route path="/portfolio" component={Portfolio} />,
+          {/* <Route exact={true} path="/virtual-cookbook" component={RecipeStashProjectPage}/>
           <Route exact={true} path="/weight-tracker" component={WeightTrackerProjectPage} />
           <Route exact={true} path='/three-beers-deep' component={ThreeBeersProjectPage} />
-          <Route exact={true} path='/isba' component={ISBAProjectPage} />
+          <Route exact={true} path='/isba' component={ISBAProjectPage} /> */}
           <Redirect to="/" />
         </Switch>
       </BrowserRouter>,

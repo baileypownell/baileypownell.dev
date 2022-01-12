@@ -2,18 +2,25 @@
 @import '../../scss/mixins.scss';
 
 footer {
+  color: $brown;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
   color: white;
-  background-image: url("../../../dist/images/keyboard.jpg"), linear-gradient(45deg, rgba(246, 96, 164, 0.89), $secondary-color);
-  background-blend-mode: soft-light;
-  background-position: bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  position: relative;
-  //font-family: 'EB Garamond', serif;
-  font-family: 'Roboto', sans-serif;
+  text-align: right;
+  padding: 20px;
+  // background-image: url("../../../dist/images/keyboard.jpg"), linear-gradient(45deg, rgba(246, 96, 164, 0.89), $secondary-color);
+  // background-blend-mode: soft-light;
+  // background-position: bottom;
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
+  // position: relative;
+  font-family: 'Cormorant Garamond', serif;
   a {
     text-decoration: none;
+    color: $brown;
+    font-weight: bold;
   }
   // @include desktop {
   //   background-size: contain;
@@ -23,14 +30,12 @@ footer {
     padding: 0;
   }
   a {
-    color: white;
     cursor: pointer;
   }
   > div {
     width: 100%;
     height: 100%;
-    padding: 6vh 0;
-    background-color: rgba(0, 0, 0, 0);
+    padding: 20px 0;
   }
   @include IE10up {
     background-image: url("../../../dist/images/keyboardIE.jpg");
@@ -66,17 +71,9 @@ footer {
   p {
     font-size: 18px;
   }
-  .copyright {
-    font-family: 'La Belle Aurore', cursive;
-    font-size: 22px;
-  }
   .source {
-    font-family: 'La Belle Aurore', cursive;
     cursor: pointer;
     text-align: center;
-    @include tablet {
-      font-size: 30px;
-    }
   }
 }
 
@@ -94,7 +91,8 @@ footer {
 }
 
 .fab,
-.fas {
-  font-size: 1.5rem;
-  padding-right: 5px;
+.fas,
+.far {
+  font-size: 1rem;
+  padding-left: 5px;
 }

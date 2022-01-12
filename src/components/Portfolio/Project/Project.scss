@@ -115,20 +115,20 @@ button {
   padding: 10px 15px;
   margin: 5px;
   cursor: pointer;
-  color: $primary-color;
-  background-color: white;
+  color: $white;
+  background-color: $muted-pink;
   outline: none;
-  transition: color, background-color, transform, -webkit-transform, -ms-transform, border, .3s;
-  &:hover {
-    color: white;
-    background-color: pink;
-    transform: translateY(-5px);
-  }
-  > a {
-    text-decoration: none;
-    color: $primary-color!important;
-    &:hover {
-      color: white!important;
-    }
-  }
+  // transition: color, background-color, transform, -webkit-transform, -ms-transform, border, .3s;
+  // &:hover {
+  //   color: white;
+  //   background-color: pink;
+  //   transform: translateY(-5px);
+  // }
+  // > a {
+  //   text-decoration: none;
+  //   color: $primary-color!important;
+  //   &:hover {
+  //     color: white!important;
+  //   }
+  // }
 }

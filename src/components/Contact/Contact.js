@@ -13,20 +13,20 @@ import CircularProgress from '@material-ui/core/CircularProgress'
 
 class Contact extends React.Component {
 
-  fadeInElements = () => {
-    let fadedElements = document.querySelectorAll('.faded');
-    for (let i = 0; i < fadedElements.length; i++) {
-      let introPos = fadedElements[i].getBoundingClientRect().top;
-      let screenPos = window.innerHeight/1.2;
-      if (introPos < screenPos ) {
-        fadedElements[i].classList.add('fade-in');
-      }
-    }
-  }
+  // fadeInElements = () => {
+  //   let fadedElements = document.querySelectorAll('.faded');
+  //   for (let i = 0; i < fadedElements.length; i++) {
+  //     let introPos = fadedElements[i].getBoundingClientRect().top;
+  //     let screenPos = window.innerHeight/1.2;
+  //     if (introPos < screenPos ) {
+  //       fadedElements[i].classList.add('fade-in');
+  //     }
+  //   }
+  // }
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.fadeInElements)
-  }
+  // componentDidMount() {
+  //   window.addEventListener('scroll', this.fadeInElements)
+  // }
 
   state = {
     name: '',
@@ -106,10 +106,10 @@ class Contact extends React.Component {
     const {message, email, name, invalidEmail} = this.state
     return (
       <div className="contact">
-      <h2>Contact</h2>
+      {/* <h2>Contact</h2> */}
       <div className="contact-container">
 
-      <div className="faded">
+      <div>
           <div className="contact-links">
             <a href="https://github.com/baileypownell" target="_blank"><img className="logo" src={github} alt="Github logo"/></a>
             <a href="https://teamtreehouse.com/baileypownell" target="_blank"><img className="logo" src={treehouse} alt="Treehouse logo"/></a>
@@ -118,7 +118,7 @@ class Contact extends React.Component {
             <a href="bpownell_resume2.pdf" target="_blank"><img className="logo" src={resume} alt="resume"/></a>
           </div>
         </div>
-          <form className="faded" onSubmit={this.sendEmail} noValidate autoComplete="off">
+          <form onSubmit={this.sendEmail} noValidate autoComplete="off">
             <div className="inputs">
               <TextField 
                 id="standard-basic" 

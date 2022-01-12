@@ -3,6 +3,11 @@ $primary-color: #F6738C;
 $secondary-color: #FFA048;
 $tertiary-color: #F6738C;
 
+$white: #FFFCF5;
+$brown: #4E392D;
+$muted-pink: #CF8E80;
+$spanish-pink: #FCB5B5;
+
 
 @mixin tablet {
   @media only screen and (min-width: 800px) {
@@ -36,21 +41,22 @@ $tertiary-color: #F6738C;
 @mixin button {
   cursor: pointer;
   border-radius: 5px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
   padding: 10px 25px;
-  color: white;
-  background-color: $tertiary-color;
+  // color: white;
+  // background-color: $tertiary-color;
   border: none!important;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.26);
+  // box-shadow: 0 10px 20px rgba(0,0,0,0.26);
   outline: none;
   transition: transform, -webkit-transform, -ms-transform, .3s;
-  a {
-    transition: color .3s;
-    color: $primary-color;
-  }
-  &:hover {
-    transform: translateY(-5px);
-  }
+  // a {
+  //   transition: color .3s;
+  //   color: $primary-color;
+  // }
+  // &:hover {
+  //   transform: translateY(-5px);
+  // }
 }
 
 @mixin flex-column {
