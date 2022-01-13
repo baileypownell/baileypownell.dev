@@ -47,25 +47,23 @@
 }
 
 .contact-links {
+  padding-top: 100px;
   color: $primary-color;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  @include tablet {
-    // flex-direction: column;
-    margin-right: 50px;
-  }
-  a img,
   a i {
+    font-size: 50px;
     display: inline-block;
+    color: $brown;
     padding: 1vw;
     flex-grow: 1;
     max-width: 12vw;
     transition-property: transform, -webkit-transform, -ms-transform;
     transition-duration: .5s;
-    &:hover {
-      @include prefix(transform, scale(1.1) translateY(-15px), webkit ms);
-    }
+    // &:hover {
+    //   @include prefix(transform, scale(1.1) translateY(-15px), webkit ms);
+    // }
     @include tablet {
       max-width: 8vw;
     }
@@ -90,7 +88,7 @@ form {
     @include button;
     letter-spacing: 8px;
     border: none;
-    background: linear-gradient(130deg, rgba(246, 96, 164, 0.89), $secondary-color);
+    background: linear-gradient(130deg, $muted-pink, $spanish-pink);
     &:hover {
       transform: none;
     }
@@ -124,7 +122,7 @@ form {
 }
 
 .MuiInput-underline:hover:not(.Mui-disabled):before {
-  border-color: $secondary-color!important;
+  border-color: $spanish-pink!important;
 }
 
 .MuiInputLabel-animated {
@@ -132,7 +130,7 @@ form {
 }
 
 .MuiInput-underline:after {
-    border-bottom: 2px solid $primary-color!important;
+    border-bottom: 2px solid $muted-pink!important;
 }
 
 .MuiSnackbar-root div {
@@ -163,4 +161,9 @@ form {
   color: white!important;
   width: 30px!important;
   height: 30px!important;
+}
+
+.MuiInputLabel-root,
+.MuiInputBase-input {
+  font-family: 'Raleway', sans-serif!important;
 }
