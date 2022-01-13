@@ -20,10 +20,7 @@ const Intro = () => {
   }, []);
   return (
     <div className="intro">
-      <p className="faded">
-        I develop mobile-first and fully responsive web applications with React, Angular, Node, and PostgreSQL. My professional experience focuses on the front end, but I have full stack experience building RESTful APIs and using serverless solutions in my own personal side projects.
-      </p>
-      <h2 className="faded">My favorite technologies</h2>
+{/* 
       <div className="tech">
         <i className="fab fa-html5"></i>
         <i className="fab fa-css3-alt "></i>
@@ -36,7 +33,7 @@ const Intro = () => {
         <img src={postgres} alt="postgreSQL" />
         <img src={heroku} alt="heroku" />
       </div>
-      
+       */}
       <div style={{ paddingTop: `4vw`}}>
         <h2 className="faded">Udemy Certificates</h2>
         <div className="faded certifications">

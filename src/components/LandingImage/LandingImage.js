@@ -33,15 +33,9 @@ class LandingImage extends React.Component {
           <h2>I am a software developer proficient in HTML, CSS, Javascript, Angular and React.</h2>
         </div>
         <div className="skills faded">
-          {/* <h3>HTML5 | CSS3 | JavaScript </h3>
-          <h3>Angular</h3>
-          <h3>React | Redux </h3>
-          <h3>Node</h3>
-          <h3>Express</h3>
-          <h3>PostgreSQL</h3> */}
-          <button>Github <i className="fab fa-github"></i></button>
-          <button>LinkedIn <i className="fab fa-linkedin"></i></button>
-          <button>Resume <i className="far fa-file"></i></button>
+          <button className="swipe">Github <i className="fab fa-github"></i></button>
+          <button className="swipe">LinkedIn <i className="fab fa-linkedin"></i></button>
+          <button className="swipe">Resume <i className="far fa-file"></i></button>
         </div>
         </div>
    

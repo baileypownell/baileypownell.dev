@@ -1,4 +1,4 @@
-@import '../../scss/mixins.scss';
+@import '../../../scss/mixins.scss';
 
 .project-page {
     text-align: center;
@@ -6,7 +6,7 @@
         color: $primary-color;
       }
     h4 {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Raleway', sans-serif;
         font-size: 30px;
         color: $primary-color;
         margin: 0;
@@ -35,7 +35,7 @@
     }
     
     p {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Raleway', sans-serif;
         line-height: 1.75;
         text-align: center;
     }

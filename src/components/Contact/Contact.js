@@ -12,22 +12,6 @@ import CircularProgress from '@material-ui/core/CircularProgress'
 
 
 class Contact extends React.Component {
-
-  // fadeInElements = () => {
-  //   let fadedElements = document.querySelectorAll('.faded');
-  //   for (let i = 0; i < fadedElements.length; i++) {
-  //     let introPos = fadedElements[i].getBoundingClientRect().top;
-  //     let screenPos = window.innerHeight/1.2;
-  //     if (introPos < screenPos ) {
-  //       fadedElements[i].classList.add('fade-in');
-  //     }
-  //   }
-  // }
-
-  // componentDidMount() {
-  //   window.addEventListener('scroll', this.fadeInElements)
-  // }
-
   state = {
     name: '',
     email: '',
@@ -110,13 +94,6 @@ class Contact extends React.Component {
       <div className="contact-container">
 
       <div>
-          <div className="contact-links">
-            <a href="https://github.com/baileypownell" target="_blank"><img className="logo" src={github} alt="Github logo"/></a>
-            <a href="https://teamtreehouse.com/baileypownell" target="_blank"><img className="logo" src={treehouse} alt="Treehouse logo"/></a>
-            <a href="https://www.linkedin.com/in/bailey-pownell-224606167/" target="_blank"><img className="logo" src={linkedin} alt="LinkedIn logo"/></a>
-            <a href="https://codepen.io/baileypownell/" target="_blank"><img className="logo" src={codepen} alt="Codepen logo"/></a>
-            <a href="bpownell_resume2.pdf" target="_blank"><img className="logo" src={resume} alt="resume"/></a>
-          </div>
         </div>
           <form onSubmit={this.sendEmail} noValidate autoComplete="off">
             <div className="inputs">
@@ -161,6 +138,14 @@ class Contact extends React.Component {
               </Button>
             </div>
           </form>
+
+          <div className="contact-links">
+            <a href="https://github.com/baileypownell" target="_blank"><img className="logo" src={github} alt="Github logo"/></a>
+            <a href="https://teamtreehouse.com/baileypownell" target="_blank"><img className="logo" src={treehouse} alt="Treehouse logo"/></a>
+            <a href="https://www.linkedin.com/in/bailey-pownell-224606167/" target="_blank"><img className="logo" src={linkedin} alt="LinkedIn logo"/></a>
+            <a href="https://codepen.io/baileypownell/" target="_blank"><img className="logo" src={codepen} alt="Codepen logo"/></a>
+            <a href="bpownell_resume2.pdf" target="_blank"><img className="logo" src={resume} alt="resume"/></a>
+          </div>
 
 
           <Snackbar

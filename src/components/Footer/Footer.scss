@@ -9,22 +9,12 @@ footer {
   color: white;
   text-align: right;
   padding: 20px;
-  // background-image: url("../../../dist/images/keyboard.jpg"), linear-gradient(45deg, rgba(246, 96, 164, 0.89), $secondary-color);
-  // background-blend-mode: soft-light;
-  // background-position: bottom;
-  // background-size: cover;
-  // background-repeat: no-repeat;
-  // background-attachment: fixed;
-  // position: relative;
   font-family: 'Cormorant Garamond', serif;
   a {
     text-decoration: none;
     color: $brown;
     font-weight: bold;
   }
-  // @include desktop {
-  //   background-size: contain;
-  // }
   p {
     display: inline;
     padding: 0;

@@ -5,22 +5,6 @@ import Project from './Project/Project';
 import './Portfolio.scss';
 
 class Porfolio extends React.Component {
-
-  // fadeInElements = () => {
-  //   let fadedElements = document.querySelectorAll('.opaque');
-  //   for (let i = 0; i < fadedElements.length; i++) {
-  //     let introPos = fadedElements[i].getBoundingClientRect().top;
-  //     let screenPos = window.innerHeight/1.2;
-  //     if (introPos < screenPos ) {
-  //       fadedElements[i].classList.add('full');
-  //     }
-  //   }
-  // }
-
-  // componentDidMount() {
-  //   window.addEventListener('scroll', this.fadeInElements)
-  // }
-
   render() {
     return (
       <div className="portfolio-container">

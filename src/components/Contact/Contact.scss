@@ -3,7 +3,7 @@
 .contact {
   padding: 8vh 0;
   text-align: center;
-  background-color: $white;
+  font-family: 'Raleway', sans-serif;
   h2 {
     font-family: 'Cormorant Garamond', sans-serif;
     color: $primary-color;
@@ -14,18 +14,19 @@
 }
 
 .contact-container {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
   width: 90%;
   margin: 0 auto;
   text-align: center;
   font-size: 18px;
   @include tablet {
     display: flex;
+    flex-direction: column;
     width: 60%;
     font-size: 20px;
     > div {
-      display: flex;
-      flex-direction: column;
+      // display: flex;
+      // flex-direction: column;
       justify-content: center;
     }
   }
@@ -51,7 +52,7 @@
   flex-wrap: wrap;
   justify-content: center;
   @include tablet {
-    flex-direction: column;
+    // flex-direction: column;
     margin-right: 50px;
   }
   a img,
@@ -103,7 +104,7 @@ form {
     flex-direction: column;
     label {
       color: #1c1a1b;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Raleway', sans-serif;
       letter-spacing: 5px;
       padding: 5px;
       @include tablet {

@@ -24,7 +24,6 @@
     text-align: right;
   }
   .points {
-    border-bottom: 2px solid white;
     margin-bottom: 5vh;
   }
   h1 {
@@ -39,22 +38,8 @@
   }
   h2 {
     color: white;
-    font-size: 35px;
+    font-size: 30px;
     margin: 10px 0;
-    @include tablet {
-      font-size: 50px;
-    }
-  }
-  h3 {
-    color: white;
-    margin-bottom: 5px;
-    margin-top: 0;
-    font-family: 'Roboto', sans-serif;
-    font-size: 25px;
-    @include desktop {
-      font-size: 35px;
-      margin-bottom: 15px;
-    }
   }
 
   h1, h2, h3 {
@@ -74,16 +59,59 @@
 
 #hello {
   color: $brown;
+  @include desktop {
+    font-size: 200px;
+  }
 }
 
-button {
-  transition: 0.5s;
-  box-shadow: 0 0 10px $muted-pink;
-  margin-left: 25px!important;
-  &:hover {
-    background-position: right center; /* change the direction of the change here */
-    // background-size: 200%;
-  }
-  background-size: 250% auto;
-  background-image: linear-gradient(to right, $spanish-pink 0%, $muted-pink 51%, $spanish-pink 100%);
+// button {
+//   transition: 0.5s;
+//   box-shadow: 0 0 10px $muted-pink;
+//   margin-left: 25px!important;
+//   &:hover {
+//     background-position: right center; /* change the direction of the change here */
+//   }
+//   background-size: 250% auto;
+//   background-image: linear-gradient(to right, $spanish-pink 0%, $muted-pink 51%, $spanish-pink 100%);
+// }
+
+[class^=swipe] {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+}
+
+
+.swipe:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: darken($spanish-pink, 5%);
+  transform: translateX(-100%);
+}
+.swipe:hover {
+  color: $white;
+}
+.swipe:hover:before {
+  transform: translateX(0);
+}
+
+
+html *,
+html *:before,
+html *:after {
+  box-sizing: border-box;
+  transition: 0.5s ease-in-out;
+}
+
+*:before,
+*:after {
+  // z-index: -1;
 }

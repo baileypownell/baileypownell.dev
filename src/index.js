@@ -9,11 +9,6 @@ import {
 
 
 import {
-  Home,
-  RecipeStashProjectPage,
-  WeightTrackerProjectPage,
-  ThreeBeersProjectPage, 
-  ISBAProjectPage,
   Contact,
   Navigation,
   Portfolio,
@@ -32,10 +27,6 @@ ReactDOM.render(
           <Route exact={true} path="/" component={LandingImage}/>
           <Route exact={true} path="/contact" component={Contact}/>,
           <Route path="/portfolio" component={Portfolio} />,
-          {/* <Route exact={true} path="/virtual-cookbook" component={RecipeStashProjectPage}/>
-          <Route exact={true} path="/weight-tracker" component={WeightTrackerProjectPage} />
-          <Route exact={true} path='/three-beers-deep' component={ThreeBeersProjectPage} />
-          <Route exact={true} path='/isba' component={ISBAProjectPage} /> */}
           <Redirect to="/" />
         </Switch>
       </BrowserRouter>,

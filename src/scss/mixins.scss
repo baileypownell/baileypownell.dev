@@ -44,19 +44,9 @@ $spanish-pink: #FCB5B5;
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
   padding: 10px 25px;
-  // color: white;
-  // background-color: $tertiary-color;
   border: none!important;
-  // box-shadow: 0 10px 20px rgba(0,0,0,0.26);
   outline: none;
   transition: transform, -webkit-transform, -ms-transform, .3s;
-  // a {
-  //   transition: color .3s;
-  //   color: $primary-color;
-  // }
-  // &:hover {
-  //   transform: translateY(-5px);
-  // }
 }
 
 @mixin flex-column {
