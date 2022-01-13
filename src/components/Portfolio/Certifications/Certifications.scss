@@ -1,22 +1,24 @@
 
-@import '../../scss/mixins.scss';
+@import '../../../scss/mixins.scss';
 
-.intro {
-  background-color: black;
+.certification-container {
+  font-family: 'Raleway', sans-serif;
   color: white;
   margin: 0;
-  font-size: 18px;
-  font-family: 'EB Garamond', serif;
+  font-size: 16px;
   text-align: center;
-  padding: 8vh 0;
+  padding: 8vh 0 0 0;
+  .udemy-title {
+    font-family: 'Raleway', sans-serif;
+    color: $brown;
+    margin: 15px 0;
+    font-size: 24px;
+  }
   > div {
     width: 90%;
     margin: 0 auto;
     @include tablet {
-      width: 60%;
-    }
-    @include desktop {
-      width: 50%;
+      width: 65%;
     }
     a {
       text-decoration: none;
@@ -32,7 +34,8 @@
     }
   }
   .udemy {
-    background-color: white;
+    background-color: $brown;
+    color: $white;
     border-radius: 10px;
     display: flex;
     flex-wrap: nowrap;
@@ -58,8 +61,8 @@
       }
     }
     p {
-      color: black;
-      font-size: 14px;
+      // color: $brown;
+      // font-size: 14px;
       margin: 0;
       text-align: left;
       line-height: 1;
@@ -67,28 +70,16 @@
       transition: color .4s;
       @include tablet {
         padding-left: 10px;
-        font-size: 18px;
+        // font-size: 18px;
       }
     }
     .bold {
       font-weight: bold;
     }
   }
-  @include tablet {
-    font-size: 22px;
-  }
   p {
     @include responsive;
     line-height: 1.5;
-  }
-  h2 {
-    color: #f66088;
-    font-size: 30px;
-    padding: 20px 0;
-    @include tablet {
-      font-size: 40px;
-      padding: 40px 0;
-    }
   }
   i {
     font-size: 36px;

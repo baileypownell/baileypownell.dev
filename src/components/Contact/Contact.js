@@ -87,6 +87,7 @@ class Contact extends React.Component {
       <div className="contact">
         <div className="contact-container">
           <p>Don't be a stranger.</p>
+          <h1 id="hi">Say Hi</h1>
           <div>
             </div>
               <form onSubmit={this.sendEmail} noValidate autoComplete="off">

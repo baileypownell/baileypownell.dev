@@ -21,12 +21,11 @@ import './main.scss';
 
 ReactDOM.render(
       <BrowserRouter>
-        <Navigation></Navigation>
-        <Footer></Footer>
+        <LandingImage/>
+        <Portfolio/>
+        <Contact/>
+        <Footer/>
         <Switch>
-          <Route exact={true} path="/" component={LandingImage}/>
-          <Route exact={true} path="/contact" component={Contact}/>,
-          <Route path="/portfolio" component={Portfolio} />,
           <Redirect to="/" />
         </Switch>
       </BrowserRouter>,

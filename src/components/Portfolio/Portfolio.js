@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Project from './Project/Project';
+import Certifications from './Certifications/Certifications';
 
 import './Portfolio.scss';
 
@@ -8,7 +9,7 @@ class Porfolio extends React.Component {
   render() {
     return (
       <div className="portfolio-container">
-        {/* <h2>Portfolio</h2> */}
+        <h2>Portfolio</h2>
         <div id="gallery">
           <Project
               id="cookbook"
@@ -25,6 +26,8 @@ class Porfolio extends React.Component {
             id="isba"
           />
         </div>
+
+        <Certifications/>
       </div>
     )
   }
