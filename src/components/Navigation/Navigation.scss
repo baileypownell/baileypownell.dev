@@ -28,7 +28,8 @@ nav {
     transform: scaleX(0);
     transition: transform 0.3s ease;
   }
-  a:hover::before {
+  a:hover::before,
+  a.active::before  {
     transform: scaleX(1);
   }
   div {

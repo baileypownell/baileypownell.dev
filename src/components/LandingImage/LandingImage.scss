@@ -8,11 +8,15 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  // position: relative;
+  // background-image: url('../../../dist/images/colored-noun-circle.svg');
+  // background-repeat: no-repeat;
+  // background-size: contain;
   @include tablet {
     flex-direction: row;
     height: 100vh;
   }
-  img {
+  #profile-image {
     width: 75%;
     flex-grow: 1;
     border-radius: 50%;
@@ -80,7 +84,7 @@
 //   background-image: linear-gradient(to right, $spanish-pink 0%, $muted-pink 51%, $spanish-pink 100%);
 // }
 
-[class^=swipe] {
+.swipe {
   position: relative;
   display: block;
   overflow: hidden;
@@ -121,4 +125,19 @@ html *:after {
 *:before,
 *:after {
   z-index: -1;
+}
+
+.circle {
+  filter: invert(19%) sepia(5%) saturate(3302%) hue-rotate(337deg) brightness(100%) contrast(86%);
+  position: absolute;
+  top: 593px;
+  left: -200px;
+}
+
+#circle2 {
+  top: 700px;
+  left: 150px;
+  width: 750px;
+  
+  filter: invert(63%) sepia(11%) saturate(1234%) hue-rotate(314deg) brightness(126%) contrast(98%);
 }
