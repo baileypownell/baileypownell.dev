@@ -16,8 +16,8 @@ class LandingImage extends React.Component {
               <h1><span id="hello">Hello,</span><br/> my name is Bailey</h1>
               <h2>I am a software developer proficient in HTML, CSS, Javascript, Angular and React.</h2>
             </div>
-            <img class="circle" src={circle}/>
-            <img class="circle" id="circle2" src={circle}/>
+            {/* <img class="circle" src={circle}/>
+            <img class="circle" id="circle2" src={circle}/> */}
             <div className="buttons fade-in">
               <button className="swipe">Github <i className="fab fa-github"></i></button>
               <button className="swipe">LinkedIn <i className="fab fa-linkedin"></i></button>

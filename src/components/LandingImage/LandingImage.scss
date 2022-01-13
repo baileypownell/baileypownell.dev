@@ -3,25 +3,27 @@
 
 .landing-screen {
   padding: 5vw;
+  padding-top: 10vh;
   background-color: $white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  // position: relative;
-  // background-image: url('../../../dist/images/colored-noun-circle.svg');
-  // background-repeat: no-repeat;
-  // background-size: contain;
+  background-image: url('../../../dist/images/pink-noun-circle.svg'), url('../../../dist/images/brown-noun-circle.svg'), url('../../../dist/images/pink-noun-circle.svg'),;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: contain, contain, contain;
+  background-position: 0px 300px, 145px 500px, 150% 500px;
   @include tablet {
+    padding-top: unset;
     flex-direction: row;
     height: 100vh;
   }
   #profile-image {
-    width: 75%;
-    flex-grow: 1;
+    width: 250px;
     border-radius: 50%;
     @include tablet {
       width: 350px;
+      max-width: 400px;
     }
   }
   .points {
@@ -31,7 +33,7 @@
     margin-bottom: 5vh;
   }
   h1 {
-    font-size: 40px;
+    font-size: 75px;
     margin: 0;
     @include tablet {
       font-size: 75px;
@@ -41,7 +43,7 @@
     }
   }
   h2 {
-    color: white;
+    color: $brown;
     font-size: 30px;
     margin: 10px 0;
   }
@@ -53,6 +55,7 @@
 
   h2 {
     margin: 75px 0;
+    color: $brown;
   }
 
 
@@ -62,7 +65,12 @@
 
   .buttons {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    @include tablet {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
   }
 }
 
