@@ -20,7 +20,7 @@
       width: 350px;
     }
   }
-  .points, .skills {
+  .points {
     text-align: right;
   }
   .points {
@@ -48,12 +48,17 @@
   }
 
   h2 {
-    margin-top: 25px;
+    margin: 75px 0;
   }
 
 
   h2 {
     font-family: 'Raleway', sans-serif;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
@@ -83,6 +88,8 @@
   overflow: hidden;
   text-transform: uppercase;
   border: 1px solid currentColor;
+  background-color: $brown;
+  z-index: -1;
 }
 
 
@@ -93,7 +100,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: darken($spanish-pink, 5%);
+  background-color: lighten($brown, 10%);
   transform: translateX(-100%);
 }
 .swipe:hover {
@@ -113,5 +120,5 @@ html *:after {
 
 *:before,
 *:after {
-  // z-index: -1;
+  z-index: -1;
 }
