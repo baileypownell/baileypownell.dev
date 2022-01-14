@@ -1,5 +1,4 @@
 import React from 'react'
-import { withRouter } from 'react-router-dom'
 import RWT from '../../../../dist/images/happy-balance.png'
 import VC from '../../../../dist/images/recipe-stash-dashboard.png'
 import ISBA from '../../../../dist/images/ISBA.jpg'
@@ -113,4 +112,4 @@ class Project extends React.Component {
   }
 }
 
-export default withRouter(Project);
+export default Project;

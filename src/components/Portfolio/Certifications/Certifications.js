@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import udemy from '../../../../dist/images/udemy.png';
-import './Certifications.scss';
+import React, { useEffect, useState } from 'react'
+import udemy from '../../../../dist/images/udemy.png'
+import './Certifications.scss'
 
 const Certifications = () => {
   const [ certifications, setCertifications ] = useState([]);
@@ -37,4 +37,4 @@ const Certifications = () => {
   )
 }
 
-export default Certifications;
+export default Certifications
