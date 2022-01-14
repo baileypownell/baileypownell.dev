@@ -1,9 +1,19 @@
 @import '../../scss/mixins.scss';
 
 .contact {
-  padding: 8vh 0;
+  padding: 8vh 0 0 0;
   text-align: center;
   font-family: 'Raleway', sans-serif;
+  background-image: url('../../../dist/images/pink-noun-circle.svg'), url('../../../dist/images/brown-noun-circle.svg'), url('../../../dist/images/pink-noun-circle.svg'),;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: contain, contain, contain;
+  background-position: -50px 450px, -350px 300px, 500px 400px;
+  @include tablet {
+    background-position: 100px 450px, -250px 300px, 800px 400px;
+  }
+  @include large-desktop {
+    background-position: 100px 450px, -250px 300px, 1250px 400px;
+  }
   h2 {
     font-family: 'Cormorant Garamond', sans-serif;
     color: $primary-color;
@@ -56,22 +66,19 @@
     font-size: 50px;
     display: inline-block;
     color: $brown;
-    padding: 1vw;
+    padding: 0 8px;
     flex-grow: 1;
-    max-width: 12vw;
     transition-property: transform, -webkit-transform, -ms-transform;
-    transition-duration: .5s;
-    // &:hover {
-    //   @include prefix(transform, scale(1.1) translateY(-15px), webkit ms);
-    // }
+    transition-duration: .3s;
+    &:hover {
+      @include prefix(transform, scale(1.0) translateY(-5px), webkit ms);
+      color: $muted-pink;
+    }
     @include tablet {
       max-width: 8vw;
     }
     @include desktop {
       max-width: 85px;
-      &:hover {
-        @include prefix(transform, scale(1.0) translateY(-10px), webkit ms);
-      }
     }
   }
 }

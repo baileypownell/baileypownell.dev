@@ -4,6 +4,7 @@ import Snackbar from '@material-ui/core/Snackbar'
 import './Contact.scss'
 import Button from '@material-ui/core/Button'
 import CircularProgress from '@material-ui/core/CircularProgress'
+import Footer from '../Footer/Footer'
 
 
 class Contact extends React.Component {
@@ -168,6 +169,8 @@ class Contact extends React.Component {
                 message={<span id="message-id">There was an error. <i className="fas fa-times"></i></span>}
               />
           </div>
+
+          <Footer/>
       </div>
     )
   }

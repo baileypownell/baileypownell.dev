@@ -1,5 +1,5 @@
 import React from 'react';
-import me from '../../../dist/images/1633797727046.jpg';
+import me from '../../../dist/images/square-profile-image.jpg';
 import './LandingImage.scss';
 
 class LandingImage extends React.Component {

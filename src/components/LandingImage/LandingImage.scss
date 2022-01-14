@@ -8,10 +8,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  // background-image: url('../../../dist/images/pink-noun-circle.svg'), url('../../../dist/images/brown-noun-circle.svg'), url('../../../dist/images/pink-noun-circle.svg'),;
-  // background-repeat: no-repeat, no-repeat, no-repeat;
-  // background-size: contain, contain, contain;
-  // background-position: 0px 300px, 145px 500px, 150% 500px;
   @include tablet {
     padding-top: unset;
     flex-direction: row;
@@ -75,6 +71,10 @@
 
 #hello {
   color: $brown;
+  font-size: 100px;
+  @include tablet {
+    font-size: 150px;
+  }
   @include desktop {
     font-size: 200px;
   }

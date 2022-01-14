@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {
   BrowserRouter,
-  Route,
   Switch,
   Redirect
 } from "react-router-dom";
@@ -10,10 +9,8 @@ import {
 
 import {
   Contact,
-  Navigation,
   Portfolio,
   LandingImage,
-  Footer,
 } from './components/index';
 
 import './main.scss';
@@ -24,7 +21,6 @@ ReactDOM.render(
         <LandingImage/>
         <Portfolio/>
         <Contact/>
-        <Footer/>
         <Switch>
           <Redirect to="/" />
         </Switch>

@@ -21,6 +21,12 @@ $spanish-pink: #FCB5B5;
   }
 }
 
+@mixin large-desktop {
+  @media only screen and (min-width: 1300px) {
+    @content;
+  }
+}
+
 @mixin responsive {
   width: 80%;
   margin: 0 auto;

@@ -61,8 +61,6 @@
       }
     }
     p {
-      // color: $brown;
-      // font-size: 14px;
       margin: 0;
       text-align: left;
       line-height: 1;
@@ -70,16 +68,11 @@
       transition: color .4s;
       @include tablet {
         padding-left: 10px;
-        // font-size: 18px;
       }
     }
     .bold {
       font-weight: bold;
     }
-  }
-  p {
-    @include responsive;
-    line-height: 1.5;
   }
   i {
     font-size: 36px;
