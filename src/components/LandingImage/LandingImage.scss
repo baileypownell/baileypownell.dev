@@ -23,13 +23,13 @@
   }
   .points {
     text-align: right;
-  }
-  .points {
     margin-bottom: 5vh;
   }
   h1 {
     font-size: 75px;
     margin: 0;
+    color: $spanish-pink;
+    font-family: 'Cormorant Garamond', serif;
     @include tablet {
       font-size: 75px;
     }
@@ -38,26 +38,12 @@
     }
   }
   h2 {
-    color: $brown;
     font-size: 30px;
     margin: 10px 0;
-  }
-
-  h1, h2, h3 {
-    color: $spanish-pink;
-    font-family: 'Cormorant Garamond', serif;
-  }
-
-  h2 {
     margin: 75px 0;
     color: $brown;
-  }
-
-
-  h2 {
     font-family: 'Raleway', sans-serif;
   }
-
   .buttons {
     display: flex;
     flex-direction: column;
@@ -67,84 +53,44 @@
       justify-content: flex-end;
     }
   }
-}
 
-#hello {
-  color: $brown;
-  font-size: 100px;
-  @include tablet {
-    font-size: 150px;
+  #hello {
+    color: $brown;
+    font-size: 100px;
+    @include tablet {
+      font-size: 150px;
+    }
+    @include desktop {
+      font-size: 200px;
+    }
   }
-  @include desktop {
-    font-size: 200px;
+  .swipe {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    border: 1px solid currentColor;
+    background-color: $brown;
+    z-index: -1;
   }
-}
-
-// button {
-//   transition: 0.5s;
-//   box-shadow: 0 0 10px $muted-pink;
-//   margin-left: 25px!important;
-//   &:hover {
-//     background-position: right center; /* change the direction of the change here */
-//   }
-//   background-size: 250% auto;
-//   background-image: linear-gradient(to right, $spanish-pink 0%, $muted-pink 51%, $spanish-pink 100%);
-// }
-
-.swipe {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  position: relative;
-  overflow: hidden;
-  text-transform: uppercase;
-  border: 1px solid currentColor;
-  background-color: $brown;
-  z-index: -1;
-}
-
-
-.swipe:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: lighten($brown, 10%);
-  transform: translateX(-100%);
-}
-.swipe:hover {
-  color: $white;
-}
-.swipe:hover:before {
-  transform: translateX(0);
-}
-
-
-html *,
-html *:before,
-html *:after {
-  box-sizing: border-box;
-  transition: 0.5s ease-in-out;
-}
-
-*:before,
-*:after {
-  z-index: -1;
-}
-
-.circle {
-  filter: invert(19%) sepia(5%) saturate(3302%) hue-rotate(337deg) brightness(100%) contrast(86%);
-  position: absolute;
-  top: 593px;
-  left: -200px;
-}
-
-#circle2 {
-  top: 700px;
-  left: 150px;
-  width: 750px;
   
-  filter: invert(63%) sepia(11%) saturate(1234%) hue-rotate(314deg) brightness(126%) contrast(98%);
+  
+  .swipe:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: lighten($brown, 10%);
+    transform: translateX(-100%);
+  }
+  .swipe:hover {
+    color: $white;
+  }
+  .swipe:hover:before {
+    transform: translateX(0);
+  }
 }
