@@ -32,6 +32,7 @@
     "react-router-dom": "^5.1.2",
     "react-spinners": "^0.8.1",
     "react-spring": "^9.4.2",
+    "react-visibility-sensor": "^5.1.1",
     "webpack": "^4.43.0"
   },
   "devDependencies": {

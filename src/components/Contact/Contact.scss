@@ -130,7 +130,7 @@ form {
 }
 
 .MuiInputLabel-animated {
-  color: black!important;
+  color: $brown!important;
 }
 
 .MuiInput-underline:after {
@@ -138,8 +138,8 @@ form {
 }
 
 .MuiSnackbar-root div {
-  background-color: white;
-  color: #333333;
+  background-color: $muted-pink;
+  color: $white;
   width: 100%;
   span {
     width: 100%;
@@ -163,7 +163,7 @@ form {
 }
 
 .MuiCircularProgress-colorPrimary {
-  color: white!important;
+  color: $white!important;
   width: 30px!important;
   height: 30px!important;
 }

@@ -88,9 +88,13 @@
   }
 }
 
+.information-banner button a {
+  color: $white!important;
+  text-decoration: none!important;
+}
 
-.information-banner button:hover >a {
-    color: white!important;
+.information-banner button:hover {
+  box-shadow: 0px 0px 15px $brown;
 }
 
 .ub-max-h_100vh {
@@ -118,17 +122,5 @@ button {
   color: $white;
   background-color: $spanish-pink;
   outline: none;
-  // transition: color, background-color, transform, -webkit-transform, -ms-transform, border, .3s;
-  // &:hover {
-  //   color: white;
-  //   background-color: pink;
-  //   transform: translateY(-5px);
-  // }
-  // > a {
-  //   text-decoration: none;
-  //   color: $primary-color!important;
-  //   &:hover {
-  //     color: white!important;
-  //   }
-  // }
+  box-shadow: 0px 0px 10px $spanish-pink;
 }

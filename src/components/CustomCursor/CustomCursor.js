@@ -3,7 +3,7 @@ import './CustomCursor.scss';
 
 const CustomCursor = () => {
   return (
-    <div class="custom-cursor"></div>
+    <div className="custom-cursor"></div>
   )
 }
 

@@ -19,7 +19,7 @@ const Certifications = () => {
 
   return (
     <div className="certification-container">
-      <p class="udemy-title">Udemy Certificates</p>
+      <p className="udemy-title">Udemy Certificates</p>
       <div className="certifications">
         {certifications.map(cert => (     
           <a href={`/udemy_certs/${cert.link}`} target="_blank">

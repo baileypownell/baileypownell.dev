@@ -84,6 +84,7 @@
     border: 1px solid currentColor;
     background-color: $brown;
     z-index: -1;
+    box-shadow: 0px 0px 10px $brown;
   }
   
   
@@ -94,11 +95,12 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: lighten($brown, 10%);
+    background-color: $brown-hue-offset;
     transform: translateX(-100%);
   }
   .swipe:hover {
-    color: $white;
+    // color: $white;
+    box-shadow: 0px 0px 20px $brown-hue-offset;
   }
   .swipe:hover:before {
     transform: translateX(0);

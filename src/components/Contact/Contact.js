@@ -124,7 +124,6 @@ class Contact extends React.Component {
                 
                 <div id="button">
                   <button 
-                    boxShadow={3} 
                     type="submit" 
                     variant="contained" 
                     color="primary" 
@@ -135,9 +134,9 @@ class Contact extends React.Component {
               </form>
 
               <div className="contact-links">
-                <a href="https://github.com/baileypownell" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/bailey-pownell-224606167/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="bpownell_resume2.pdf" target="_blank"><i class="fas fa-file"></i></a>
+                <a href="https://github.com/baileypownell" target="_blank"><i className="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/bailey-pownell-224606167/" target="_blank"><i className="fab fa-linkedin"></i></a>
+                <a href="bpownell_resume2.pdf" target="_blank"><i className="fas fa-file"></i></a>
               </div>
 
 
