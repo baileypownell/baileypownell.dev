@@ -17,7 +17,6 @@ const LandingImage = () => {
                 <animated.h1 style={styles}><span id="hello">Hello,</span><br/> my name is Bailey</animated.h1>
               )}
           </Spring>
-          {/* <h1><span id="hello">Hello,</span><br/> my name is Bailey</h1> */}
           <h2>I am a software developer proficient in HTML, CSS, Javascript, Angular and React.</h2>
         </div>
         <div className="buttons fade-in">
