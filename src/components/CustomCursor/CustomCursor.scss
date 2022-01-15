@@ -11,6 +11,7 @@
   transition-duration: 150ms;
   transition-timing-function: ease-out;
   animation: cursorAnim .5s infinite alternate;
+  pointer-events: none;
 }
 
 @keyframes cursorAnim {

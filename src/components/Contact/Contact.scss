@@ -39,8 +39,6 @@
     width: 60%;
     font-size: 20px;
     > div {
-      // display: flex;
-      // flex-direction: column;
       justify-content: center;
     }
   }
@@ -92,55 +90,15 @@ form {
   flex-direction: column;
   width: 90%;
   margin: 0 auto;
-  Button {
-    width: 100%;
-    padding-top: 10px;
-    margin: 0 auto;
-    @include button;
-    letter-spacing: 8px;
-    border: none;
-    background: linear-gradient(130deg, $muted-pink, $spanish-pink);
-    box-shadow: 0px 0px 8px $muted-pink!important;
+  button {
+    box-shadow: 0px 0px 15px $muted-pink;
     &:hover {
-      transform: none;
-      box-shadow: 0px 0px 15px $muted-pink;
+      background-color: $brown;
+      box-shadow: 0px 0px 15px $brown;
     }
     @include tablet {
       width: fit-content!important;
       font-size: 18px;
-    }
-
-
-
-
-    // .swipe {
-      position: relative;
-      display: block;
-      overflow: hidden;
-      position: relative;
-      // overflow: hidden;
-      // text-transform: uppercase;
-      // border: 1px solid currentColor;
-      // background-color: $brown;
-      z-index: -1;
-    // }
-    
-    
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-color: lighten($brown, 10%);
-      transform: translateX(-100%);
-    }
-    &:hover {
-      color: $white;
-    }
-    &:hover:before {
-      transform: translateX(0);
     }
   }
   > div {
@@ -222,4 +180,8 @@ form {
 
 .MuiButton-containedPrimary {
   color: $brown!important;
+}
+
+button:hover {
+  background-color: $brown!important;
 }

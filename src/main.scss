@@ -23,15 +23,17 @@ a {
 
 #app {
   min-height: 100vh;
-  background-image: url('../dist/images/pink-noun-circle.svg'), url('../dist/images/brown-noun-circle.svg'), url('../dist/images/pink-noun-circle.svg'),;
+  background-image: url('../dist/images/pink-noun-circle.svg'), url('../dist/images/brown-noun-circle.svg'), url('../dist/images/pink-noun-circle.svg');
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: contain, contain, contain;
   background-position: -200px 750px, 5px 700px, 200px 550px;
   @include tablet {
-    background-position: 0px 300px, 145px 500px, 150% 500px;
+    background-size: 700px 700px, 750px 750px, 800px, 800px;
+    background-position: -200px 500px, 135px 650px, 180% 650px;
   }
   @include large-desktop {
-    background-position: -450px 200px, 0 350px, 554px 600px;
+    background-size: 700px 700px, 800px 800px, 900px, 900px;
+    background-position: -450px 300px, 0 450px, 554px 600px;
   }
 }
 

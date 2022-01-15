@@ -2,7 +2,6 @@ import React from 'react'
 import TextField from '@material-ui/core/TextField'
 import Snackbar from '@material-ui/core/Snackbar'
 import './Contact.scss'
-import Button from '@material-ui/core/Button'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import Footer from '../Footer/Footer'
 
@@ -124,14 +123,14 @@ class Contact extends React.Component {
                 </div>
                 
                 <div id="button">
-                  <Button 
+                  <button 
                     boxShadow={3} 
                     type="submit" 
                     variant="contained" 
                     color="primary" 
                     disabled={!(message && email && name && !invalidEmail)}>
                     {this.state.sending ? <CircularProgress /> : 'Send' }
-                  </Button>
+                  </button>
                 </div>
               </form>
 
