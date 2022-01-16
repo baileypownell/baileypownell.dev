@@ -15,6 +15,7 @@ html *:after {
 body {
   background-color: $white;
   margin: 0px;
+  overflow-x: hidden;
 }
 
 a {

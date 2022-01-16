@@ -58,33 +58,6 @@
   }
 }
 
-.contact-links {
-  padding-top: 100px;
-  color: $primary-color;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  a i {
-    font-size: 50px;
-    display: inline-block;
-    color: $brown;
-    padding: 0 8px;
-    flex-grow: 1;
-    transition-property: transform, -webkit-transform, -ms-transform;
-    transition-duration: .3s;
-    &:hover {
-      @include prefix(transform, scale(1.0) translateY(-5px), webkit ms);
-      color: $muted-pink;
-    }
-    @include tablet {
-      max-width: 8vw;
-    }
-    @include desktop {
-      max-width: 85px;
-    }
-  }
-}
-
 form {
   display: flex;
   flex-direction: column;

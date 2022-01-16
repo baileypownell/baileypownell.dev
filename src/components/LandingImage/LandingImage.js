@@ -1,13 +1,13 @@
-import React from 'react';
-import me from '../../../dist/images/square-profile-image.jpg';
-import './LandingImage.scss';
-import { Spring, animated, easings, Trail, useTrail } from 'react-spring';
+import React from 'react'
+import me from '../../../dist/images/square-profile-image.jpg'
+import './LandingImage.scss'
+import { Spring, animated, easings, useTrail } from 'react-spring'
 
 const LandingImage = () => {
   const buttons = [
-    {text: 'Github', classesString: 'fab fa-github'},
-    {text: 'LinkedIn',  classesString: 'fab fa-linkedin'},
-    {text: 'Resume', classesString: 'far fa-file"></i>'}
+    { text: 'Github', classesString: 'fab fa-github' },
+    { text: 'LinkedIn',  classesString: 'fab fa-linkedin' },
+    { text: 'Resume', classesString: 'fas fa-file' }
   ]
 
   const trail = useTrail(buttons.length, {
@@ -17,7 +17,14 @@ const LandingImage = () => {
 
   return (
     <div className="landing-screen">
-      <img id="profile-image" src={me} />
+      <Spring
+        from={{ opacity: 0, transform: 'scale(0.9) translateX(-300px)', }}
+        to={{ opacity: 1, transform: 'scale(1) translateX(0)' }}
+        config={{ duration: 1000 }}>
+          {styles => (
+            <animated.img style={styles} id="profile-image" src={me} />
+          )}
+      </Spring>
       <div>
         <div className="points">
           <Spring
@@ -56,7 +63,6 @@ const LandingImage = () => {
             )
           })}
         </div>
- 
       </div>
     </div>
   )

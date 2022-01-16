@@ -17,6 +17,7 @@ const Footer = () => {
   const onChange = (isVisible) => {
     setIsVisible(isVisible)
   }
+  
   return (
     <VisibilitySensor onChange={onChange} partialVisibility>
       <animated.footer style={styles} id="footer">

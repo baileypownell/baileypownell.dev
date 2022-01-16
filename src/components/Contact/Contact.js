@@ -6,6 +6,7 @@ import VisibilitySensor from 'react-visibility-sensor'
 import './Contact.scss'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import Footer from '../Footer/Footer'
+import ContactButtons from './ContactButtons/ContactButtons'
 
 
 class Contact extends React.Component {
@@ -96,7 +97,7 @@ class Contact extends React.Component {
     return (
       <div className="contact">
         <div className="contact-container">
-          <VisibilitySensor onChange={this.onChange} partialVisibility>
+          <VisibilitySensor onChange={this.onChange}>
             <Spring opacity={isVisible ? 1 : 0} transform={isVisible ? 'scale(1)' : 'scale(0.9)'} config={{ duration: 750, delay: 500 }}>
               {styles => (
                 <animated.div style={styles}>
@@ -149,12 +150,7 @@ class Contact extends React.Component {
             </Spring>
           </VisibilitySensor>
 
-          <div className="contact-links">
-            <a href="https://github.com/baileypownell" target="_blank"><i className="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/bailey-pownell-224606167/" target="_blank"><i className="fab fa-linkedin"></i></a>
-            <a href="bpownell_resume2.pdf" target="_blank"><i className="fas fa-file"></i></a>
-          </div>
-
+          <ContactButtons />
 
           <Snackbar
             anchorOrigin={{
