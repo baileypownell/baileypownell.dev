@@ -22,7 +22,10 @@
     }
     a {
       text-decoration: none;
-      width: 50%;
+      width: 100%;
+      @include tablet {
+        width: 50%;
+      }
     }
   }
   .certifications {

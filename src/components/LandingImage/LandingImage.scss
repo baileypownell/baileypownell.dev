@@ -3,7 +3,7 @@
 
 .landing-screen {
   padding: 5vw;
-  padding-top: 10vh;
+  padding-top: 8vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -27,17 +27,22 @@
     width: 250px;
     border-radius: 50%;
     box-shadow: 0px 0px 40px $muted-pink;
+    margin-bottom: 35px;
     @include tablet {
       width: 350px;
       max-width: 400px;
+      margin-bottom: 0;
     }
   }
   .points {
-    text-align: right;
+    text-align: center;
     margin-bottom: 5vh;
+    @include tablet {
+      text-align: right;
+    }
   }
   h1 {
-    font-size: 75px;
+    font-size: 45px;
     margin: 0;
     color: $spanish-pink;
     font-family: 'Cormorant Garamond', serif;
@@ -49,11 +54,15 @@
     }
   }
   h2 {
-    font-size: 30px;
-    margin: 10px 0;
-    margin: 75px 0;
+    font-size: 20px;
+    line-height: 1.5;
     color: $brown;
+    margin-top: 40px;
     font-family: 'Raleway', sans-serif;
+    @include tablet {
+      margin: 75px 0;
+      font-size: 30px;
+    }
   }
   .buttons {
     display: flex;

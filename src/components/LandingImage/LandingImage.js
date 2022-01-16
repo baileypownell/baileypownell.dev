@@ -57,7 +57,9 @@ const LandingImage = () => {
               trail: 3000
             }}>
               {styles => (
-                <animated.h2 style={styles}>I am a software developer proficient in HTML, CSS, Javascript, Angular and React.</animated.h2>
+                <animated.h2 style={styles}>
+                  I am a software developer proficient in CSS, Javascript/Typescript, Node, Angular, and React.
+                </animated.h2>
               )}
           </Spring>
         </div>
