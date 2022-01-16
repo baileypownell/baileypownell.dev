@@ -79,6 +79,7 @@
     }
   }
   .swipe {
+    cursor: pointer;
     position: relative;
     display: block;
     overflow: hidden;
@@ -87,7 +88,6 @@
     text-transform: uppercase;
     border: 1px solid currentColor;
     background-color: $brown;
-    z-index: -1;
     box-shadow: 0px 0px 10px $brown;
   }
   

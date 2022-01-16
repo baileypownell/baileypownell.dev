@@ -22,7 +22,8 @@ const ContactButtons = () => {
 
   const trail = useTrail(contactLinks.length, {
     from: isVisible ? { opacity: 0, transform: 'translate3d(0,-40px,0)' } : { opacity: 1, transform: 'translate3d(0,0px,0)' },
-    to:  isVisible ? { opacity: 1, transform: 'translate3d(0,0px,0)' } : { opacity: 0, transform: 'translate3d(0,-40px,0)' }
+    to:  isVisible ? { opacity: 1, transform: 'translate3d(0,0px,0)' } : { opacity: 0, transform: 'translate3d(0,-40px,0)' },
+    config: { duration: 250 }
   })
 
   const onChange = (isVisible) => {
