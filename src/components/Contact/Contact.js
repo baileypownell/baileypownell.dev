@@ -79,10 +79,16 @@ class Contact extends React.Component {
     } 
   }
 
-  handleClose = () => {
-    this.setState({
-      showSuccessSnackBar: false
-    })
+  handleClose = (snackBarType) => {
+    if (snackBarType === 'success') {
+      this.setState({
+        showSuccessSnackBar: false
+      })
+    } else if (snackBarType === 'error') {
+      this.setState({
+        showErrorSnackBar: false
+      })
+    }
   }
 
   onChange = (isVisible) => {
@@ -158,8 +164,8 @@ class Contact extends React.Component {
               horizontal: 'center',
             }}
             open={this.state.showSuccessSnackBar}
-            autoHideDuration={3000}
-            onClose={this.handleClose}
+            autoHideDuration={4000}
+            onClose={() => this.handleClose('success')}
             ContentProps={{
               'aria-describedby': 'message-id',
             }}
@@ -171,8 +177,8 @@ class Contact extends React.Component {
               horizontal: 'center',
             }}
             open={this.state.showErrorSnackBar}
-            autoHideDuration={6000}
-            onClose={this.handleClose}
+            autoHideDuration={4000}
+            onClose={() => this.handleClose('error')}
             ContentProps={{
               'aria-describedby': 'message-id',
             }}
