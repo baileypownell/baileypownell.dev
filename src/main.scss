@@ -47,7 +47,6 @@ h1, h2, h3, h4 {
   h4 {
     margin: 10px 0;
     font-family: 'Raleway', sans-serif;
-    color: $primary-color;
     text-align: center;
     @include tablet {
       font-size: 30px;
