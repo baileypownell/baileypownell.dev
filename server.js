@@ -1,12 +1,18 @@
 // require('dotenv').config()
-const path = require('path');
-const express = require('express');
-var bodyParser = require('body-parser');
-const fs = require('fs');
-const cors = require('cors');
-const nodemailer = require('nodemailer');
-const sgTransport = require('nodemailer-sendgrid-transport');
-const app = express();
+const path = require('path')
+const express = require('express')
+var bodyParser = require('body-parser')
+const fs = require('fs')
+const cors = require('cors')
+const nodemailer = require('nodemailer')
+const app = express()
+const AWS = require("aws-sdk")
+
+AWS.config.update({ 
+  accessKeyId: process.env.SES_ACCESS_KEY,
+  secretAccessKey: process.env.SES_SECRET_KEY,
+  region: process.env.AWS_REGION_ID 
+});
 
 // middleware so we can access request.body
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -89,12 +95,9 @@ app.get('/udemy_certs/:link', (request, response) => {
 
 app.post('/contact', (request, response) => {
   const { name, email, message } = request.body; 
-  const options = {
-    auth: {
-      api_key: `${process.env.SENDGRID_API_KEY}`,
-    }
-  }
-  const mailer = nodemailer.createTransport(sgTransport(options))
+  const mailer = nodemailer.createTransport({
+    SES: new AWS.SES(),
+  })
   const emailToSend = {
     from: `bailey.pownell@gmail.com`,
     to: `bailey.pownell@gmail.com`,
