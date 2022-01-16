@@ -1,6 +1,8 @@
 import React from 'react'
 import TextField from '@material-ui/core/TextField'
 import Snackbar from '@material-ui/core/Snackbar'
+import { animated, Spring } from 'react-spring/'
+import VisibilitySensor from 'react-visibility-sensor'
 import './Contact.scss'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import Footer from '../Footer/Footer'
@@ -15,7 +17,8 @@ class Contact extends React.Component {
     showSuccessSnackBar: false,
     showErrorSnackBar: false,
     invalidEmail: false,
-    emailErrorText: ''
+    emailErrorText: '',
+    isVisible: false
   }
 
   updateInput = (e) => {
@@ -81,94 +84,107 @@ class Contact extends React.Component {
     })
   }
 
+  onChange = (isVisible) => {
+    this.setState({
+      isVisible
+    })
+  }
+
   render() {
-    const {message, email, name, invalidEmail} = this.state
+    const {message, email, name, invalidEmail, isVisible} = this.state
+
     return (
       <div className="contact">
         <div className="contact-container">
-          <p>Don't be a stranger.</p>
-          <h1 id="hi">Say Hi</h1>
-          <div>
-            </div>
-              <form onSubmit={this.sendEmail} noValidate autoComplete="off">
-                <div className="inputs">
-                  <TextField 
-                    id="standard-basic" 
-                    id="name" 
-                    name="name" 
-                    onChange={this.updateInput} 
-                    value={name}
-                    label="Name" />
-                  <TextField 
-                    id="standard-basic" 
-                    name="email" 
-                    error={this.state.invalidEmail} 
-                    helperText={this.state.emailErrorText} 
-                    id="email" 
-                    type="email" 
-                    value={email}
-                    onChange={this.updateInput} 
-                    label="Email" />
-                  <TextField 
-                    id="standard-basic" 
-                    id="message" 
-                    name="message" 
-                    maxLength="500" 
-                    multiline
-                    rows={6}
-                    placeholder="Message"
-                    value={message}
-                    onChange={this.updateInput} 
-                    label="Message" />
-                </div>
-                
-                <div id="button">
-                  <button 
-                    type="submit" 
-                    variant="contained" 
-                    color="primary" 
-                    disabled={!(message && email && name && !invalidEmail)}>
-                    {this.state.sending ? <CircularProgress /> : 'Send' }
-                  </button>
-                </div>
-              </form>
+          <VisibilitySensor onChange={this.onChange} partialVisibility>
+            <Spring opacity={isVisible ? 1 : 0} transform={isVisible ? 'scale(1)' : 'scale(0.9)'} config={{ duration: 750, delay: 500 }}>
+              {styles => (
+                <animated.div style={styles}>
+                  <p>Don't be a stranger.</p>
+                  <h1 id="hi">Say Hi</h1>
+                  <form onSubmit={this.sendEmail} noValidate autoComplete="off">
+                    <div className="inputs">
+                      <TextField 
+                        id="standard-basic" 
+                        id="name" 
+                        name="name" 
+                        onChange={this.updateInput} 
+                        value={name}
+                        label="Name" />
+                      <TextField 
+                        id="standard-basic" 
+                        name="email" 
+                        error={this.state.invalidEmail} 
+                        helperText={this.state.emailErrorText} 
+                        id="email" 
+                        type="email" 
+                        value={email}
+                        onChange={this.updateInput} 
+                        label="Email" />
+                      <TextField 
+                        id="standard-basic" 
+                        id="message" 
+                        name="message" 
+                        maxLength="500" 
+                        multiline
+                        rows={6}
+                        placeholder="Message"
+                        value={message}
+                        onChange={this.updateInput} 
+                        label="Message" />
+                    </div>
+                    
+                    <div id="button">
+                      <button 
+                        type="submit" 
+                        variant="contained" 
+                        color="primary" 
+                        disabled={!(message && email && name && !invalidEmail)}>
+                        {this.state.sending ? <CircularProgress /> : 'Send' }
+                      </button>
+                    </div>
+                  </form>
+                </animated.div> 
+                )}
+            </Spring>
+          </VisibilitySensor>
 
-              <div className="contact-links">
-                <a href="https://github.com/baileypownell" target="_blank"><i className="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/bailey-pownell-224606167/" target="_blank"><i className="fab fa-linkedin"></i></a>
-                <a href="bpownell_resume2.pdf" target="_blank"><i className="fas fa-file"></i></a>
-              </div>
-
-
-              <Snackbar
-                anchorOrigin={{
-                  vertical: 'bottom',
-                  horizontal: 'center',
-                }}
-                open={this.state.showSuccessSnackBar}
-                autoHideDuration={6000}
-                onClose={this.handleClose}
-                ContentProps={{
-                  'aria-describedby': 'message-id',
-                }}
-                message={<span id="message-id">Email sent! <i className="fas fa-check-square"></i></span>}
-              />
-              <Snackbar
-                anchorOrigin={{
-                  vertical: 'bottom',
-                  horizontal: 'center',
-                }}
-                open={this.state.showErrorSnackBar}
-                autoHideDuration={6000}
-                onClose={this.handleClose}
-                ContentProps={{
-                  'aria-describedby': 'message-id',
-                }}
-                message={<span id="message-id">There was an error. <i className="fas fa-times"></i></span>}
-              />
+          <div className="contact-links">
+            <a href="https://github.com/baileypownell" target="_blank"><i className="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/bailey-pownell-224606167/" target="_blank"><i className="fab fa-linkedin"></i></a>
+            <a href="bpownell_resume2.pdf" target="_blank"><i className="fas fa-file"></i></a>
           </div>
 
-          <Footer/>
+
+          <Snackbar
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'center',
+            }}
+            open={this.state.showSuccessSnackBar}
+            autoHideDuration={6000}
+            onClose={this.handleClose}
+            ContentProps={{
+              'aria-describedby': 'message-id',
+            }}
+            message={<span id="message-id">Email sent! <i className="fas fa-check-square"></i></span>}
+          />
+          <Snackbar
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'center',
+            }}
+            open={this.state.showErrorSnackBar}
+            autoHideDuration={6000}
+            onClose={this.handleClose}
+            ContentProps={{
+              'aria-describedby': 'message-id',
+            }}
+            message={<span id="message-id">There was an error. <i className="fas fa-times"></i></span>}
+          />
+        </div>
+
+        <Footer/>
       </div>
     )
   }

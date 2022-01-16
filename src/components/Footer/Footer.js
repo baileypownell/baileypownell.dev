@@ -1,21 +1,20 @@
-import React, { useState } from 'react';
-import { animated, useSpring } from "react-spring/";
-import VisibilitySensor from "react-visibility-sensor";
-
-import './Footer.scss';
+import React, { useState } from 'react'
+import { animated, useSpring } from 'react-spring/'
+import VisibilitySensor from 'react-visibility-sensor'
+import './Footer.scss'
 
 const Footer = () => {
 
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false)
 
   const styles = useSpring({
     opacity: isVisible ? 1 : 0,
     transform: isVisible ? 'translateY(0px)' : 'translateY(-10px)',
     duration: 300,
-    delay: 250,
+    delay: 150,
   })
 
-  function onChange (isVisible) {
+  const onChange = (isVisible) => {
     setIsVisible(isVisible)
   }
   return (
@@ -29,4 +28,4 @@ const Footer = () => {
   )
 }
 
-export default Footer;
+export default Footer

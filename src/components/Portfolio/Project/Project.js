@@ -74,14 +74,13 @@ class Project extends React.Component {
     this.setState({ isShown: false })
   }
 
-
   render() {
-    const { background_image, showButton, isShown } = this.state;
+    const { background_image, showButton, isShown } = this.state
     const { github_link, id } = this.props
 
     return (
       <>
-        <div className="parent fade">
+        <div className="parent">
           <div className="website" style={{ backgroundImage: `url(${background_image})`}}></div>
             <div className="darken">
               <div className="information-banner">
@@ -112,4 +111,4 @@ class Project extends React.Component {
   }
 }
 
-export default Project;
+export default Project

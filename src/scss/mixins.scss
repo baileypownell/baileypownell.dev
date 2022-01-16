@@ -11,8 +11,6 @@ $spanish-pink: #FCB5B5;
 $spanish-pink-frosted:rgba(252, 181, 181, .5);
 $muted-pink-frosted: rgba(207, 142, 128, 0.5);
 
-
-
 @mixin tablet {
   @media only screen and (min-width: 800px) {
     @content;
@@ -71,32 +69,3 @@ $muted-pink-frosted: rgba(207, 142, 128, 0.5);
   }
 }
 
-@mixin desktopIE10up {
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) and (min-width: 900px) {
-    @content;
-  }
-}
-
-
-// fade effects
-.faded {
-  opacity: 0;
-  transform: translateY(30px);
-  transition-property: translate opacity;
-  transition-duration: 1s;
-}
-
-.fade-in {
-  opacity: 1;
-  transform: translateY(0px);
-}
-
-.opaque {
-  opacity: 0;
-  transition-property: translate opacity;
-  transition-duration: 1s;
-}
-
-.full {
-  opacity: 1;
-}
