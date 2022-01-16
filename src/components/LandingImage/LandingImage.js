@@ -5,9 +5,21 @@ import { Spring, animated, easings, useTrail } from 'react-spring'
 
 const LandingImage = () => {
   const buttons = [
-    { text: 'Github', classesString: 'fab fa-github' },
-    { text: 'LinkedIn',  classesString: 'fab fa-linkedin' },
-    { text: 'Resume', classesString: 'fas fa-file' }
+    { 
+      text: 'Github', 
+      classesString: 'fab fa-github',
+      href: 'https://github.com/baileypownell'
+    },
+    { 
+      text: 'LinkedIn',  
+      classesString: 'fab fa-linkedin',
+      href: 'https://www.linkedin.com/in/bailey-pownell-224606167/', 
+    },
+    { 
+      text: 'Resume', 
+      classesString: 'fas fa-file',
+      href: 'bpownell_resume2.pdf'
+    }
   ]
 
   const trail = useTrail(buttons.length, {
@@ -52,14 +64,18 @@ const LandingImage = () => {
 
         <div className="buttons">
           {trail.map((props, index) => {
+            const button = buttons[index]
             return (
-              <animated.button
+              <animated.a
+                href={button.href} 
+                target='_blank'
                 key={index}
-                style={props}
-                className="swipe"
-              >
-                {buttons[index].text} <i className={buttons[index].classesString}></i>
-              </animated.button>
+                style={props}>
+                <button
+                  className="swipe">
+                  {button.text} <i className={button.classesString}></i>
+                </button>
+              </animated.a>
             )
           })}
         </div>
