@@ -21,7 +21,7 @@ const Footer = () => {
   return (
     <VisibilitySensor onChange={onChange} partialVisibility>
       <animated.footer style={styles} id="footer">
-        <a href="https://github.com/baileypownell/Portfolio-React" target="_blank">
+        <a href="https://github.com/baileypownell/updated-portfolio" target="_blank">
           <p className="source">See the source code for this site <i className="fas fa-code"></i></p>
         </a>
       </animated.footer>

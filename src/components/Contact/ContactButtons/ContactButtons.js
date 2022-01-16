@@ -15,7 +15,7 @@ const ContactButtons = () => {
       href: 'https://www.linkedin.com/in/bailey-pownell-224606167/', 
       className: 'fab fa-linkedin'}, 
     { 
-      href: 'bpownell_resume2.pdf', 
+      href: 'bailey_pownell_resume.pdf', 
       className: 'fas fa-file'
     }
   ]

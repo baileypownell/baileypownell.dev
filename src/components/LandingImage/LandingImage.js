@@ -18,7 +18,7 @@ const LandingImage = () => {
     { 
       text: 'Resume', 
       classesString: 'fas fa-file',
-      href: 'bpownell_resume2.pdf'
+      href: 'bailey_pownell_resume.pdf'
     }
   ]
 

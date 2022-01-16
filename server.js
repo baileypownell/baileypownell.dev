@@ -24,8 +24,8 @@ const port = process.env.PORT || 3000;
 // serve static assets (javascript) from the dist folder in project root
 app.use(express.static(path.join(__dirname + '/dist')));
 
-app.get('/bpownell_resume2.pdf', (req, res) => {
-  const pdf = fs.readFileSync('./bpownell_resume2.pdf');
+app.get('/bailey_pownell_resume.pdf', (req, res) => {
+  const pdf = fs.readFileSync('./bailey_pownell_resume.pdf');
   res.contentType('application/pdf');
   res.send(pdf);
 });
