@@ -137,8 +137,9 @@ form {
 
 .MuiCircularProgress-colorPrimary {
   color: $white!important;
-  width: 30px!important;
-  height: 30px!important;
+  width: 20px!important;
+  height: 20px!important;
+  margin: 0 50px;
 }
 
 .MuiInputLabel-root,

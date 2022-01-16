@@ -158,7 +158,7 @@ class Contact extends React.Component {
               horizontal: 'center',
             }}
             open={this.state.showSuccessSnackBar}
-            autoHideDuration={6000}
+            autoHideDuration={3000}
             onClose={this.handleClose}
             ContentProps={{
               'aria-describedby': 'message-id',
