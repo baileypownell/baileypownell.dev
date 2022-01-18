@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import RWT from '../../../../dist/images/happy-balance.png'
 import VC from '../../../../dist/images/recipe-stash-dashboard.png'
 import ISBA from '../../../../dist/images/ISBA.jpg'
@@ -14,91 +14,87 @@ const Projects = {
   BAND_WEBSITE: 'band-website'
 }
 
-class Project extends React.Component {
+const Project = (props) => {
 
-  state = {
-    showButton: false,
-    background_image: '',
-    isShown: false
-  }
+  const [ showButton, setShowButton ] = useState(false)
+  const [ backgroundImage, setBackgroundImage ] = useState('')
+  const [ isShown, setIsShown ] = useState(false)
 
-  determineBackground = () => {
-    switch(this.props.id) {
+  const determineBackground = () => {
+    switch(props.id) {
       case Projects.WEIGHT_TRACKER:
-        this.setState({ background_image: RWT })
+        setBackgroundImage(RWT)
         break
       case Projects.COOKBOOK:
-        this.setState({ background_image: VC })
+        setBackgroundImage(VC)
         break
       case Projects.ISBA:
-        this.setState({ background_image: ISBA })
+        setBackgroundImage(ISBA)
       break
       case Projects.BAND_WEBSITE:
-        this.setState({ background_image: BW })
+        setBackgroundImage(BW)
       break
       default:
-        this.setState({ background_image: VC })
+        setBackgroundImage(VC)
       return
     }
   }
 
-  componentDidMount = () => {
-    this.determineBackground()
-    window.addEventListener('resize', this.resize.bind(this))
-    this.resize()
+  useEffect(() => {
+    determineBackground()
+    window.addEventListener('resize', resize.bind(this))
+    resize()
+
+    // effectively componentWillUnmount() 
+    return () => {
+      window.removeEventListener('resize', resize.bind(this))
+    }
+  }, [])
+
+  const resize = () => {
+    setShowButton( window.innerWidth <= 1000 )
   }
 
-  resize() {
-    this.setState({ showButton: window.innerWidth <= 1000 })
+  const openSideSheet = () => {
+    setIsShown(true)
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.resize.bind(this))
+  const closeSideSheet = () => {
+    setIsShown(false)
   }
 
-  openSideSheet = () => {
-    this.setState({ isShown: true })
-  }
+  const { github_link, id } = props
 
-  closeSideSheet = () => {
-    this.setState({ isShown: false })
-  }
-
-  render() {
-    const { background_image, showButton, isShown } = this.state
-    const { github_link, id } = this.props
-
-    return (
-      <>
-        <div className="parent">
-          <div className="website" style={{ backgroundImage: `url(${background_image})`}}></div>
-            <div className="darken">
-              <div className="information-banner">
-                { github_link ? <button><a href={github_link} target="_blank">View Source Code</a></button> : null }
-                <button
-                onClick={() => this.openSideSheet()}>Learn More</button>
-            </div>
+  return (
+    <>
+      <div className="parent">
+        <div className="website" style={{ backgroundImage: `url(${backgroundImage})`}}></div>
+          <div className="darken">
+            <div className="information-banner">
+              { github_link ? <button><a href={github_link} target="_blank">View Source Code</a></button> : null }
+              <button
+              onClick={() => openSideSheet()}>Learn More</button>
           </div>
         </div>
+      </div>
 
-        <SideSheet
-            width={1000}
-            isShown={isShown}
-            preventBodyScrolling={true}
-            position={Position.RIGHT}
-            onCloseComplete={() => this.closeSideSheet()}
-          >
-            <div class="side-sheet-content">
-                { showButton ? <button onClick={this.closeSideSheet}><ArrowLeftIcon size={16} marginRight={8} /> Close </button> : null }
-                { id === Projects.WEIGHT_TRACKER ? <WeightTrackerProjectPage></WeightTrackerProjectPage> : null }
-                { id === Projects.COOKBOOK ? <RecipeStashProjectPage></RecipeStashProjectPage> : null }
-                { id === Projects.BAND_WEBSITE ? <ThreeBeersProjectPage></ThreeBeersProjectPage> : null }
-                { id === Projects.ISBA ? <ISBAProjectPage></ISBAProjectPage> : null }
-            </div>
-        </SideSheet>
-      </>
-    )
-  }
+      <SideSheet
+          width={1000}
+          isShown={isShown}
+          preventBodyScrolling={true}
+          position={Position.RIGHT}
+          onCloseComplete={() => closeSideSheet()}
+        >
+          <div className="side-sheet-content">
+              { showButton ? <button onClick={closeSideSheet}><ArrowLeftIcon size={16} marginRight={8} /> Close </button> : null }
+              { id === Projects.WEIGHT_TRACKER ? <WeightTrackerProjectPage></WeightTrackerProjectPage> : null }
+              { id === Projects.COOKBOOK ? <RecipeStashProjectPage></RecipeStashProjectPage> : null }
+              { id === Projects.BAND_WEBSITE ? <ThreeBeersProjectPage></ThreeBeersProjectPage> : null }
+              { id === Projects.ISBA ? <ISBAProjectPage></ISBAProjectPage> : null }
+          </div>
+      </SideSheet>
+    </>
+  )
 }
 
 export default Project
