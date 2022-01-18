@@ -45,9 +45,7 @@ class Contact extends React.Component {
 
   sendEmail = (e) => {
     const { name, email, message, invalidEmail } = this.state;
-    this.setState({
-      sending: true
-    })
+    this.setState({ sending: true })
     e.preventDefault()
     if (name && email && message && !invalidEmail) {
       let payload = {
@@ -72,9 +70,7 @@ class Contact extends React.Component {
       })
       .catch(err => {
         console.log(err)
-        this.setState({
-          sending: false
-        })
+        this.setState({ sending: false })
       })
     } 
   }
@@ -92,9 +88,7 @@ class Contact extends React.Component {
   }
 
   onChange = (isVisible) => {
-    this.setState({
-      isVisible
-    })
+    this.setState({ isVisible })
   }
 
   render() {
@@ -192,4 +186,4 @@ class Contact extends React.Component {
   }
 }
 
-export default Contact;
+export default Contact

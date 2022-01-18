@@ -25,45 +25,35 @@ class Project extends React.Component {
   determineBackground = () => {
     switch(this.props.id) {
       case Projects.WEIGHT_TRACKER:
-        this.setState({
-          background_image: RWT
-        })
-        break;
+        this.setState({ background_image: RWT })
+        break
       case Projects.COOKBOOK:
-        this.setState({
-          background_image: VC
-        })
-        break;
+        this.setState({ background_image: VC })
+        break
       case Projects.ISBA:
-        this.setState({
-          background_image: ISBA
-        });
-      break;
+        this.setState({ background_image: ISBA })
+      break
       case Projects.BAND_WEBSITE:
-        this.setState({
-          background_image: BW
-        });
-      break;
+        this.setState({ background_image: BW })
+      break
       default:
-        this.setState({
-          background_image: VC
-        });
-        return;
+        this.setState({ background_image: VC })
+      return
     }
   }
 
   componentDidMount = () => {
     this.determineBackground()
-    window.addEventListener("resize", this.resize.bind(this))
+    window.addEventListener('resize', this.resize.bind(this))
     this.resize()
   }
 
   resize() {
-    this.setState({showButton: window.innerWidth <= 1000});
+    this.setState({ showButton: window.innerWidth <= 1000 })
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this.resize.bind(this));
+    window.removeEventListener('resize', this.resize.bind(this))
   }
 
   openSideSheet = () => {
