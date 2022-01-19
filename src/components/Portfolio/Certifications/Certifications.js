@@ -20,10 +20,21 @@ const Certifications = () => {
   }
 
   useEffect(() => {
-    fetch(`/udemy_certs`)
-    .then(response => response.json())
-    .then(data => setCertifications(data))
-    .catch(err => console.log(err))
+    const getCertifications = async () => {
+      try {
+        const udemy_certs = await fetch(`/udemy_certs`)
+        if (udemy_certs.ok) {
+          const certificates = await udemy_certs.json()
+          setCertifications(certificates)
+        } else {
+          console.log(`There was an error fetching the certifications: ${udemy_certs.status}`)
+        }
+      } catch(error) {
+        console.log(error)
+      }
+    }
+
+    getCertifications()
   }, [])
 
   const trail = useTrail(certifications.length, {
