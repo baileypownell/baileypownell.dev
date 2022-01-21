@@ -2,7 +2,6 @@ import React from 'react'
 import logo from './cover-dark.png'
 
 function WeightTrackerProjectPage() {
-  
   return (
       <div className="project-page">
         <input style={{display: 'none'}} tabIndex="1"></input>
@@ -31,4 +30,4 @@ function WeightTrackerProjectPage() {
   )
 }
 
-export default WeightTrackerProjectPage;
+export default WeightTrackerProjectPage

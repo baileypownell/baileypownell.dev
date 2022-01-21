@@ -6,9 +6,9 @@ import {
   Portfolio,
   LandingImage,
   CustomCursor
-} from './components/index';
+} from './components/index'
 
-import './main.scss';
+import './main.scss'
 
 
 ReactDOM.render(
@@ -23,4 +23,4 @@ ReactDOM.render(
     <Contact/>
   </div>,
   document.getElementById('app')
-);
+)

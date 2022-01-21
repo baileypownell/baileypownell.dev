@@ -26,24 +26,22 @@ const Portfolio = () => {
         <h2>Portfolio</h2>
         <div id="gallery">
           <Project
-              id="cookbook"
+              id='cookbook'
           />
           <Project
-            id="weight-tracker"
+            id='weight-tracker'
           />
           <Project
-            github_link="https://github.com/baileypownell/3-Beers-Deep"
-            id="band-website"
+            github_link='https://github.com/baileypownell/3-Beers-Deep'
+            id='band-website'
           />
           <Project
-            github_link="https://github.com/baileypownell/Indiana-State-Bar-Redesign"
-            id="isba"
+            github_link='https://github.com/baileypownell/Indiana-State-Bar-Redesign'
+            id='isba'
           />
         </div>
-
         <Certifications/>
       </animated.div>
-
     </VisibilitySensor>
   )
 }

@@ -1,7 +1,6 @@
 import React from 'react'
 
 const ThreeBeersProjectPage = () => {
-
   return (
     <div className="project-page" autofocus={true}>
       <input style={{display: 'none'}} tabIndex="1"></input>

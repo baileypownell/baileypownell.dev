@@ -18,4 +18,4 @@ export {
   LandingImage,
   Footer,
   CustomCursor
-};
+}

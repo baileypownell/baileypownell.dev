@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './CustomCursor.scss';
+import React, { useState } from 'react'
+import './CustomCursor.scss'
 
 const CustomCursor = () => {
   return (
