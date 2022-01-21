@@ -43,8 +43,8 @@ class Contact extends React.Component {
     })
   }
 
-  sendEmail = (e) => {
-    const { name, email, message, invalidEmail } = this.state;
+  sendEmail = async(e) => {
+    const { name, email, message, invalidEmail } = this.state
     this.setState({ sending: true })
     e.preventDefault()
     if (name && email && message && !invalidEmail) {
@@ -52,26 +52,37 @@ class Contact extends React.Component {
         name: name,
         email: email,
         message: message
-      };
-      fetch('/contact', {
-        method: 'POST',
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      })
-      .then(res => {
+      }
+
+      try {
+        const emailResponse = await fetch('/contact', {
+          method: 'POST',
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        })
+
         this.setState({
           sending: false,
-          showSuccessSnackBar: res.ok, 
-          showErrorSnackBar: !res.ok,
           name: '', 
           message: '', 
-          email: ''
+          email: '',
+          showSuccessSnackBar: emailResponse.ok,
+          showErrorSnackBar: !emailResponse.ok
         })
-      })
-      .catch(err => {
-        console.log(err)
-        this.setState({ sending: false })
-      })
+      
+        if (!emailResponse.ok) {
+          console.log(`There was an error: ${emailResponse.status}`)
+        }
+      } catch(error) {
+        this.setState({
+          sending: false,
+          name: '', 
+          message: '', 
+          email: '',
+          showErrorSnackBar: true
+        })
+        console.log(error)
+      }
     } 
   }
 
