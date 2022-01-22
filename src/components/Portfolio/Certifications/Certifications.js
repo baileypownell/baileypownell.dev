@@ -3,6 +3,7 @@ import { animated, useSpring, useTrail } from 'react-spring/'
 import VisibilitySensor from 'react-visibility-sensor'
 import udemy from '../../../../dist/images/udemy.png'
 import './Certifications.scss'
+import { compareAsc } from 'date-fns'
 
 const Certifications = () => {
   const [ certifications, setCertifications ] = useState([])
@@ -25,6 +26,9 @@ const Certifications = () => {
         const udemy_certs = await fetch(`/udemy_certs`)
         if (udemy_certs.ok) {
           const certificates = await udemy_certs.json()
+          certificates.sort((cert1, cert2) => {
+            return compareAsc(new Date(cert1.date), new Date(cert2.date))
+          })
           setCertifications(certificates)
         } else {
           console.log(`There was an error fetching the certifications: ${udemy_certs.status}`)
