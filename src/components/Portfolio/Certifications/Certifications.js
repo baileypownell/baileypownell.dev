@@ -63,7 +63,7 @@ const Certifications = () => {
                 <div className="udemy">
                   <img src={udemy} />
                   <div>
-                    <p>{cert.title.substring(0, 30)}{cert.title.length > 30 ? '...' : null}</p>
+                    <p>{cert.title.substring(0, 50)}{cert.title.length > 50 ? '...' : null}</p>
                     <p>Issued: {cert.issued}</p>
                   </div>
                 </div>

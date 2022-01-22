@@ -16,8 +16,9 @@
   > div {
     width: 90%;
     margin: 0 auto;
+    text-align: left;
     @include desktop {
-      width: 65%;
+      width: 80%;
     }
     a {
       text-decoration: none;
@@ -34,7 +35,7 @@
       flex-wrap: wrap;
     }
     a:last-child {
-        width: 100%;
+      width: 100%;
     }
   }
   .udemy {
@@ -60,42 +61,24 @@
       justify-content: left;
       min-height: 0px;
     }
-    img {
-      @include tablet {
-        width: 50px;
-      }
-    }
     p {
       margin: 5px 0;
-      text-align: left;
-      line-height: 1;
       width: 100%!important;
       transition: color .4s;
-      @include tablet {
-        padding-left: 10px;
+      &:first-of-type {
+        font-size: 16px;
       }
-    }
-    .bold {
-      font-weight: bold;
-    }
-  }
-  i {
-    font-size: 36px;
-    padding-right: 10px;
-    @include tablet {
-      font-size: 45px;
-    }
-    @include desktop {
-      font-size: 55px;
+      &:last-of-type {
+        padding-top: 5px;
+        font-size: 14px;
+        border-top: 1px solid $white;
+      }
     }
   }
   img {
-    width: 32px;
-    @include tablet {
-      width: 45px;
-    }
+    width: 50px;
     @include desktop {
-      width: 50px;
+      width: 60px;
     }
   }
 }
