@@ -7,7 +7,7 @@ import { compareAsc } from 'date-fns'
 
 const Certifications = () => {
   const [ certifications, setCertifications ] = useState([])
-  const [isVisible, setIsVisible] = useState(false)
+  const [ isVisible, setIsVisible ] = useState(false)
 
   const styles = useSpring({
     opacity: isVisible ? 1 : 0,
