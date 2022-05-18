@@ -1,5 +1,5 @@
 import React from 'react'
-import me from '../../../dist/images/square-profile-image.jpg'
+import me from '../../../dist/images/profile-pic.png'
 import './LandingImage.scss'
 import { Spring, animated, easings, useTrail } from 'react-spring'
 
