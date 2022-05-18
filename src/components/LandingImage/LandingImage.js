@@ -1,7 +1,7 @@
 import React from 'react'
+import { animated, easings, Spring, useTrail } from 'react-spring'
 import me from '../../../dist/images/profile-pic.png'
 import './LandingImage.scss'
-import { Spring, animated, easings, useTrail } from 'react-spring'
 
 const LandingImage = () => {
   const buttons = [
