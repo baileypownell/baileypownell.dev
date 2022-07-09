@@ -45,12 +45,6 @@ app.get('/udemy_certs', (req, res) => {
       issued: format(new Date(2019, 08, 01), 'PP'),
       date: new Date(2019, 08, 01),
     }, 
-    // {
-    //   title: '100 Algorithms Challenge',
-    //   link: 'UC-9J835G6E.pdf',
-    //   issued: format(new Date(2019, 05, 04), 'PP'),
-    //   date: new Date(2019, 05, 04),
-    // }, 
     {
       title: 'Advanced JavaScript Concepts',
       link: 'UC-17LFFRO3.jpg',
@@ -63,12 +57,6 @@ app.get('/udemy_certs', (req, res) => {
       issued: format(new Date(2020, 03, 02), 'PP'),
       date: new Date(2020, 03, 02),
     }, 
-    // {
-    //   title: 'Git Going Fast: One Hour of Git Crash Course',
-    //   link: 'UC-D7BODFLQ.pdf',
-    //   issued: format(new Date(2019, 05, 04), 'PP'),
-    //   date: new Date(2019, 05, 04),
-    // },
     {
       title: 'React - The Complete Guide',
       link: 'UC-Q4O7GA4H.pdf',
@@ -142,4 +130,3 @@ app.listen(port, () => {
 })
 
 module.exports = app
-

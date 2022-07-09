@@ -26,6 +26,7 @@
     "evergreen-ui": "^5.1.2",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
+    "ismobilejs": "^1.1.1",
     "node": "^13.13.0",
     "nodemailer": "^6.4.6",
     "nodemon": "^2.0.3",
@@ -35,6 +36,7 @@
     "react-spinners": "^0.8.1",
     "react-spring": "^9.4.2",
     "react-visibility-sensor": "^5.1.1",
+    "rxjs": "^7.5.5",
     "webpack": "^4.43.0"
   },
   "devDependencies": {
