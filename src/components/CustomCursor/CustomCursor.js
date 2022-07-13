@@ -21,7 +21,7 @@ const CustomCursor = () => {
   }, [])
 
   useEffect(() => {
-    if (pageX !== undefined && pageY !== undefined) {
+    if (showCustomCursor && (pageX !== undefined && pageY !== undefined)) {
       const cursor = document.querySelector('.custom-cursor')
       cursor.setAttribute('style', `top: ${(pageY - 10)}px; left: ${(pageX - 10)}px;`)
     }
