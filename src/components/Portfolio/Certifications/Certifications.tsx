@@ -26,7 +26,7 @@ const Certifications = () => {
         const udemy_certs = await fetch(`/api/udemy_certs`)
         if (udemy_certs.ok) {
           const certificates = await udemy_certs.json()
-          certificates.sort((cert1, cert2) => {
+          certificates.sort((cert1: any, cert2: any) => {
             return compareAsc(new Date(cert1.date), new Date(cert2.date))
           })
           setCertifications(certificates)
@@ -53,7 +53,7 @@ const Certifications = () => {
         <p className="udemy-title">Udemy Certificates</p>
         <div className="certifications">
           { trail.map((props, index) => {
-            const cert = certifications[index]
+            const cert: any = certifications[index]
             return (     
               <animated.a 
                 key={index} 

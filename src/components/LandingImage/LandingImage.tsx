@@ -33,7 +33,7 @@ const LandingImage = () => {
         from={{ opacity: 0, transform: 'scale(0.9) translateX(-300px)', }}
         to={{ opacity: 1, transform: 'scale(1) translateX(0)' }}
         config={{ duration: 1000 }}>
-          {styles => (
+          {(styles: any) => (
             <animated.img style={styles} id="profile-image" src={me} />
           )}
       </Spring>
@@ -43,7 +43,7 @@ const LandingImage = () => {
             from={{ opacity: 0, transform: 'scale(0.9)' }}
             to={{ opacity: 1, transform: 'scale(1)' }}
             config={{ duration: 500 }}>
-              {styles => (
+              {(styles: any) => (
                 <animated.h1 style={styles}><span id="hello">Hello,</span><br/> my name is Bailey</animated.h1>
               )}
           </Spring>
@@ -53,10 +53,8 @@ const LandingImage = () => {
             config={{ 
               duration: 1000,
               easing: easings.easeInOutQuart, 
-              delay: 5500,
-              trail: 3000
             }}>
-              {styles => (
+              {(styles: any) => (
                 <animated.h2 style={styles}>
                   I am a software developer proficient in CSS, Javascript/Typescript, Node, Angular, and React.
                 </animated.h2>

@@ -14,7 +14,7 @@ const Projects = {
   BAND_WEBSITE: 'band-website'
 }
 
-const Project = (props) => {
+const Project = (props: any) => {
 
   const [ showButton, setShowButton ] = useState(false)
   const [ backgroundImage, setBackgroundImage ] = useState('')

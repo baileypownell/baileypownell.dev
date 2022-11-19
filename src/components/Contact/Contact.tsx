@@ -24,7 +24,7 @@ class Contact extends React.Component {
     isVisible: false
   }
 
-  updateInput = (e) => {
+  updateInput = (e: any) => {
     if (e.target.id === 'email') {
       const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       if (regex.test(e.target.value)) {
@@ -44,7 +44,7 @@ class Contact extends React.Component {
     })
   }
 
-  sendEmail = async(e) => {
+  sendEmail = async(e: any) => {
     const { name, email, message, invalidEmail } = this.state
     this.setState({ sending: true })
     e.preventDefault()
@@ -110,8 +110,11 @@ class Contact extends React.Component {
       <div className="contact">
         <div className="contact-container">
           <VisibilitySensor onChange={this.onChange}>
-            <Spring opacity={isVisible ? 1 : 0} transform={isVisible ? 'scale(1)' : 'scale(0.9)'} config={{ duration: 750, delay: 500 }}>
-              {styles => (
+            <Spring 
+              from={{ opacity: isVisible ? 0 : 1, transform: isVisible ? 'scale(0.9)' : 'scale(1)' }}
+              to={{ opacity: isVisible ? 1 : 0, transform: isVisible ? 'scale(1)' : 'scale(0.9)' }}
+              config={{ duration: 750 }}>
+              {(styles: any) => (
                 <animated.div style={styles}>
                   <p>Don't be a stranger.</p>
                   <h1 id="hi">Say Hi</h1>

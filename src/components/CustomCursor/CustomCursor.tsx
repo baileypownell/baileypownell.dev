@@ -5,8 +5,8 @@ import './CustomCursor.scss'
 
 const CustomCursor = () => {
   const [showCustomCursor, setShowCustomCursor] = useState(false)
-  const [pageX, setPageX] = useState(window.pageX)
-  const [pageY, setPageY] = useState(window.pageY)
+  const [pageX, setPageX] = useState((window as any).pageX)
+  const [pageY, setPageY] = useState((window as any).pageY)
 
   useEffect(() => {
     const userOnMobileDevice = isMobile(window.navigator).any
@@ -14,7 +14,7 @@ const CustomCursor = () => {
 
 
     const mouseMoves = fromEvent(window, "mousemove");
-    mouseMoves.subscribe(mouseEvent => {
+    mouseMoves.subscribe((mouseEvent: any) => {
       setPageX(mouseEvent.pageX)
       setPageY(mouseEvent.pageY)
     })
@@ -22,7 +22,7 @@ const CustomCursor = () => {
 
   useEffect(() => {
     if (showCustomCursor && (pageX !== undefined && pageY !== undefined)) {
-      const cursor = document.querySelector('.custom-cursor')
+      const cursor: any = document.querySelector('.custom-cursor')
       cursor.setAttribute('style', `top: ${(pageY - 10)}px; left: ${(pageX - 10)}px;`)
     }
   }, [pageX, pageY])
