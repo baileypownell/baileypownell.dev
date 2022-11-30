@@ -1,9 +1,9 @@
 import { ArrowLeftIcon, Position, SideSheet } from 'evergreen-ui'
 import { useEffect, useState } from 'react'
-import BW from '../../../assets/images/3bdhome.jpg'
-import RWT from '../../../assets/images/happy-balance.png'
-import ISBA from '../../../assets/images/ISBA.jpg'
-import VC from '../../../assets/images/recipe-stash-dashboard.png'
+import BW from '../../../images/3bdhome.jpg'
+import RWT from '../../../images/happy-balance.png'
+import ISBA from '../../../images/ISBA.jpg'
+import VC from '../../../images/recipe-stash-dashboard.png'
 import { ISBAProjectPage, RecipeStashProjectPage, ThreeBeersProjectPage, WeightTrackerProjectPage } from '../../index'
 import './Project.scss'
 

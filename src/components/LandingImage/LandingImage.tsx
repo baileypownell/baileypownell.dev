@@ -1,5 +1,5 @@
 import { animated, easings, Spring, useTrail } from 'react-spring'
-import me from '../../assets/images/profile-pic.png'
+import me from '../../images/profile-pic.png'
 import './LandingImage.scss'
 
 const LandingImage = () => {
@@ -17,7 +17,7 @@ const LandingImage = () => {
     { 
       text: 'Resume', 
       classesString: 'fas fa-file',
-      href: 'server/assets/bailey_pownell_resume.pdf'
+      href: '/bailey_pownell_resume.pdf'
     }
   ]
 

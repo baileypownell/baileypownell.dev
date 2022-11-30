@@ -1,10 +1,10 @@
 import './RecipeStashProjectPage.scss'
-import logo from '../../../assets/images/white-logo.png'
-import video from '../../../assets/images/recipe-stash-demo-muted.mp4'
-import main from '../../../assets/images/recipe-stash-main.png'
-import main2 from '../../../assets/images/recipe-stash-recipe.png'
-import main3 from '../../../assets/images/recipe-stash-editing.png'
-import mobile from '../../../assets/images/mobile-recipe-stash-recipe.png'
+import logo from '../../../images/white-logo.png'
+import video from '../../../images/recipe-stash-demo-muted.mp4'
+import main from '../../../images/recipe-stash-main.png'
+import main2 from '../../../images/recipe-stash-recipe.png'
+import main3 from '../../../images/recipe-stash-editing.png'
+import mobile from '../../../images/mobile-recipe-stash-recipe.png'
 
 const RecipeStashProjectPage = () => {
   return (

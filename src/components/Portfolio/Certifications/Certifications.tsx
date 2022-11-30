@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { animated, useSpring, useTrail } from 'react-spring/'
 import VisibilitySensor from 'react-visibility-sensor'
-import udemy from '../../../assets/images/udemy.png'
+import udemy from '../../../images/udemy.png'
 import './Certifications.scss'
 import { compareAsc } from 'date-fns'
 
@@ -23,12 +23,11 @@ const Certifications = () => {
   useEffect(() => {
     const getCertifications = async () => {
       try {
-        const udemy_certs = await fetch(`/api/udemy_certs`)
+        const udemy_certs = await fetch(`/.netlify/functions/udemy_certs`)
         if (udemy_certs.ok) {
-          const certificates = await udemy_certs.json()
-          certificates.sort((cert1: any, cert2: any) => {
-            return compareAsc(new Date(cert1.date), new Date(cert2.date))
-          })
+          const data = await udemy_certs.json()
+          const certificates = data.certificates
+          certificates.sort((cert1: any, cert2: any) => compareAsc(new Date(cert1.date), new Date(cert2.date)))
           setCertifications(certificates)
         } else {
           console.log(`There was an error fetching the certifications: ${udemy_certs.status}`)
@@ -58,7 +57,7 @@ const Certifications = () => {
               <animated.a 
                 key={index} 
                 style={props}
-                href={`/api/udemy_certs/${cert.link}`} 
+                href={`/${cert.link}`}
                 target="_blank">
                 <div className="udemy">
                   <img src={udemy} />

@@ -1,7 +1,7 @@
-import logo from '../../../assets/images/cover-dark.png'
-import video from '../../../assets/images/happy-balance-demo.mp4'
-import main from '../../../assets/images/happy-balance.png'
-import mobile from '../../../assets/images/happy-balance-mobile.png'
+import logo from '../../../images/cover-dark.png'
+import video from '../../../images/happy-balance-demo.mp4'
+import main from '../../../images/happy-balance.png'
+import mobile from '../../../images/happy-balance-mobile.png'
 
 function WeightTrackerProjectPage() {
   return (

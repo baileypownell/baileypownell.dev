@@ -1,8 +1,8 @@
-import original_design from '../../../assets/images/isba_real.jpg'
-import current_project from '../../../assets/images/isba_menu.jpg'
-import home from '../../../assets/images/isba_home.jpg'
-import links from '../../../assets/images/isba_links.jpg'
-import mobile_nav from '../../../assets/images/isba_mobile_nav.png'
+import original_design from '../../../images/isba_real.jpg'
+import current_project from '../../../images/isba_menu.jpg'
+import home from '../../../images/isba_home.jpg'
+import links from '../../../images/isba_links.jpg'
+import mobile_nav from '../../../images/isba_mobile_nav.png'
 
 const ISBAProjectPage = () => {
   return (

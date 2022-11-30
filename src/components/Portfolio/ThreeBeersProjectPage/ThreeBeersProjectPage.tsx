@@ -1,6 +1,6 @@
-import home from '../../../assets/images/3bdhome.jpg'
-import spotify from '../../../assets/images/spotify-3bd.png'
-import footer from '../../../assets/images/footer-3bd.png'
+import home from '../../../images/3bdhome.jpg'
+import spotify from '../../../images/spotify-3bd.png'
+import footer from '../../../images/footer-3bd.png'
 
 const ThreeBeersProjectPage = () => {
   return (

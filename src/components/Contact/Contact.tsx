@@ -49,14 +49,10 @@ class Contact extends React.Component {
     this.setState({ sending: true })
     e.preventDefault()
     if (name && email && message && !invalidEmail) {
-      let payload = {
-        name: name,
-        email: email,
-        message: message
-      }
+      let payload = { name, email, message }
 
       try {
-        const emailResponse = await fetch('/api/contact', {
+        const emailResponse = await fetch('/.netlify/functions/contact', {
           method: 'POST',
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload)

@@ -1,4 +1,3 @@
-import { Boolean } from 'aws-sdk/clients/apigateway'
 import { useState } from 'react'
 import { animated, useTrail } from 'react-spring'
 import VisibilitySensor from 'react-visibility-sensor'
@@ -16,7 +15,7 @@ const ContactButtons = () => {
       href: 'https://www.linkedin.com/in/bailey-pownell-224606167/', 
       className: 'fab fa-linkedin'}, 
     { 
-      href: 'server/assets/bailey_pownell_resume.pdf', 
+      href: '/bailey_pownell_resume.pdf', 
       className: 'fas fa-file'
     }
   ]
