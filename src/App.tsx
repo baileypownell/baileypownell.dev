@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import {
     Contact,
     Portfolio,
@@ -8,8 +6,6 @@ import {
 } from './components/index'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
       <CustomCursor/>
