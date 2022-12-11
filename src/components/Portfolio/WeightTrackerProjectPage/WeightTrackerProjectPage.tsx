@@ -25,7 +25,7 @@ function WeightTrackerProjectPage() {
       <img title="mobile view" className="project-photo mobile-view" src={mobile}></img>
       <h3>This is a closed source project.</h3>
       <div className="button-holder">
-        <a target="_blank" rel="noopener" href="https://happy-balance.herokuapp.com/"><button>Visit Application</button></a>
+        <a target="_blank" rel="noopener" href="https://candid-shortbread-74b74d.netlify.app/"><button>Visit Application</button></a>
       </div>
     </div>
   )
