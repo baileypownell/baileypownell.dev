@@ -16,7 +16,7 @@ const ThreeBeersProjectPage = () => {
       <h3>I used PHP for the back end.</h3>
       <img title="project footer" className="project-photo" src={footer}></img>
       <div className="button-holder">
-          <a target="_blank" href="https://github.com/baileypownell/3-Beers-Deep"><button>View Source Code</button></a>
+        <a target="_blank" href="https://github.com/baileypownell/3-Beers-Deep"><button>View Source Code</button></a>
       </div>
     </div>
   )

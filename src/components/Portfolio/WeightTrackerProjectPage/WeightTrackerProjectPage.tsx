@@ -18,14 +18,14 @@ function WeightTrackerProjectPage() {
       </h3>
       <img title="main project photo" className="project-photo" src={main} ></img>
       <h3>
-        I built this single-page web app because I wanted to use React and Firebase to build a full-stack CRUD application. 
+        I built this single-page web app because I wanted to use React and Firebase to build a full-stack application. 
         This project really pushed the boundaries of what I knew at the time, and was the first project I deployed with heroku.
         I used Chart.js for building the graphs.
       </h3>
       <img title="mobile view" className="project-photo mobile-view" src={mobile}></img>
-      <h3>This is a closed source project.</h3>
       <div className="button-holder">
-        <a target="_blank" rel="noopener" href="https://candid-shortbread-74b74d.netlify.app/"><button>Visit Application</button></a>
+        <a target="_blank" rel="noopener" href="https://happy-balance-app.netlify.app/"><button>Visit Application</button></a>
+        <a target="_blank" href="https://github.com/baileypownell/happy_balance"><button>View Source Code</button></a>
       </div>
     </div>
   )

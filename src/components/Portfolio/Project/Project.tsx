@@ -45,7 +45,6 @@ const Project = (props: any) => {
     window.addEventListener('resize', resize.bind(this))
     resize()
 
-    // effectively componentWillUnmount() 
     return () => {
       window.removeEventListener('resize', resize.bind(this))
     }
@@ -78,19 +77,18 @@ const Project = (props: any) => {
       </div>
 
       <SideSheet
-          width={1000}
-          isShown={isShown}
-          preventBodyScrolling={true}
-          position={Position.RIGHT}
-          onCloseComplete={() => closeSideSheet()}
-        >
-          <div className="side-sheet-content">
-              { showButton ? <button onClick={closeSideSheet}><ArrowLeftIcon size={16} marginRight={8} /> Close </button> : null }
-              { id === Projects.WEIGHT_TRACKER ? <WeightTrackerProjectPage></WeightTrackerProjectPage> : null }
-              { id === Projects.COOKBOOK ? <RecipeStashProjectPage></RecipeStashProjectPage> : null }
-              { id === Projects.BAND_WEBSITE ? <ThreeBeersProjectPage></ThreeBeersProjectPage> : null }
-              { id === Projects.ISBA ? <ISBAProjectPage></ISBAProjectPage> : null }
-          </div>
+        width={1000}
+        isShown={isShown}
+        preventBodyScrolling={true}
+        position={Position.RIGHT}
+        onCloseComplete={() => closeSideSheet()}>
+        <div className="side-sheet-content">
+          { showButton ? <button onClick={closeSideSheet}><ArrowLeftIcon size={16} marginRight={8} /> Close </button> : null }
+          { id === Projects.WEIGHT_TRACKER ? <WeightTrackerProjectPage></WeightTrackerProjectPage> : null }
+          { id === Projects.COOKBOOK ? <RecipeStashProjectPage></RecipeStashProjectPage> : null }
+          { id === Projects.BAND_WEBSITE ? <ThreeBeersProjectPage></ThreeBeersProjectPage> : null }
+          { id === Projects.ISBA ? <ISBAProjectPage></ISBAProjectPage> : null }
+        </div>
       </SideSheet>
     </>
   )

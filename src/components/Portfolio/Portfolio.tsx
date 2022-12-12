@@ -26,7 +26,9 @@ const Portfolio = () => {
         <h2>Portfolio</h2>
         <div id="gallery">
           <Project id='cookbook' />
-          <Project id='weight-tracker' />
+          <Project 
+            github_link='https://github.com/baileypownell/happy_balance' 
+            id='weight-tracker' />
           <Project
             github_link='https://github.com/baileypownell/3-Beers-Deep'
             id='band-website'
