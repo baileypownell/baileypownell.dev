@@ -18,9 +18,7 @@ function WeightTrackerProjectPage() {
       </h3>
       <img title="main project photo" className="project-photo" src={main} ></img>
       <h3>
-        I built this single-page web app because I wanted to use React and Firebase to build a full-stack application. 
-        This project really pushed the boundaries of what I knew at the time, and was the first project I deployed with heroku.
-        I used Chart.js for building the graphs.
+        Built with React, Typescript, MUI, Firebase, Chart.js & Netlify.
       </h3>
       <img title="mobile view" className="project-photo mobile-view" src={mobile}></img>
       <div className="button-holder">

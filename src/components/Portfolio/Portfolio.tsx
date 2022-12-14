@@ -25,17 +25,15 @@ const Portfolio = () => {
       <animated.div style={styles} className="portfolio-container">
         <h2>Portfolio</h2>
         <div id="gallery">
-          <Project id='cookbook' />
+          <Project
+            github_link='https://github.com/baileypownell/recipe_stash' 
+            id='cookbook' />
           <Project 
             github_link='https://github.com/baileypownell/happy_balance' 
             id='weight-tracker' />
           <Project
             github_link='https://github.com/baileypownell/3-Beers-Deep'
             id='band-website'
-          />
-          <Project
-            github_link='https://github.com/baileypownell/Indiana-State-Bar-Redesign'
-            id='isba'
           />
         </div>
         <Certifications/>
