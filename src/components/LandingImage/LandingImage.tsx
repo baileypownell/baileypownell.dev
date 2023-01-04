@@ -1,5 +1,5 @@
 import { animated, easings, Spring, useTrail } from 'react-spring'
-import me from '../../images/profile-pic.png'
+import me from '../../images/pfp.jpg'
 import './LandingImage.scss'
 
 const LandingImage = () => {
