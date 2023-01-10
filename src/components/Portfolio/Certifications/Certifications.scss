@@ -10,8 +10,6 @@
   padding: 8vh 0 0 0;
   .udemy-title {
     color: $brown;
-    margin: 15px 0;
-    font-size: 24px;
   }
   > div {
     width: 90%;
@@ -29,6 +27,7 @@
     }
   }
   .certifications {
+    padding-top: 2rem;
     @include tablet {
       display: flex;
       flex-direction: row;

@@ -5,6 +5,11 @@ html *:before,
 html *:after {
   box-sizing: border-box;
   transition: 0.5s ease-in-out;
+  font-weight: light;
+}
+
+h1, h2, h3, h4, h5, h6, button, p {
+  font-weight: light;
 }
 
 *:before,
@@ -49,6 +54,11 @@ h2,
 h3,
 h4 {
   margin: 0;
+  font-weight: 200;
+}
+
+button {
+  font-size: 16px;
 }
 
 .project-page {

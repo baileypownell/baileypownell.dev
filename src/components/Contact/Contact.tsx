@@ -113,7 +113,7 @@ class Contact extends React.Component {
               {(styles: any) => (
                 <animated.div style={styles}>
                   <p>Don't be a stranger.</p>
-                  <h1 id="hi">Say Hi</h1>
+                  <h1 id="hi">Say hi!</h1>
                   <form onSubmit={this.sendEmail} noValidate autoComplete="off">
                     <div className="inputs">
                       <TextField 

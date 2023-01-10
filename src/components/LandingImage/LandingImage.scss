@@ -45,7 +45,7 @@
     font-size: 45px;
     margin: 0;
     color: $spanish-pink;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Dawning of a New Day', cursive;
     @include tablet {
       font-size: 75px;
     }
@@ -80,6 +80,7 @@
   #hello {
     color: $brown;
     font-size: 100px;
+    font-family: 'Raleway', sans-serif;
     @include tablet {
       font-size: 150px;
     }

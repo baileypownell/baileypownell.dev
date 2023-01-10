@@ -49,7 +49,7 @@ const Certifications = () => {
   return (
     <VisibilitySensor onChange={onChange} partialVisibility>
       <animated.div style={styles} className="certification-container">
-        <p className="udemy-title">Udemy Certificates</p>
+        <h2 className="udemy-title">Udemy Certificates</h2>
         <div className="certifications">
           { trail.map((props, index) => {
             const cert: any = certifications[index]
