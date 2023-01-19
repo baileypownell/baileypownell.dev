@@ -1,10 +1,9 @@
-
-$white: #FFFCF5;
-$brown: #4E392D;
+$white: #fffcf5;
+$brown: #4e392d;
 $brown-hue-offset: rgb(78, 45, 29);
-$muted-pink: #CF8E80;
-$spanish-pink: #FCB5B5;
-$spanish-pink-frosted:rgba(252, 181, 181, .5);
+$muted-pink: #cf8e80;
+$spanish-pink: #fcb5b5;
+$spanish-pink-frosted: rgba(252, 181, 181, 0.5);
 $muted-pink-frosted: rgba(207, 142, 128, 0.5);
 
 @mixin tablet {
@@ -47,9 +46,9 @@ $muted-pink-frosted: rgba(207, 142, 128, 0.5);
   border-radius: 5px;
   font-family: 'Raleway', sans-serif;
   padding: 10px 25px;
-  border: none!important;
+  border: none !important;
   outline: none;
-  transition: transform, -webkit-transform, -ms-transform, .3s;
+  transition: transform, -webkit-transform, -ms-transform, 0.3s;
 }
 
 @mixin flex-column {
@@ -63,4 +62,3 @@ $muted-pink-frosted: rgba(207, 142, 128, 0.5);
     @content;
   }
 }
-

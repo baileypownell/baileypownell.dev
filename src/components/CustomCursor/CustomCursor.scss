@@ -10,7 +10,7 @@
   position: absolute;
   transition-duration: 150ms;
   transition-timing-function: ease-out;
-  animation: cursorAnim .5s infinite alternate;
+  animation: cursorAnim 0.5s infinite alternate;
   pointer-events: none;
 }
 
@@ -19,7 +19,7 @@
     transform: scale(1.1);
   }
   to {
-    transform: scale(.7);
+    transform: scale(0.7);
     box-shadow: 0 0 15px $muted-pink;
   }
 }

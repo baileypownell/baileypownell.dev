@@ -4,7 +4,9 @@
   padding: 8vh 0 0 0;
   text-align: center;
   font-family: 'Raleway', sans-serif;
-  background-image: url('../../images/pink-noun-circle.svg'), url('../../images/brown-noun-circle.svg'), url('../../images/pink-noun-circle.svg'),;
+  background-image: url('../../images/pink-noun-circle.svg'),
+    url('../../images/brown-noun-circle.svg'),
+    url('../../images/pink-noun-circle.svg');
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: contain, contain, contain;
   background-position: -50px 450px, -350px 300px, 500px 400px;
@@ -65,7 +67,7 @@ form {
       box-shadow: 0px 0px 15px $brown;
     }
     @include tablet {
-      width: fit-content!important;
+      width: fit-content !important;
       font-size: 18px;
     }
   }
@@ -94,15 +96,15 @@ form {
 }
 
 .MuiInput-underline:hover:not(.Mui-disabled):before {
-  border-color: $spanish-pink!important;
+  border-color: $spanish-pink !important;
 }
 
 .MuiInputLabel-animated {
-  color: $brown!important;
+  color: $brown !important;
 }
 
 .MuiInput-underline:after {
-    border-bottom: 2px solid $muted-pink!important;
+  border-bottom: 2px solid $muted-pink !important;
 }
 
 .MuiSnackbar-root div {
@@ -126,22 +128,21 @@ form {
 }
 
 .MuiFormHelperText-root.Mui-error {
-  color: $brown!important; 
-  font-weight: 300!important;
+  color: $brown !important;
+  font-weight: 300 !important;
 }
 
 .MuiCircularProgress-colorPrimary {
-  color: $white!important;
-  width: 20px!important;
-  height: 20px!important;
+  color: $white !important;
+  width: 20px !important;
+  height: 20px !important;
   margin: 0 50px;
 }
 
 .MuiInputLabel-root,
 .MuiInputBase-input {
-  font-family: 'Raleway', sans-serif!important;
+  font-family: 'Raleway', sans-serif !important;
 }
-
 
 #hi {
   color: $spanish-pink;
@@ -149,9 +150,9 @@ form {
 }
 
 .MuiButton-containedPrimary {
-  color: $brown!important;
+  color: $brown !important;
 }
 
 button:hover {
-  background-color: $brown!important;
+  background-color: $brown !important;
 }

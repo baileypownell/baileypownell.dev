@@ -31,9 +31,9 @@
     grid-gap: 2vw;
   }
   @include IE10up {
-    position:relative;
+    position: relative;
     &:after {
-      content: "";
+      content: '';
       display: table;
       clear: both;
     }

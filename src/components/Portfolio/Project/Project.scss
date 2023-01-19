@@ -8,25 +8,24 @@
   @include desktop {
     overflow: unset;
     transition: transform, -webkit-transform, -ms-transform, box-shadow;
-    transition-duration: .5s;
+    transition-duration: 0.5s;
   }
   @include IE10up {
     margin: 20px 0;
-      @media (min-width: 900px) { 
-        width:45%;
-        margin: 20px;
-        float: right;
+    @media (min-width: 900px) {
+      width: 45%;
+      margin: 20px;
+      float: right;
     }
   }
 }
 
-
 .parent:hover {
   @include desktop {
     @include prefix(transform, translateY(-15px), webkit ms);
-      box-shadow: 25px 25px 55px rgba(51, 51, 51, 0.83);
-    }
+    box-shadow: 25px 25px 55px rgba(51, 51, 51, 0.83);
   }
+}
 
 .darken {
   overflow: hidden;
@@ -38,15 +37,14 @@
     margin: 0 auto;
     height: 100%;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.0);
-    transition: background-color .5s ease;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.5s ease;
     &:hover .information-banner {
       @include prefix(transform, translateY(0px), webkit ms);
       opacity: 1;
     }
   }
 }
-
 
 .website {
   width: 100%;
@@ -56,7 +54,7 @@
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: transform, -webkit-transform, -ms-transform, .5s;
+  transition: transform, -webkit-transform, -ms-transform, 0.5s;
   border-radius: 10px;
   @include desktop {
     min-height: 200px;
@@ -70,7 +68,11 @@
 .information-banner {
   position: absolute;
   text-align: center;
-  background: linear-gradient(160deg, rgba(207, 142, 128, .4), rgba(78, 57, 45, .4));
+  background: linear-gradient(
+    160deg,
+    rgba(207, 142, 128, 0.4),
+    rgba(78, 57, 45, 0.4)
+  );
   padding: 20px 0;
   width: 100%;
   bottom: 0;
@@ -84,13 +86,13 @@
     @include prefix(transform, translateY(500px), webkit ms);
     @include flex-column;
     justify-content: center;
-    transition: transform, -webkit-transform, -ms-transform, .5s;
+    transition: transform, -webkit-transform, -ms-transform, 0.5s;
   }
 }
 
 .information-banner button a {
-  color: $white!important;
-  text-decoration: none!important;
+  color: $white !important;
+  text-decoration: none !important;
 }
 
 .information-banner button:hover {
@@ -98,7 +100,7 @@
 }
 
 .ub-max-h_100vh {
-  width: 100%!important;
+  width: 100% !important;
   @include tablet {
     width: auto;
   }

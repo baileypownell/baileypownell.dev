@@ -8,7 +8,14 @@ html *:after {
   font-weight: light;
 }
 
-h1, h2, h3, h4, h5, h6, button, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+p {
   font-weight: light;
 }
 
@@ -22,8 +29,8 @@ body {
   margin: 0px;
   overflow-x: hidden;
   // unclear why these two rules need to be overriden when a project is opened in a drawer
-  padding: 0!important;
-  overflow: auto!important;
+  padding: 0 !important;
+  overflow: auto !important;
 }
 
 a {
@@ -33,7 +40,8 @@ a {
 
 .App {
   min-height: 100vh;
-  background-image: url('images/pink-noun-circle.svg'), url('images/brown-noun-circle.svg'), url('images/pink-noun-circle.svg');
+  background-image: url('images/pink-noun-circle.svg'),
+    url('images/brown-noun-circle.svg'), url('images/pink-noun-circle.svg');
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: contain, contain, contain;
   background-position: -200px 750px, 5px 700px, 200px 550px;
@@ -126,9 +134,13 @@ button {
   }
 }
 
-// overlay color 
+// overlay color
 .css-xeqldi::before {
-  background: linear-gradient(160deg, rgba(252, 181, 181, 0.664), rgba(78, 57, 45, 0.541));
+  background: linear-gradient(
+    160deg,
+    rgba(252, 181, 181, 0.664),
+    rgba(78, 57, 45, 0.541)
+  );
 }
 
 .MuiFormControl-root {
