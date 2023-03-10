@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
-    "start": "yarn ts-node-esm ./server/server",
     "netlify-dev": "netlify dev"
   },
   "dependencies": {
