@@ -20,6 +20,8 @@ const handler = async (event, context) => {
 
     const emailResult: SentMessageInfo = await mailer.sendMail(emailToSend);
 
+    console.log('emailResult: ', emailResult);
+
     if (emailResult.rejected) {
       return {
         statusCode: 500,
@@ -36,6 +38,7 @@ const handler = async (event, context) => {
       };
     }
   } catch (error) {
+    console.log(error);
     return {
       statusCode: 500,
       body: JSON.stringify({
