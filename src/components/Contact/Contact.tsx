@@ -1,4 +1,11 @@
-import { CircularProgress, Snackbar, TextField } from '@mui/material';
+import {
+  Box,
+  Button,
+  CircularProgress,
+  Snackbar,
+  TextField,
+  useTheme,
+} from '@mui/material';
 import { Form, Formik } from 'formik';
 import { useState } from 'react';
 import { animated, Spring } from 'react-spring/';
@@ -22,6 +29,7 @@ const Contact = () => {
   const [showSuccessSnackBar, setShowSuccessSnackBar] = useState(false);
   const [showErrorSnackBar, setShowErrorSnackBar] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const theme = useTheme();
 
   const sendEmail = async (form: {
     name: string;
@@ -58,8 +66,8 @@ const Contact = () => {
   const onChange = (isVisible: boolean) => setIsVisible(isVisible);
 
   return (
-    <div className="contact">
-      <div className="contact-container">
+    <Box className="contact">
+      <Box className="contact-container">
         <VisibilitySensor onChange={onChange}>
           <Spring
             from={{
@@ -87,7 +95,7 @@ const Contact = () => {
                   onSubmit={(values) => sendEmail(values)}
                   render={(formik) => (
                     <Form>
-                      <div className="inputs">
+                      <Box className="inputs">
                         <TextField
                           variant="standard"
                           id="name"
@@ -136,11 +144,19 @@ const Contact = () => {
                           }
                           label="Message"
                         />
-                      </div>
-                      <div id="button">
-                        <button
+                      </Box>
+                      <Box
+                        margin="0 auto"
+                        width="100%"
+                        sx={{
+                          [theme.breakpoints.up('sm')]: {
+                            width: 'auto',
+                          },
+                        }}
+                      >
+                        <Button
                           type="submit"
-                          color="primary"
+                          variant="contained"
                           disabled={
                             !(
                               formik.values.message &&
@@ -150,8 +166,8 @@ const Contact = () => {
                           }
                         >
                           {sending ? <CircularProgress /> : 'Send'}
-                        </button>
-                      </div>
+                        </Button>
+                      </Box>
                     </Form>
                   )}
                 />
@@ -196,10 +212,10 @@ const Contact = () => {
             </span>
           }
         />
-      </div>
+      </Box>
 
       <Footer />
-    </div>
+    </Box>
   );
 };
 

@@ -1,18 +1,22 @@
+import { ThemeProvider } from '@mui/material';
 import {
   Contact,
   Portfolio,
   LandingImage,
   CustomCursor,
 } from './components/index';
+import { theme } from './theme';
 
 function App() {
   return (
-    <div className="App">
-      <CustomCursor />
-      <LandingImage />
-      <Portfolio />
-      <Contact />
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <CustomCursor />
+        <LandingImage />
+        <Portfolio />
+        <Contact />
+      </div>
+    </ThemeProvider>
   );
 }
 

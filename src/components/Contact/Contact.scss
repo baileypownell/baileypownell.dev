@@ -60,17 +60,6 @@ form {
   flex-direction: column;
   width: 90%;
   margin: 0 auto;
-  button {
-    box-shadow: 0px 0px 15px $muted-pink;
-    &:hover {
-      background-color: $brown;
-      box-shadow: 0px 0px 15px $brown;
-    }
-    @include tablet {
-      width: fit-content !important;
-      font-size: 18px;
-    }
-  }
   > div {
     display: flex;
     flex-direction: column;
@@ -119,14 +108,6 @@ form {
   }
 }
 
-#button {
-  margin: 0 auto;
-  width: 100%;
-  @include tablet {
-    width: auto;
-  }
-}
-
 .MuiFormHelperText-root.Mui-error {
   color: $brown !important;
   font-weight: 300 !important;
@@ -147,12 +128,4 @@ form {
 #hi {
   color: $spanish-pink;
   font-family: 'Dawning of a New Day', cursive;
-}
-
-.MuiButton-containedPrimary {
-  color: $brown !important;
-}
-
-button:hover {
-  background-color: $brown !important;
 }

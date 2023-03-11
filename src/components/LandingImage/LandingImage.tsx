@@ -1,3 +1,4 @@
+import { Box } from '@mui/material';
 import { animated, easings, Spring, useTrail } from 'react-spring';
 import me from '../../images/pfp.jpg';
 import './LandingImage.scss';
@@ -38,7 +39,7 @@ const LandingImage = () => {
           <animated.img style={styles} id="profile-image" src={me} />
         )}
       </Spring>
-      <div>
+      <Box paddingTop={2}>
         <div className="points">
           <Spring
             from={{ opacity: 0, transform: 'scale(0.9)' }}
@@ -86,7 +87,7 @@ const LandingImage = () => {
             );
           })}
         </div>
-      </div>
+      </Box>
     </div>
   );
 };
