@@ -41,16 +41,6 @@ $muted-pink-frosted: rgba(207, 142, 128, 0.5);
   }
 }
 
-@mixin button {
-  cursor: pointer;
-  border-radius: 5px;
-  font-family: 'Raleway', sans-serif;
-  padding: 10px 25px;
-  border: none !important;
-  outline: none;
-  transition: transform, -webkit-transform, -ms-transform, 0.3s;
-}
-
 @mixin flex-column {
   display: flex;
   flex-direction: column;

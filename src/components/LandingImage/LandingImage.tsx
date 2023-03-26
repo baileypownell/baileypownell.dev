@@ -1,9 +1,10 @@
-import { Box } from '@mui/material';
+import { Box, Button, Stack, useTheme } from '@mui/material';
 import { animated, easings, Spring, useTrail } from 'react-spring';
 import me from '../../images/pfp.jpg';
 import './LandingImage.scss';
 
 const LandingImage = () => {
+  const theme = useTheme();
   const buttons = [
     {
       text: 'Github',
@@ -29,7 +30,7 @@ const LandingImage = () => {
   });
 
   return (
-    <div className="landing-screen">
+    <Box className="landing-screen">
       <Spring
         from={{ opacity: 0, transform: 'scale(0.9) translateX(-300px)' }}
         to={{ opacity: 1, transform: 'scale(1) translateX(0)' }}
@@ -40,7 +41,7 @@ const LandingImage = () => {
         )}
       </Spring>
       <Box paddingTop={2}>
-        <div className="points">
+        <Box className="points">
           <Spring
             from={{ opacity: 0, transform: 'scale(0.9)' }}
             to={{ opacity: 1, transform: 'scale(1)' }}
@@ -48,7 +49,22 @@ const LandingImage = () => {
           >
             {(styles: any) => (
               <animated.h1 style={styles}>
-                <span id="hello">Hello,</span>
+                <Box
+                  component="span"
+                  sx={{
+                    color: theme.palette.secondary.main,
+                    fontSize: '100px',
+                    fontFamily: `'Raleway', sans-serif`,
+                    [theme.breakpoints.up('md')]: {
+                      fontSize: '150px',
+                    },
+                    [theme.breakpoints.up('lg')]: {
+                      fontSize: '200px',
+                    },
+                  }}
+                >
+                  Hello,
+                </Box>
                 <br /> my name is Bailey
               </animated.h1>
             )}
@@ -68,9 +84,17 @@ const LandingImage = () => {
               </animated.h2>
             )}
           </Spring>
-        </div>
+        </Box>
 
-        <div className="buttons">
+        <Stack
+          alignItems="center"
+          sx={{
+            [theme.breakpoints.up('md')]: {
+              flexDirection: 'row',
+              justifyContent: 'flex-end',
+            },
+          }}
+        >
           {trail.map((props, index) => {
             const button = buttons[index];
             return (
@@ -80,15 +104,34 @@ const LandingImage = () => {
                 key={index}
                 style={props}
               >
-                <button className="swipe">
-                  {button.text} <i className={button.classesString}></i>
-                </button>
+                <Button
+                  startIcon={
+                    <i
+                      style={{ marginLeft: '5px', marginRight: '5px' }}
+                      className={button.classesString}
+                    ></i>
+                  }
+                  sx={{
+                    margin: '5px',
+                    cursor: 'pointer',
+                    textTransform: 'uppercase',
+                    backgroundColor: theme.palette.secondary.main,
+                    boxShadow: `0px 0px 10px ${theme.palette.secondary.main}`,
+                    color: theme.palette.info.main,
+                    '&:hover': {
+                      boxShadow: `0px 0px 20px ${theme.palette.secondary.dark}`,
+                      backgroundColor: theme.palette.secondary.main,
+                    },
+                  }}
+                >
+                  {button.text}
+                </Button>
               </animated.a>
             );
           })}
-        </div>
+        </Stack>
       </Box>
-    </div>
+    </Box>
   );
 };
 

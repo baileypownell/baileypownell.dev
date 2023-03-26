@@ -5,6 +5,7 @@ import main from '../../../images/recipe-stash-main.png';
 import main2 from '../../../images/recipe-stash-recipe.png';
 import main3 from '../../../images/recipe-stash-editing.png';
 import mobile from '../../../images/mobile-recipe-stash-recipe.png';
+import { Button, Stack } from '@mui/material';
 
 const RecipeStashProjectPage = () => {
   return (
@@ -44,14 +45,19 @@ const RecipeStashProjectPage = () => {
         className="project-photo mobile-view"
         src={mobile}
       ></img>
-      <div className="button-holder">
+      <Stack
+        justifyContent="center"
+        alignItems="center"
+        padding="15px 0px 30px 0px"
+        className="button-holder"
+      >
         <a target="_blank" href="https://recipe-stash-1.herokuapp.com/">
-          <button>Visit Application</button>
+          <Button variant="contained">Visit Application</Button>
         </a>
         <a target="_blank" href="https://github.com/baileypownell/recipe_stash">
-          <button>View Source Code</button>
+          <Button variant="contained">View Source Code</Button>
         </a>
-      </div>
+      </Stack>
     </div>
   );
 };

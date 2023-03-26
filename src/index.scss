@@ -65,10 +65,6 @@ h4 {
   font-weight: 200;
 }
 
-button {
-  font-size: 16px;
-}
-
 .project-page {
   h4 {
     margin: 10px 0;
@@ -95,11 +91,6 @@ button {
         margin: 0px 10px 0px 0px;
       }
     }
-  }
-
-  button {
-    @include button;
-    margin-top: 10px;
   }
 
   .project-photo {

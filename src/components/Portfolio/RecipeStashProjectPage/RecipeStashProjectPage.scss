@@ -10,15 +10,7 @@
     margin: 0;
     text-align: center;
   }
-  .button-holder {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 0px 30px 0px;
-  }
   button {
-    @include button;
     margin-top: 10px;
   }
 

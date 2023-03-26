@@ -1,3 +1,4 @@
+import { Box, Button, Stack } from '@mui/material';
 import { ArrowLeftIcon, Position, SideSheet } from 'evergreen-ui';
 import { useEffect, useState } from 'react';
 import BW from '../../../images/3bdhome.jpg';
@@ -76,16 +77,18 @@ const Project = (props: any) => {
           style={{ backgroundImage: `url(${backgroundImage})` }}
         ></div>
         <div className="darken">
-          <div className="information-banner">
+          <Stack spacing={1} className="information-banner">
             {github_link ? (
-              <button>
+              <Button variant="contained">
                 <a href={github_link} target="_blank">
                   View Source Code
                 </a>
-              </button>
+              </Button>
             ) : null}
-            <button onClick={() => openSideSheet()}>Learn More</button>
-          </div>
+            <Button variant="contained" onClick={() => openSideSheet()}>
+              Learn More
+            </Button>
+          </Stack>
         </div>
       </div>
 
@@ -98,9 +101,12 @@ const Project = (props: any) => {
       >
         <div className="side-sheet-content">
           {showButton ? (
-            <button onClick={closeSideSheet}>
-              <ArrowLeftIcon size={16} marginRight={8} /> Close{' '}
-            </button>
+            <Button
+              startIcon={<ArrowLeftIcon size={16} marginRight={8} />}
+              onClick={closeSideSheet}
+            >
+              Close
+            </Button>
           ) : null}
           {id === Projects.WEIGHT_TRACKER ? (
             <WeightTrackerProjectPage></WeightTrackerProjectPage>

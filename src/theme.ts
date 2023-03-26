@@ -21,6 +21,7 @@ export const theme = createTheme({
     },
     secondary: {
       main: '#4e392d',
+      dark: 'rgb(78, 45, 29)',
       //   contrastText: '#fff',
     },
     error: {
