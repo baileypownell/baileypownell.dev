@@ -71,12 +71,12 @@ const Project = (props: any) => {
 
   return (
     <>
-      <div className="parent">
-        <div
+      <Box className="parent">
+        <Box
           className="website"
           style={{ backgroundImage: `url(${backgroundImage})` }}
-        ></div>
-        <div className="darken">
+        ></Box>
+        <Box className="darken">
           <Stack spacing={1} className="information-banner">
             {github_link ? (
               <Button variant="contained">
@@ -89,8 +89,8 @@ const Project = (props: any) => {
               Learn More
             </Button>
           </Stack>
-        </div>
-      </div>
+        </Box>
+      </Box>
 
       <SideSheet
         width={1000}
@@ -99,7 +99,7 @@ const Project = (props: any) => {
         position={Position.RIGHT}
         onCloseComplete={() => closeSideSheet()}
       >
-        <div className="side-sheet-content">
+        <Box className="side-sheet-content">
           {showButton ? (
             <Button
               startIcon={<ArrowLeftIcon size={16} marginRight={8} />}
@@ -118,7 +118,7 @@ const Project = (props: any) => {
             <ThreeBeersProjectPage></ThreeBeersProjectPage>
           ) : null}
           {id === Projects.ISBA ? <ISBAProjectPage></ISBAProjectPage> : null}
-        </div>
+        </Box>
       </SideSheet>
     </>
   );

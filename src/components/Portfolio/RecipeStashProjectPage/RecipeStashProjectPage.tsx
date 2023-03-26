@@ -5,11 +5,11 @@ import main from '../../../images/recipe-stash-main.png';
 import main2 from '../../../images/recipe-stash-recipe.png';
 import main3 from '../../../images/recipe-stash-editing.png';
 import mobile from '../../../images/mobile-recipe-stash-recipe.png';
-import { Button, Stack } from '@mui/material';
+import { Box, Button, Stack, Typography } from '@mui/material';
 
 const RecipeStashProjectPage = () => {
   return (
-    <div className="project-page">
+    <Box className="project-page">
       <input style={{ display: 'none' }} tabIndex={1}></input>
       <img title="logo" className="logo" src={logo}></img>
       <video
@@ -22,7 +22,7 @@ const RecipeStashProjectPage = () => {
         Sorry, your browser doesn't support embedded videos.
       </video>
       <img className="project-photo" src={main}></img>
-      <h3>
+      <Typography variant="h3">
         Built with React, TypeScript, Node, AWS, MUI, and Postgres, Recipe Stash
         is a fullstack SPA whereby users can add recipes, duplicate them, tag
         them with various categories (sugar-free, dairy-free, vegan, etc), &
@@ -37,7 +37,7 @@ const RecipeStashProjectPage = () => {
           very convincing article against using JWTs for authentication purposes
         </a>
         .
-      </h3>
+      </Typography>
       <img className="project-photo" src={main2}></img>
       <img className="project-photo" src={main3}></img>
       <img
@@ -58,7 +58,7 @@ const RecipeStashProjectPage = () => {
           <Button variant="contained">View Source Code</Button>
         </a>
       </Stack>
-    </div>
+    </Box>
   );
 };
 
