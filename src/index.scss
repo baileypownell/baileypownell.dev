@@ -1,5 +1,9 @@
 @import 'scss/mixins.scss';
 
+html {
+  overflow-x: hidden;
+}
+
 html *,
 html *:before,
 html *:after {

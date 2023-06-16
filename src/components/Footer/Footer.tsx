@@ -25,7 +25,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener"
         >
-          <p className="source">
+          <p>
             See the source code for this site <i className="fas fa-code"></i>
           </p>
         </a>
