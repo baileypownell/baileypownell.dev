@@ -39,7 +39,12 @@ const LandingImage = () => {
           config={{ duration: 1000 }}
         >
           {(styles: any) => (
-            <animated.img style={styles} id="profile-image" src={me} />
+            <animated.img
+              style={styles}
+              id="profile-image"
+              src={me}
+              alt="Me at one of my favorite restaurants holding a watermelon cosmo"
+            />
           )}
         </Spring>
         <Box paddingTop={4}>
