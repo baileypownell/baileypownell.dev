@@ -109,6 +109,7 @@ const LandingImage = () => {
                   <Button
                     href={button.href}
                     target="_blank"
+                    role="link"
                     startIcon={
                       <i
                         style={{ marginLeft: '5px', marginRight: '5px' }}
