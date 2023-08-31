@@ -110,6 +110,7 @@ const LandingImage = () => {
                     href={button.href}
                     target="_blank"
                     role="link"
+                    aria-label={`Open a new tab to view ${button.text}`}
                     startIcon={
                       <i
                         style={{ marginLeft: '5px', marginRight: '5px' }}
