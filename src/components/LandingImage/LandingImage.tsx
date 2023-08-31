@@ -105,13 +105,10 @@ const LandingImage = () => {
             {trail.map((props, index) => {
               const button = buttons[index];
               return (
-                <animated.a
-                  href={button.href}
-                  target="_blank"
-                  key={index}
-                  style={props}
-                >
+                <animated.div key={button.href}  style={props}>
                   <Button
+                    href={button.href}
+                    target="_blank"
                     startIcon={
                       <i
                         style={{ marginLeft: '5px', marginRight: '5px' }}
@@ -133,7 +130,7 @@ const LandingImage = () => {
                   >
                     {button.text}
                   </Button>
-                </animated.a>
+                </animated.div>
               );
             })}
           </Stack>
