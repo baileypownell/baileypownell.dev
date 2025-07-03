@@ -1,11 +1,14 @@
-import { Box, Button, Stack, useTheme } from '@mui/material';
+import { Box, Button, Stack, useMediaQuery, useTheme } from '@mui/material';
 import { animated, easings, Spring, useTrail } from 'react-spring';
-import me from '../../images/pfp.jpg';
+import me from '../../images/summit.jpg';
 import Footer from '../Footer/Footer';
 import './LandingImage.scss';
 
 const LandingImage = () => {
   const theme = useTheme();
+  const minWidth800 = useMediaQuery('(min-width:800px)');
+  const minWidth1200 = useMediaQuery('(min-width:1200px)');
+  const isSmallViewport = useMediaQuery(theme.breakpoints.down('md'));
   const buttons = [
     {
       text: 'Github',
@@ -31,8 +34,13 @@ const LandingImage = () => {
   });
 
   return (
-    <Box className="landing-screen">
-      <Stack alignItems="center" padding={5} spacing={3}>
+    <Box className="landing-screen" height="100vh">
+      <Stack
+        alignItems="center"
+        flexDirection={minWidth800 ? 'row' : 'column'}
+        height="100%"
+        p={isSmallViewport ? 3 : 0}
+      >
         <Spring
           from={{ opacity: 0, transform: 'scale(0.9) translateX(-300px)' }}
           to={{ opacity: 1, transform: 'scale(1) translateX(0)' }}
@@ -43,11 +51,11 @@ const LandingImage = () => {
               style={styles}
               id="profile-image"
               src={me}
-              alt="Me at one of my favorite restaurants holding a watermelon cosmo"
+              alt="At the summit of Lily Mountain, Colorado"
             />
           )}
         </Spring>
-        <Box paddingTop={4}>
+        <Box paddingTop={2} marginLeft={minWidth1200 ? '100px' : '25px'}>
           <Box className="points">
             <Spring
               from={{ opacity: 0, transform: 'scale(0.9)' }}
@@ -55,25 +63,7 @@ const LandingImage = () => {
               config={{ duration: 500 }}
             >
               {(styles: any) => (
-                <animated.h1 style={styles}>
-                  <Box
-                    component="span"
-                    sx={{
-                      color: theme.palette.secondary.main,
-                      fontSize: '100px',
-                      fontFamily: `'Raleway', sans-serif`,
-                      [theme.breakpoints.up('md')]: {
-                        fontSize: '150px',
-                      },
-                      [theme.breakpoints.up('lg')]: {
-                        fontSize: '200px',
-                      },
-                    }}
-                  >
-                    Hello,
-                  </Box>
-                  <br /> my name is Bailey
-                </animated.h1>
+                <animated.h1 style={styles}>Bailey Pownell</animated.h1>
               )}
             </Spring>
             <Spring
@@ -85,27 +75,40 @@ const LandingImage = () => {
               }}
             >
               {(styles: any) => (
-                <animated.h2 style={styles}>
-                  My areas of practice include Javascript/Typescript, Node,
-                  Angular, and React.
-                </animated.h2>
+                <div>
+                  <Box pt={2} pb={2}>
+                    <animated.h2 style={styles}>
+                      Frontend Software Developer
+                    </animated.h2>
+                  </Box>
+
+                  <Stack pt={2} spacing={3}>
+                    <Box>
+                      <animated.h3 style={styles}>
+                        Typescript | Node | Angular | React
+                      </animated.h3>
+                    </Box>
+                    <Box>
+                      <animated.h3 style={styles}>
+                        Component testing | Dependency management | Acessibility
+                      </animated.h3>
+                    </Box>
+                  </Stack>
+                </div>
               )}
             </Spring>
           </Box>
 
           <Stack
             alignItems="center"
-            sx={{
-              [theme.breakpoints.up('md')]: {
-                flexDirection: 'row',
-                justifyContent: 'flex-end',
-              },
-            }}
+            pt={4}
+            justifyContent={minWidth800 ? 'flex-end' : 'center'}
+            flexDirection={minWidth800 ? 'row' : 'column'}
           >
             {trail.map((props, index) => {
               const button = buttons[index];
               return (
-                <animated.div key={button.href}  style={props}>
+                <animated.div key={button.href} style={props}>
                   <Button
                     href={button.href}
                     target="_blank"

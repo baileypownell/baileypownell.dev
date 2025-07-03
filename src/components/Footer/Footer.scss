@@ -10,16 +10,13 @@ footer {
   a {
     text-decoration: none;
     color: $brown;
+    cursor: pointer;
   }
   p {
     display: inline;
     padding: 0;
     position: relative;
   }
-  a {
-    cursor: pointer;
-  }
-
   p::before {
     content: '';
     position: absolute;

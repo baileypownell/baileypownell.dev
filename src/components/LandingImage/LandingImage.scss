@@ -5,17 +5,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
   background-image: url('../../images/pink-noun-circle.svg'),
     url('../../images/brown-noun-circle.svg');
   background-repeat: no-repeat, no-repeat;
   background-size: 300px 300px, 400px 400px;
   background-position: -200px 0px, -175px -175px;
-  > div {
-    @include tablet {
-      flex-direction: row;
-    }
-  }
   @include large-desktop {
     background-size: 500px 500px, 450px 450px;
     background-position: -200px -150px, -15px -275px;
@@ -29,8 +23,9 @@
     width: 250px;
     border-radius: 50%;
     box-shadow: 0px 0px 40px $muted-pink;
-    margin-bottom: 35px;
-    @include tablet {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    @include desktop {
       width: 350px;
       max-width: 400px;
       margin-bottom: 0;
@@ -38,7 +33,6 @@
   }
   .points {
     text-align: center;
-    margin-bottom: 5vh;
     @include tablet {
       text-align: right;
     }
@@ -56,14 +50,19 @@
     }
   }
   h2 {
+    font-weight: 800;
     font-size: 20px;
     line-height: 1.5;
     color: $brown;
-    margin-top: 40px;
     font-family: 'Raleway', sans-serif;
     @include tablet {
-      margin: 75px 0;
       font-size: 30px;
     }
+  }
+  h3 {
+    font-size: 18px;
+    line-height: 1.5;
+    color: $brown;
+    font-family: 'Raleway', sans-serif;
   }
 }
