@@ -1,6 +1,6 @@
 import { Box, Button, Stack, useMediaQuery, useTheme } from '@mui/material';
 import { animated, easings, Spring, useTrail } from 'react-spring';
-import me from '../../images/summit.jpg';
+import me from '../../images/summit_alt.jpg';
 import Footer from '../Footer/Footer';
 import './LandingImage.scss';
 
