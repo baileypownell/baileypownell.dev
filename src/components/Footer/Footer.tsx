@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { animated, useSpring } from 'react-spring/';
+import { animated, useSpring } from 'react-spring';
 import VisibilitySensor from 'react-visibility-sensor';
 import './Footer.scss';
 

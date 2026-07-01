@@ -23,7 +23,7 @@ const LandingImage = () => {
     {
       text: 'Resume',
       classesString: 'fas fa-file',
-      href: '/bailey_pownell_resume.pdf',
+      href: '/Resume.pdf',
     },
   ];
 
