@@ -1,4 +1,4 @@
-@import '../../scss/mixins.scss';
+@use '../../scss/mixins.scss';
 
 .landing-screen {
   display: flex;
@@ -10,22 +10,22 @@
   background-repeat: no-repeat, no-repeat;
   background-size: 300px 300px, 400px 400px;
   background-position: -200px 0px, -175px -175px;
-  @include large-desktop {
+  @include mixins.large-desktop {
     background-size: 500px 500px, 450px 450px;
     background-position: -200px -150px, -15px -275px;
   }
 
-  @include tablet {
+  @include mixins.tablet {
     padding-top: unset;
     min-height: 100vh;
   }
   #profile-image {
     width: 250px;
     border-radius: 50%;
-    box-shadow: 0px 0px 40px $muted-pink;
+    box-shadow: 0px 0px 40px mixins.$muted-pink;
     margin-bottom: 20px;
     margin-top: 20px;
-    @include desktop {
+    @include mixins.desktop {
       width: 350px;
       max-width: 400px;
       margin-bottom: 0;
@@ -33,19 +33,19 @@
   }
   .points {
     text-align: center;
-    @include tablet {
+    @include mixins.tablet {
       text-align: right;
     }
   }
   h1 {
     font-size: 45px;
     margin: 0;
-    color: $spanish-pink;
+    color: mixins.$spanish-pink;
     font-family: 'Dawning of a New Day', cursive;
-    @include tablet {
+    @include mixins.tablet {
       font-size: 75px;
     }
-    @include desktop {
+    @include mixins.desktop {
       font-size: 100px;
     }
   }
@@ -53,16 +53,16 @@
     font-weight: 800;
     font-size: 20px;
     line-height: 1.5;
-    color: $brown;
+    color: mixins.$brown;
     font-family: 'Raleway', sans-serif;
-    @include tablet {
+    @include mixins.tablet {
       font-size: 30px;
     }
   }
   h3 {
     font-size: 18px;
     line-height: 1.5;
-    color: $brown;
+    color: mixins.$brown;
     font-family: 'Raleway', sans-serif;
   }
 }

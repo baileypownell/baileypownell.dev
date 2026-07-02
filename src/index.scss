@@ -1,4 +1,4 @@
-@import 'scss/mixins.scss';
+@use 'scss/mixins.scss';
 
 html {
   overflow-x: hidden;
@@ -29,7 +29,7 @@ p {
 }
 
 body {
-  background-color: $white;
+  background-color: mixins.$white;
   margin: 0px;
   overflow-x: hidden;
   // unclear why these two rules need to be overriden when a project is opened in a drawer
@@ -44,20 +44,38 @@ a {
 
 .App {
   min-height: 100vh;
-  background-image: url('images/pink-noun-circle.svg'),
-    url('images/brown-noun-circle.svg'), url('images/pink-noun-circle.svg');
+  background-image:
+    url('images/pink-noun-circle.svg'), url('images/brown-noun-circle.svg'),
+    url('images/pink-noun-circle.svg');
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: contain, contain, contain;
-  background-position: -200px 750px, 5px 700px, 200px 550px;
+  background-position:
+    -200px 750px,
+    5px 700px,
+    200px 550px;
 
-  @include tablet {
-    background-size: 700px 700px, 750px 750px, 800px, 800px;
-    background-position: -200px 500px, 135px 650px, 180% 650px;
+  @include mixins.tablet {
+    background-size:
+      700px 700px,
+      750px 750px,
+      800px,
+      800px;
+    background-position:
+      -200px 500px,
+      135px 650px,
+      180% 650px;
   }
 
-  @include large-desktop {
-    background-size: 700px 700px, 800px 800px, 900px, 900px;
-    background-position: -450px 300px, 0 450px, 554px 600px;
+  @include mixins.large-desktop {
+    background-size:
+      700px 700px,
+      800px 800px,
+      900px,
+      900px;
+    background-position:
+      -450px 300px,
+      0 450px,
+      554px 600px;
   }
 }
 
@@ -75,7 +93,7 @@ h4 {
     font-family: 'Raleway', sans-serif;
     text-align: center;
 
-    @include tablet {
+    @include mixins.tablet {
       font-size: 30px;
       margin: 0;
     }
@@ -88,7 +106,7 @@ h4 {
     align-items: center;
     padding: 15px 0px 30px 0px;
 
-    @include tablet {
+    @include mixins.tablet {
       flex-direction: row;
 
       button {
@@ -104,9 +122,9 @@ h4 {
     background-size: contain;
     background-position: center;
     border-radius: 10px;
-    box-shadow: 0 0px 20px $brown;
+    box-shadow: 0 0px 20px mixins.$brown;
 
-    @include tablet {
+    @include mixins.tablet {
       margin: 20px auto;
     }
   }
@@ -116,10 +134,10 @@ h4 {
     font-family: 'Ralewayß', sans-serif;
     line-height: 1.75;
     text-align: center;
-    color: $brown;
+    color: mixins.$brown;
     font-weight: normal;
 
-    @include tablet {
+    @include mixins.tablet {
       font-size: unset;
     }
   }
@@ -143,9 +161,9 @@ h4 {
 }
 
 .side-sheet-content button {
-  box-shadow: 0px 0px 10px $spanish-pink;
+  box-shadow: 0px 0px 10px  mixins.$spanish-pink;
 
   &:hover {
-    box-shadow: 0px 0px 15px $brown;
+    box-shadow: 0px 0px 15px mixins.$brown;
   }
 }
