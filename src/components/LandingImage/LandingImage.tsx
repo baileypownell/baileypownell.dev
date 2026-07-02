@@ -34,12 +34,14 @@ const LandingImage = () => {
   });
 
   return (
-    <Box className="landing-screen" height="100vh">
+    <Box className="landing-screen" sx={{ height: '100vh' }}>
       <Stack
-        alignItems="center"
-        flexDirection={minWidth800 ? 'row' : 'column'}
-        height="100%"
-        p={isSmallViewport ? 3 : 0}
+        sx={{
+          alignItems: 'center',
+          flexDirection: minWidth800 ? 'row' : 'column',
+          height: '100%',
+          p: isSmallViewport ? 3 : 0,
+        }}
       >
         <Spring
           from={{ opacity: 0, transform: 'scale(0.9) translateX(-300px)' }}
@@ -55,7 +57,9 @@ const LandingImage = () => {
             />
           )}
         </Spring>
-        <Box paddingTop={2} marginLeft={minWidth1200 ? '100px' : '25px'}>
+        <Box
+          sx={{ paddingTop: 2, marginLeft: minWidth1200 ? '100px' : '25px' }}
+        >
           <Box className="points">
             <Spring
               from={{ opacity: 0, transform: 'scale(0.9)' }}
@@ -76,13 +80,13 @@ const LandingImage = () => {
             >
               {(styles: any) => (
                 <div>
-                  <Box pt={2} pb={2}>
+                  <Box sx={{ paddingTop: 2, paddingBottom: 2 }}>
                     <animated.h2 style={styles}>
                       Frontend Software Developer
                     </animated.h2>
                   </Box>
 
-                  <Stack pt={2} spacing={3}>
+                  <Stack sx={{ paddingTop: 2, spacing: 3 }}>
                     <Box>
                       <animated.h3 style={styles}>
                         Typescript | Node | Angular | React
@@ -100,10 +104,12 @@ const LandingImage = () => {
           </Box>
 
           <Stack
-            alignItems="center"
-            pt={4}
-            justifyContent={minWidth800 ? 'flex-end' : 'center'}
-            flexDirection={minWidth800 ? 'row' : 'column'}
+            sx={{
+              alignItems: 'center',
+              justifyContent: minWidth800 ? 'flex-end' : 'center',
+              flexDirection: minWidth800 ? 'row' : 'column',
+              paddingTop: 4,
+            }}
           >
             {trail.map((props, index) => {
               const button = buttons[index];

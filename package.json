@@ -9,32 +9,22 @@
     "netlify-dev": "netlify dev"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
-    "@mui/material": "^5.10.12",
-    "@types/cors": "^2.8.12",
-    "@types/nodemailer": "^6.4.6",
-    "aws-sdk": "^2.1253.0",
-    "date-fns": "^2.29.3",
-    "evergreen-ui": "^6.12.0",
-    "formik": "^2.2.9",
+    "@mui/material": "^9.1.2",
     "ismobilejs": "^1.1.1",
     "material-ui": "^0.20.2",
-    "nodemailer": "^6.8.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-spring": "^9.5.5",
-    "react-visibility-sensor": "^5.1.1",
-    "rxjs": "^7.5.7",
-    "sass": "^1.56.0",
-    "yup": "^1.0.2"
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-spring": "^10.0.4",
+    "rxjs": "^7.8.2",
+    "sass": "^1.101.0"
   },
   "devDependencies": {
-    "@types/react": "^18.0.22",
-    "@types/react-dom": "^18.0.7",
-    "@vitejs/plugin-react": "^2.2.0",
-    "netlify-cli": "^12.2.7",
-    "typescript": "^4.6.4",
-    "vite": "^3.2.11"
+    "@emotion/styled": "^11.14.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "netlify-cli": "^26.1.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.1.2"
   }
 }
