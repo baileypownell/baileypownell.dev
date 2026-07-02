@@ -1,6 +1,4 @@
-@use '../../scss/mixins.scss';
-
-.landing-screen {
+  .landing-screen {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -10,22 +8,22 @@
   background-repeat: no-repeat, no-repeat;
   background-size: 300px 300px, 400px 400px;
   background-position: -200px 0px, -175px -175px;
-  @include mixins.large-desktop {
+  @media only screen and (min-width: 1200px) {
     background-size: 500px 500px, 450px 450px;
     background-position: -200px -150px, -15px -275px;
   }
 
-  @include mixins.tablet {
+  @media only screen and (min-width: 800px) {
     padding-top: unset;
     min-height: 100vh;
   }
   #profile-image {
     width: 250px;
     border-radius: 50%;
-    box-shadow: 0px 0px 40px mixins.$muted-pink;
+    box-shadow: 0px 0px 40px var(--muted-pink);
     margin-bottom: 20px;
     margin-top: 20px;
-    @include mixins.desktop {
+    @media only screen and (min-width: 100px) {
       width: 350px;
       max-width: 400px;
       margin-bottom: 0;
@@ -33,19 +31,19 @@
   }
   .points {
     text-align: center;
-    @include mixins.tablet {
+    @media only screen and (min-width: 800px) {
       text-align: right;
     }
   }
   h1 {
     font-size: 45px;
     margin: 0;
-    color: mixins.$spanish-pink;
+    color: var(--spanish-pink);
     font-family: 'Dawning of a New Day', cursive;
-    @include mixins.tablet {
+    @media only screen and (min-width: 800px) {
       font-size: 75px;
     }
-    @include mixins.desktop {
+    @media only screen and (min-width: 1000px) {
       font-size: 100px;
     }
   }
@@ -53,16 +51,16 @@
     font-weight: 800;
     font-size: 20px;
     line-height: 1.5;
-    color: mixins.$brown;
+    color: var(--brown);
     font-family: 'Raleway', sans-serif;
-    @include mixins.tablet {
+    @media only screen and (min-width: 800px) {
       font-size: 30px;
     }
   }
   h3 {
     font-size: 18px;
     line-height: 1.5;
-    color: mixins.$brown;
+    color: var(--brown);
     font-family: 'Raleway', sans-serif;
   }
 }

@@ -1,11 +1,9 @@
-@use '../../scss/mixins.scss';
-
 .custom-cursor {
   width: 20px;
   height: 20px;
-  border: 1px solid mixins.$spanish-pink;
-  background-color: mixins.$spanish-pink-frosted;
-  box-shadow: 0 0 10px mixins.$spanish-pink;
+  border: 1px solid var(--spanish-pink);
+  background-color: var(--spanish-pink-frosted);
+  box-shadow: 0 0 10px var(--spanish-pink);
   border-radius: 50%;
   position: absolute;
   transition-duration: 150ms;
@@ -20,6 +18,6 @@
   }
   to {
     transform: scale(0.7);
-    box-shadow: 0 0 15px mixins.$muted-pink;
+    box-shadow: 0 0 15px var(--muted-pink);
   }
 }

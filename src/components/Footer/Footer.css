@@ -1,7 +1,5 @@
-@use '../../scss/mixins.scss';
-
-footer {
-  color: mixins.$brown;
+  footer {
+  color: var(--brown);
   width: 100%;
   text-align: right;
   padding: 20px;
@@ -9,7 +7,7 @@ footer {
   font-size: 20px;
   a {
     text-decoration: none;
-    color: mixins.$brown;
+    color: var(--brown);
     cursor: pointer;
   }
   p {
@@ -25,7 +23,7 @@ footer {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: mixins.$spanish-pink;
+    background-color: var(--spanish-pink);
     transform: scaleX(0);
     transition: transform 0.3s ease;
   }

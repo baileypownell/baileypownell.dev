@@ -1,4 +1,12 @@
-@use 'scss/mixins.scss';
+:root {
+  --white: #fffcf5;
+  --brown: #4e392d;
+  --brown-hue-offset: rgb(78, 45, 29);
+  --muted-pink: #cf8e80;
+  --spanish-pink: #fcb5b5;
+  --spanish-pink-frosted: rgba(252, 181, 181, 0.5);
+  --muted-pink-frosted: rgba(207, 142, 128, 0.5);
+}
 
 html {
   overflow-x: hidden;
@@ -29,10 +37,10 @@ p {
 }
 
 body {
-  background-color: mixins.$white;
+  background-color: var(--white);
   margin: 0px;
   overflow-x: hidden;
-  // unclear why these two rules need to be overriden when a project is opened in a drawer
+  /* unclear why these two rules need to be overriden when a project is opened in a drawer */
   padding: 0 !important;
   overflow: auto !important;
 }
@@ -54,7 +62,7 @@ a {
     5px 700px,
     200px 550px;
 
-  @include mixins.tablet {
+  @media only screen and (min-width: 800px) {
     background-size:
       700px 700px,
       750px 750px,
@@ -66,7 +74,7 @@ a {
       180% 650px;
   }
 
-  @include mixins.large-desktop {
+  @media only screen and (min-width: 1300px) {
     background-size:
       700px 700px,
       800px 800px,
@@ -93,7 +101,7 @@ h4 {
     font-family: 'Raleway', sans-serif;
     text-align: center;
 
-    @include mixins.tablet {
+    @media only screen and (min-width: 800px) {
       font-size: 30px;
       margin: 0;
     }
@@ -106,7 +114,7 @@ h4 {
     align-items: center;
     padding: 15px 0px 30px 0px;
 
-    @include mixins.tablet {
+    @media only screen and (min-width: 800px) {
       flex-direction: row;
 
       button {
@@ -122,9 +130,9 @@ h4 {
     background-size: contain;
     background-position: center;
     border-radius: 10px;
-    box-shadow: 0 0px 20px mixins.$brown;
+    box-shadow: 0 0px 20px var(--brown);
 
-    @include mixins.tablet {
+    @media only screen and (min-width: 800px) {
       margin: 20px auto;
     }
   }
@@ -134,10 +142,10 @@ h4 {
     font-family: 'Ralewayß', sans-serif;
     line-height: 1.75;
     text-align: center;
-    color: mixins.$brown;
+    color: var(--brown);
     font-weight: normal;
 
-    @include mixins.tablet {
+    @media only screen and (min-width: 800px) {
       font-size: unset;
     }
   }
@@ -147,7 +155,7 @@ h4 {
   }
 }
 
-// overlay color
+/* overlay color */
 .css-xeqldi::before {
   background: linear-gradient(
     160deg,
@@ -161,9 +169,9 @@ h4 {
 }
 
 .side-sheet-content button {
-  box-shadow: 0px 0px 10px  mixins.$spanish-pink;
+  box-shadow: 0px 0px 10px var(--spanish-pink);
 
   &:hover {
-    box-shadow: 0px 0px 15px mixins.$brown;
+    box-shadow: 0px 0px 15px var(--brown);
   }
 }

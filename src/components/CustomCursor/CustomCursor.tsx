@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { fromEvent } from 'rxjs';
 import isMobile from 'ismobilejs';
-import './CustomCursor.scss';
+import './CustomCursor.css';
 
 const CustomCursor = () => {
   const [showCustomCursor, setShowCustomCursor] = useState(false);
