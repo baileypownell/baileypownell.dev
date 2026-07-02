@@ -15,14 +15,11 @@ export const theme = createTheme({
   palette: {
     primary: {
       main: '#fcb5b5',
-      //   dark: '#d1564c',
-      //   light: '#ea7065',
       contrastText: '#fffcf5',
     },
     secondary: {
       main: '#4e392d',
       dark: 'rgb(78, 45, 29)',
-      //   contrastText: '#fff',
     },
     error: {
       main: '#dd7244',
