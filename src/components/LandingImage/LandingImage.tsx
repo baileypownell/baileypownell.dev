@@ -5,6 +5,11 @@ import Footer from '../Footer/Footer';
 import './LandingImage.css';
 
 const LandingImage = () => {
+  const AnimatedH1 = animated('h1');
+  const AnimatedH2 = animated('h2');
+  const AnimatedH3 = animated('h3');
+  const AnimatedImg = animated('img');
+  const AnimatedDiv = animated('div');
   const theme = useTheme();
   const minWidth800 = useMediaQuery('(min-width:800px)');
   const minWidth1200 = useMediaQuery('(min-width:1200px)');
@@ -49,7 +54,7 @@ const LandingImage = () => {
           config={{ duration: 1000 }}
         >
           {(styles: any) => (
-            <animated.img
+            <AnimatedImg
               style={styles}
               id="profile-image"
               src={me}
@@ -67,7 +72,7 @@ const LandingImage = () => {
               config={{ duration: 500 }}
             >
               {(styles: any) => (
-                <animated.h1 style={styles}>Bailey Pownell</animated.h1>
+                <AnimatedH1 style={styles}>Bailey Pownell</AnimatedH1>
               )}
             </Spring>
             <Spring
@@ -81,21 +86,21 @@ const LandingImage = () => {
               {(styles: any) => (
                 <div>
                   <Box sx={{ paddingTop: 2, paddingBottom: 2 }}>
-                    <animated.h2 style={styles}>
+                    <AnimatedH2 style={styles}>
                       Frontend Software Developer
-                    </animated.h2>
+                    </AnimatedH2>
                   </Box>
 
                   <Stack sx={{ paddingTop: 2, spacing: 3 }}>
                     <Box>
-                      <animated.h3 style={styles}>
+                      <AnimatedH3 style={styles}>
                         Typescript | Node | Angular | React
-                      </animated.h3>
+                      </AnimatedH3>
                     </Box>
                     <Box>
-                      <animated.h3 style={styles}>
+                      <AnimatedH3 style={styles}>
                         Component testing | Dependency management | Acessibility
-                      </animated.h3>
+                      </AnimatedH3>
                     </Box>
                   </Stack>
                 </div>
@@ -114,7 +119,7 @@ const LandingImage = () => {
             {trail.map((props, index) => {
               const button = buttons[index];
               return (
-                <animated.div key={button.href} style={props}>
+                <AnimatedDiv key={button.href} style={props}>
                   <Button
                     href={button.href}
                     target="_blank"
@@ -141,7 +146,7 @@ const LandingImage = () => {
                   >
                     {button.text}
                   </Button>
-                </animated.div>
+                </AnimatedDiv>
               );
             })}
           </Stack>
