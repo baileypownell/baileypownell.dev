@@ -11,7 +11,6 @@
   "dependencies": {
     "@mui/material": "^9.1.2",
     "ismobilejs": "^1.1.1",
-    "material-ui": "^0.20.2",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-spring": "^10.0.4",
